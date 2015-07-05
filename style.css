@@ -1,0 +1,16 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #252525;
+}
+
+#head {
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 8vh;
+  background-color: #002525;
+}
