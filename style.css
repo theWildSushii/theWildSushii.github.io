@@ -4,13 +4,42 @@
 }
 
 body {
-  background-color: #252525;
+  background-color: #dadada;
+  font-family: "Haas Unica", Helvetica;
+  color: #00ffff;
+}
+
+a {
+  text-decoration: none;
+  text-shadow: 0px 0px 8px #00ffff;
+}
+
+a:visited {
+  color: #00ffff;
+  text-shadow: 0px 0px 8px #ff00ff;
 }
 
 #head {
   left: 0px;
   top: 0px;
   width: 100vw;
-  height: 8vh;
-  background-color: #002525;
+  height: 48px;
+  background-color: #252525;
+}
+
+#head > * {
+  float: left;
+  margin: 4px;
+}
+
+#head > img {
+  width: 40px;
+}
+
+#head > h2 {
+  margin-top: 8px;
+}
+
+#head > p {
+  margin-top: 14px;
 }
