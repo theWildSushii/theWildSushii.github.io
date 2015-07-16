@@ -16,7 +16,7 @@ window.onload = function() {
     "Don't forget to be fabulous everyday!",
     "42",
     "Free hugs",
-    "I want to be your friend FOREVER",
+    "derp herp",
     "I'm still not knowing who let the dogs out :(",
     "Oh hi, I'm up here :D",
     "love meh",
