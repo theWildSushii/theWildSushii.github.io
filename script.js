@@ -33,4 +33,14 @@ window.onload = function() {
     "Do you use Vim? Get <a href=\"https://github.com/theWildSushii/SweetCandy.vim\">this</a> colorscheme."
   ];
   e("randText").innerHTML = messages[randomInt(0, messages.length)];
+  loaded(true);
+}
+
+function loaded(state){
+  var loader = e("loader");
+  if(state){
+    loader.style.opacity = "0";
+  } else {
+    loader.style.opacity = "1";
+  }
 }

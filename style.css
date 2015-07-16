@@ -1,3 +1,13 @@
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #252525;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 90px;
+  background-color: #00ffff;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -20,11 +30,13 @@ a:visited {
 }
 
 #head {
+  position: fixed;
   left: 0px;
   top: 0px;
   width: 100vw;
   height: 48px;
   background-color: #252525;
+  box-shadow: 0px 0px 3.14159px #252525;
 }
 
 #head > * {
@@ -43,3 +55,75 @@ a:visited {
 #head > p {
   margin-top: 14px;
 }
+
+#body {
+  margin-top: 48px;
+}
+
+#posts {
+  margin: 8px;
+  padding: 8px;
+  margin-right: 38.2vw;
+}
+
+#posts > div {
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 3.14159px;
+  background-color: #252525;
+  box-shadow: 0px 0px 3.14159px #252525;
+}
+
+#posts > div > img {
+  border-radius: 3.14159px;
+  box-shadow: 0px 0px 3.14159px #00ffff;
+  margin: 3.14159px;
+  max-width: calc(61.8vw - 32px);
+}
+
+#sidebar {
+  position: fixed;
+  top: 56px;
+  right: 8px;
+  padding: 8px;
+  width: calc(38.2% - 24px);
+  height: calc(100% - 80px);
+  overflow-y: scroll;
+}
+
+#loader {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 64px;
+  height: 64px;
+  margin-left: calc(50% - 32px);
+  margin-top: 64px;
+  border-radius: 32px;
+  background: url(loader.png);
+  background-color: #252525;
+  box-shadow: 0px 0px 3.14159px #00ffff;
+  transition: opacity 0.25s linear 0s;
+  animation: loaderAni 1s steps(36) infinite;
+  -webkit-animation: loaderAni .8s steps(36) infinite;
+  z-index: 20;
+}
+
+@keyframes loaderAni{
+  from{
+    background-position: 0px;
+  }
+  to{
+    background-position: -2304px;
+  }
+}
+@-webkit-keyframes loaderAni{
+  from{
+    background-position: 0px;
+  }
+  to{
+    background-position: -2304px;
+  }
+}
+
+
