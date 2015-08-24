@@ -4,7 +4,6 @@
   background-color: #252525;
 }
 ::-webkit-scrollbar-thumb {
-  border-radius: 90px;
   background-color: #00ffff;
 }
 
