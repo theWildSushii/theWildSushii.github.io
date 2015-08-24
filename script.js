@@ -24,21 +24,21 @@ function getPosts(){
       posts = http.responseText.split("\n");
     } else {
       posts = ["h2===Could not get data$$p===It may be something wrong with the site or your device :("];
+      e("posts").innerHTML = dataToHTML(posts, end, init);
+      loaded(true);
     }
   }
-  http.open("GET", "posts.txt", false);
+  http.open("GET", "posts.txt", true);
   http.send();
   return posts;
 }
 
 window.onload = function() {
 
-  e("posts").innerHTML = dataToHTML(getPosts(), end, init);
 
   var messages = getRandomText();
-
+  getPosts();
   e("randText").innerHTML = messages[randomInt(0, messages.length)];
-  loaded(true);
 }
 
 function loaded(state){
