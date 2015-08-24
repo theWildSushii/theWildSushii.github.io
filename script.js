@@ -11,7 +11,7 @@ function getRandomText(){
       phrases = ["Something happened :("];
     }
   }
-  http.open("GET", "random.txt", false);
+  http.open("GET", "random.txt", true);
   http.send();
   return phrases;
 }
