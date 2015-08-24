@@ -7,15 +7,16 @@ function getRandomText(){
   http.onreadystatechange = function(){
     if (http.readyState == 4 && http.status == 200){
       phrases = http.responseText.split("\n");
+      e("randText").innerHTML = phrases[randomInt(0, phrases.length)];
       getPosts();
     } else {
       phrases = ["Something happened :("];
+      e("randText").innerHTML = phrases[0];
       getPosts();
     }
   }
   http.open("GET", "random.txt", true);
   http.send();
-  return phrases;
 }
 
 function getPosts(){
@@ -30,14 +31,10 @@ function getPosts(){
   }
   http.open("GET", "posts.txt", true);
   http.send();
-  return posts;
 }
 
 window.onload = function() {
-
-
-  var messages = getRandomText();
-  e("randText").innerHTML = messages[randomInt(0, messages.length)];
+  getRandomText();
 }
 
 function loaded(state){
