@@ -24,10 +24,6 @@ function getPosts(){
       posts = http.responseText.split("\n");
       e("posts").innerHTML = dataToHTML(posts, end, init);
       loaded(true);
-    } else {
-      posts = ["h2===Could not get data$$p===It may be something wrong with the site or your device :("];
-      e("posts").innerHTML = dataToHTML(posts, end, init);
-      loaded(true);
     }
   }
   http.open("GET", "posts.txt", true);
