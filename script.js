@@ -20,7 +20,6 @@ function getPosts(){
   http.onreadystatechange = function(){
     if(http.readyState == 4 && http.status == 200){
       posts = http.responseText.split("&&&");
-      alert(http.responseText);
       e("posts").innerHTML = dataToHTML(posts, end, init);
       loaded(true);
     }
@@ -63,7 +62,7 @@ function dataToHTML(input){
       post = tPost;
     }
 
-    output += "<div>" + post + "</div>";
+    output = output + "<div>" + post + "</div>";
   }
 
   return output;
