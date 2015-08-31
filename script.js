@@ -1,6 +1,3 @@
-var end = 10;
-var init = 0;
-
 function getRandomText(){
   var http = ajax();
   var phrases;
@@ -46,20 +43,22 @@ function loaded(state){
   }
 }
 
-function dataToHTML(input, limit, start){
+function dataToHTML(input){
   var output = "";
 
-  for(var i = start; i < input.length && i < limit; i++){
+  for(var i = 0; i < input.length; i++){
     var temp = input[i].split("$$");
     var post = "";
 
     for(var e = 0; e < temp.lenght; e++){
       var temp2 = temp[e].split("===");
       var tPost = "";
-      if(temp2[0] != "img"){
+      if(temp2[0] != "img" && temp2[0] != "a"){
         tPost = "<" + temp2[0] + ">" + temp2[1] + "</" + temp2[0] + ">";
       } else if (temp2[0] == "img"){
         tPost = "<img src=\"" + temp2[1] + "\">";
+      } else if(temp2[0] == "a"){
+        tPost = "<a href=\"" + temp2[1] + "\">" + temp2[2] + "</a>"
       }
       post = tPost;
     }
