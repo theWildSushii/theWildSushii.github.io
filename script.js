@@ -25,6 +25,7 @@ function getPosts(){
   http.onreadystatechange = function(){
     if(http.readyState == 4 && http.status == 200){
       posts = http.responseText.split("\n");
+      alert(http.responseText);
       e("posts").innerHTML = dataToHTML(posts, end, init);
       loaded(true);
     }
