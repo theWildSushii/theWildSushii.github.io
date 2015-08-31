@@ -8,11 +8,9 @@ function getRandomText(){
     if (http.readyState == 4 && http.status == 200){
       phrases = http.responseText.split("\n");
       e("randText").innerHTML = phrases[randomInt(0, phrases.length)];
-      getPosts();
     } else {
       phrases = ["Something happened :("];
       e("randText").innerHTML = phrases[0];
-      getPosts();
     }
   }
   http.open("GET", "random.txt", true);
@@ -35,6 +33,7 @@ function getPosts(){
 }
 
 window.onload = function() {
+  getPosts();
   getRandomText();
 }
 
