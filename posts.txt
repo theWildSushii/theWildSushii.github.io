@@ -1,2 +1,1 @@
-h2===Test Post$$p===This is some example text
-h2===Another Post$$p===This is some more example text$$img===navi.png
+h2===Test Post$$p===This is some example text&&&h2===Another Post$$p===This is some more example text$$img===navi.png
