@@ -14,23 +14,37 @@ function getRandomText(){
   http.send();
 }
 
-function getPosts(){
+function getSidebar() {
   var http = ajax();
-  var posts;
+  var data;
   http.onreadystatechange = function(){
     if(http.readyState == 4 && http.status == 200){
-      posts = http.responseText.split("&&&");
-      e("posts").innerHTML = dataToHTML(posts);
-      loaded(true);
+      data = http.responseText;
+      e("sidebar").innerHTML = data;
+    } else {
+      e("sidebar").innerHTML = "<p>Could not get data. </p><a href=\"#\" onClick=\"getSidebar()\">Try again?</a>";
     }
   }
-  http.open("GET", "posts.txt", true);
-  http.send();
 }
 
+function getSize(){
+  var allElements = document.getElementsByTagName('*');
+  for (var i = 0; i < allElements.length; i++){
+    if (allElements[i].getAttribute("tws-size") !== null){
+      var rawSize = allElements[i].getAttribute("tws-size");
+      var size = rawSize.split("x");
+      allElements[i].width = size[0];
+      allElements[i].height = size[1];
+    }
+  }
+}
+
+
 window.onload = function() {
-  getPosts();
+  getSize();
   getRandomText();
+  getSidebar();
+  loaded(true);
 }
 
 function loaded(state){
@@ -42,28 +56,4 @@ function loaded(state){
   }
 }
 
-function dataToHTML(input){
-  var output = "";
 
-  for(var i = 0; i < input.length; i++){
-    var temp = input[i].split("$$");
-    var post = "";
-
-    for(var e = 0; e < temp.lenght; e++){
-      var temp2 = temp[e].split("===");
-      var tPost = "";
-      if(temp2[0] != "img" && temp2[0] != "a"){
-        tPost = "<" + temp2[0] + ">" + temp2[1] + "</" + temp2[0] + ">";
-      } else if (temp2[0] == "img"){
-        tPost = "<img src=\"" + temp2[1] + "\">";
-      } else if(temp2[0] == "a"){
-        tPost = "<a href=\"" + temp2[1] + "\">" + temp2[2] + "</a>"
-      }
-      post = tPost;
-    }
-
-    output = output + "<div>" + post + "</div>";
-  }
-
-  return output;
-}

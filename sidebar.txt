@@ -1,0 +1,3 @@
+<a href="index.html">Home</a><br>
+<a href="downloads.html">Downloads</a><br>
+<a href="about.html">About</a><br>
