@@ -25,6 +25,8 @@ function getSidebar() {
       e("sidebar").innerHTML = "<p>Could not get data. </p><a href=\"#\" onClick=\"getSidebar()\">Try again?</a>";
     }
   }
+  http.open("GET", "sidebar.txt", true);
+  http.send();
 }
 
 function getSize(){
