@@ -5,7 +5,7 @@ var result = "";
 var lang = "en";
 
 function brainInit(){
-  remote("/words/" + lang + ".txt")
+  remote("words/" + lang + ".txt")
   data = result.split("\n");
 }
 
