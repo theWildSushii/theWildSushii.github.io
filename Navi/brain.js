@@ -6,7 +6,6 @@ var lang = "en";
 
 function brainInit(){
   remote("words/" + lang + ".txt")
-  data = result.split("\n");
 }
 
 function ajax(){
@@ -22,9 +21,10 @@ function remote(dir){
   http.onreadystatechange = function(){
     if(http.readyState == 4 && http.status == 200){
       result = http.responseText;
+      data = result.split("\n");
     }
   }
-  http.open("GET", dir, true);
+  http.open("GET", dir, false);
   http.send();
 
 }
