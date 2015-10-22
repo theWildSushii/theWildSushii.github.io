@@ -3,6 +3,7 @@ var store = {};
 var data = [];
 var result = "";
 var lang = "en";
+var voice = "US English Female";
 
 function brainInit(){
   remote("words/" + lang + ".txt")
@@ -12,6 +13,11 @@ function langChange(){
   loaded(false);
   _("input").insertAdjacentHTML('beforebegin', "<div class=\"separator\"></div>");
   lang = _("lang").value;
+  if(lang == "en"){
+    voice = "US English Female";
+  } else if(lang == "es"){
+    voice = "Spanish Female";
+  }
   remote("words/" + lang + ".txt");
 }
 
@@ -68,6 +74,9 @@ function parse(data){
 
   var output = tempMemory;
   tempMemory = "";
+  if(_("tts").checked){
+    responsiveVoice.speak(output, voice);
+  }
   return output.toLowerCase();
 }
 

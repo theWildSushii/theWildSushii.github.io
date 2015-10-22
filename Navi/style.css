@@ -95,7 +95,7 @@ div.list > ul {
 div.list > ul > li {
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  border-bottom-color: #000000;
+  border-bottom-color: #00ffff;
   transition: background-color .25s linear 0s;
   padding: 8px;
   margin: 0px;

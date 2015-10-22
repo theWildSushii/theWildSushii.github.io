@@ -3,6 +3,7 @@ function _(x) {
 }
 
 function init() {
+  _("tts").checked = true;
   loaded(false);
   brainInit();
   _("message").focus();
@@ -17,6 +18,10 @@ function loaded(state){
   } else {
     loader.style.opacity = "1";
   }
+}
+
+function flick(target){
+  _(target).checked = !_(target).checked;
 }
 
 function textCheck(e){
