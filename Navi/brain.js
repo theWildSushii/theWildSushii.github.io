@@ -87,7 +87,7 @@ function signal(input){
   while(tempMemory == ""){
     var prob = randInt(0, 10);
     if(prob >= 5){
-      for(var i = 0; i < randInt(1,3); i++){
+      for(var i = 0; i < randInt(1, prob); i++){
         tempMemory += data[randInt(0, data.length - 1)] + " ";
       }
     }
