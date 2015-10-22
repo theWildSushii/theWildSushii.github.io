@@ -1,4 +1,4 @@
-a
+﻿a
 abandon
 abandoned
 ability
@@ -2286,7 +2286,7 @@ occupy
 occur
 occur to
 ocean
-o�clock
+o’clock
 October
 odd
 oddly
