@@ -8,6 +8,13 @@ function brainInit(){
   remote("words/" + lang + ".txt")
 }
 
+function langChange(){
+  loaded(false);
+  _("input").insertAdjacentHTML('beforebegin', "<div class=\"separator\"></div>");
+  lang = _("lang").value;
+  remote("words/" + lang + ".txt");
+}
+
 function ajax(){
   if (window.XMLHttpRequest){
     return new XMLHttpRequest();
@@ -22,6 +29,7 @@ function remote(dir){
     if(http.readyState == 4 && http.status == 200){
       result = http.responseText;
       data = result.split("\n");
+      loaded(true);
     }
   }
   http.open("GET", dir, false);

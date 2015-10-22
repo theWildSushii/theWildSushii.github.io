@@ -17,3 +17,7 @@
   background-color: #00ffff;
   box-shadow: 0 0 6px #00ffff;
 }
+
+::-webkit-scrollbar-corner {
+  background-color: rgba(0, 0, 0, 0.16);
+}

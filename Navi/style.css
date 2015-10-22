@@ -68,10 +68,11 @@ div.settings > div.list{
   height: 100%;
   top: 0px;
   right: 0px;
+  margin: 0px;
   border-radius: 0px;
   transition: width .25s linear 0s, background-color .25s linear 0s;
-  padding: 8px;
-  overflow: scroll;
+  overflow: hidden;
+  display: none;
   background-color: rgba(0, 255, 255, 0);
 }
 
@@ -82,8 +83,13 @@ div.settings:hover {
 div.settings:hover > div.list {
   width: 38.2%;
   background-color: rgba(0, 255, 255, .64);
+  overflow: scroll;
   box-shadow: 0px 0px 16px rgba(0, 255, 255, 0.64);
   display: block;
+}
+
+div.list > ul {
+  padding: 0px;
 }
 
 div.list > ul > li {
@@ -91,8 +97,8 @@ div.list > ul > li {
   border-bottom-width: 1px;
   border-bottom-color: #000000;
   transition: background-color .25s linear 0s;
-  border-radius: 3px;
-  padding: 4px;
+  padding: 8px;
+  margin: 0px;
 }
 
 div.list > ul > li:hover {
@@ -186,6 +192,16 @@ div.user > p {
 div.navi > p {
   color: #00ffff;
   text-align: left;
+}
+
+div.separator {
+  margin-left: 19.1%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 61.8%;
+  height: 1px;
+  background-color: #dadada;
+  box-shadow: 0px 0px 8px #dadada;
 }
 
 div#input {

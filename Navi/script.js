@@ -6,7 +6,6 @@ function init() {
   loaded(false);
   brainInit();
   _("message").focus();
-  loaded(true);
 }
 
 window.onload = init;
