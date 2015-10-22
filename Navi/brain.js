@@ -68,7 +68,7 @@ function parse(data){
 
   var output = tempMemory;
   tempMemory = "";
-  return output;
+  return output.toLowerCase();
 }
 
 function signal(input){
