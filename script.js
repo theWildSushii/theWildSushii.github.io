@@ -6,8 +6,7 @@ function getRandomText(){
       phrases = http.responseText.split("\n");
       e("randText").innerHTML = phrases[randomInt(0, phrases.length)];
     } else {
-      phrases = ["Something happened :("];
-      e("randText").innerHTML = phrases[0];
+      e("randText").innerHTML = "Something happened :("
     }
   }
   http.open("GET", "random.txt", true);
@@ -16,13 +15,18 @@ function getRandomText(){
 
 function getSidebar() {
   var http = ajax();
-  var data;
+  var data, listitems;
   http.onreadystatechange = function(){
     if(http.readyState == 4 && http.status == 200){
       data = http.responseText;
-      e("sidebar").innerHTML = data;
+      listitems = data.split("\n");
+      var out = "";
+      for(car i = 0; i < listitems.length; i++){
+        out += "<li>" + listitems[i] + "</li>";
+      }
+      e("list").innerHTML = out;
     } else {
-      e("sidebar").innerHTML = "<p>Could not get data. </p><a href=\"#\" onClick=\"getSidebar()\">Try again?</a>";
+      e("list").innerHTML = "<li><p>Could not get data. </p><a href=\"#\" onClick=\"getSidebar()\">Try again?</a></li>";
     }
   }
   http.open("GET", "sidebar.txt", true);

@@ -1,12 +1,14 @@
 var tempMemory = "";
-var store = {};
+var store = {}; //TODO Use it somewhere...
 var data = [];
+var patterns = [];
 var result = "";
 var lang = "en";
 var voice = "US English Female";
 
 function brainInit(){
-  remote("words/" + lang + ".txt")
+  getWords("language/" + lang + "/words.txt");
+  getPatterns("language/" + lang + "/patterns.txt");
 }
 
 function langChange(){
@@ -18,7 +20,8 @@ function langChange(){
   } else if(lang == "es"){
     voice = "Spanish Female";
   }
-  remote("words/" + lang + ".txt");
+  getWords("language/" + lang + "/words.txt");
+  getPatterns("language/" + lang + "/patterns.txt");
 }
 
 function ajax(){
@@ -29,7 +32,7 @@ function ajax(){
   }
 }
 
-function remote(dir){
+function getWords(dir){
   var http = ajax();
   http.onreadystatechange = function(){
     if(http.readyState == 4 && http.status == 200){
@@ -43,27 +46,20 @@ function remote(dir){
 
 }
 
-function remoteGET(dir, params){
+function getPatterns(dir){
   var http = ajax();
   http.onreadystatechange = function(){
     if(http.readyState == 4 && http.status == 200){
       result = http.responseText;
+      patterns = result.split("\n");
+      loaded(true);
     }
   }
-  http.open("GET", dir + "?" + params, true);
+  http.open("GET", dir, false);
   http.send();
+
 }
 
-function remotePOST(dir, params){
-  var http = ajax();
-  http.onreadystatechange = function(){
-    if(http.readyState == 4 && http.status == 200){
-      result = http.responseText;
-    }
-  }
-  http.open("POST", dir, true);
-  http.send(params);
-}
 
 function parse(data){
   //TODO Parse the data somehow...
