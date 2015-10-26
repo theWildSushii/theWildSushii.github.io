@@ -21,7 +21,7 @@ function getSidebar() {
       data = http.responseText;
       listitems = data.split("\n");
       var out = "";
-      for(car i = 0; i < listitems.length; i++){
+      for(var i = 0; i < listitems.length; i++){
         out += "<li>" + listitems[i] + "</li>";
       }
       e("list").innerHTML = out;
