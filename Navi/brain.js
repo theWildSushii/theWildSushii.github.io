@@ -43,7 +43,6 @@ function getWords(dir){
   }
   http.open("GET", dir, false);
   http.send();
-
 }
 
 function getPatterns(dir){
@@ -57,7 +56,6 @@ function getPatterns(dir){
   }
   http.open("GET", dir, false);
   http.send();
-
 }
 
 
@@ -67,7 +65,6 @@ function parse(data){
   for(var i = 0; i < keys.length; i++){
     signal(keys[i]);
   }
-
   var output = tempMemory;
   tempMemory = "";
   if(_("tts").checked){
