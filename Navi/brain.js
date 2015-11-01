@@ -9,12 +9,13 @@ var voice = "US English Female";
 function brainInit(){
   getWords("language/" + lang + "/words.txt");
   getPatterns("language/" + lang + "/patterns.txt");
+  loaded(true);
 }
 
 function langChange(){
   loaded(false);
-  _("input").insertAdjacentHTML('beforebegin', "<div class=\"separator\"></div>");
-  lang = _("lang").value;
+  e("input").insertAdjacentHTML('beforebegin', "<div class=\"separator\"></div>");
+  lang = e("lang").value;
   if(lang == "en"){
     voice = "US English Female";
   } else if(lang == "es"){
@@ -67,10 +68,14 @@ function parse(data){
   }
   var output = tempMemory;
   tempMemory = "";
-  if(_("tts").checked){
-    responsiveVoice.speak(output, voice);
+  if(e("tts").checked){
+    say(output);
   }
   return output.toLowerCase();
+}
+
+function say(input){
+  responsiveVoice.speak(input, voice);
 }
 
 function signal(input){

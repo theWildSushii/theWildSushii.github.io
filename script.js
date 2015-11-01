@@ -24,9 +24,9 @@ function getSidebar() {
       for(var i = 0; i < listitems.length; i++){
         out += "<li>" + listitems[i] + "</li>";
       }
-      e("list").innerHTML = out;
+      e("slist").innerHTML = out;
     } else {
-      e("list").innerHTML = "<li><p>Could not get data. </p><a href=\"#\" onClick=\"getSidebar()\">Try again?</a></li>";
+      e("slist").innerHTML = "<li><p>Could not get data. </p><a href=\"#\" onClick=\"getSidebar()\">Try again?</a></li>";
     }
   }
   http.open("GET", "sidebar.txt", true);
@@ -45,6 +45,21 @@ function getSize(){
   }
 }
 
+var isShowing = false;
+function showList(){
+  if(isShowing){
+    e("list").style.display = "none";
+    e("list").style.width = "0px";
+    e("settings").style.marginRight = "8px";
+    e("list").style.backgroundColor = "rgba(0, 255, 255, 0)"
+  } else {
+    e("list").style.display = "block";
+    e("list").style.width = "61.8%";
+    e("settings").style.marginRight = "61.8%";
+    e("list").style.backgroundColor = "rgba(0, 255, 255, .64)"
+  }
+  isShowing = !isShowing;
+}
 
 window.onload = function() {
   getSize();

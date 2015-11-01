@@ -1,18 +1,30 @@
-function _(x) {
-  return document.getElementById(x);
-}
-
 function init() {
-  _("tts").checked = true;
+  e("tts").checked = true;
   loaded(false);
   brainInit();
-  _("message").focus();
+  e("message").focus();
 }
 
 window.onload = init;
 
+var isShowing = false;
+function showList(){
+  if(isShowing){
+    e("list").style.display = "none";
+    e("list").style.width = "0px";
+    e("settings").style.marginRight = "8px";
+    e("list").style.backgroundColor = "rgba(0, 255, 255, 0)"
+  } else {
+    e("list").style.display = "block";
+    e("list").style.width = "61.8%";
+    e("settings").style.marginRight = "61.8%";
+    e("list").style.backgroundColor = "rgba(0, 255, 255, .64)"
+  }
+  isShowing = !isShowing;
+}
+
 function loaded(state){
-  var loader = _("loader");
+  var loader = e("loader");
   if(state){
     loader.style.opacity = "0";
   } else {
@@ -21,7 +33,7 @@ function loaded(state){
 }
 
 function flick(target){
-  _(target).checked = !_(target).checked;
+  e(target).checked = !e(target).checked;
 }
 
 function textCheck(e){
@@ -32,13 +44,13 @@ function textCheck(e){
 }
 
 function sendMessage() {
-  var text = _("message").value;
-  _("message").value = "";
-  if(text != "" || text != "\n"){
-    _("message").focus();
+  var text = e("message").value;
+  e("message").value = "";
+  if(text != "" || text != "\n" || text != "\n\n"){
+    e("message").focus();
     popUp("user", text);
     loaded(false);
-    _("message").value = "";
+    e("message").value = "";
     popUp("navi", parse(text));
     loaded(true);
   }
@@ -57,7 +69,7 @@ var messageCount = 0;
 function popUp(user, text) {
   if(text != ""){
     var id = "m" + messageCount;
-    var input = _("input");
+    var input = e("input");
     input.insertAdjacentHTML('beforebegin', "<div id=\"" + id + "\" class=\"" + user + "\"><p>" + text + "</p></div>");
     messageCount = messageCount + 1;
     if(messageCount > 6){

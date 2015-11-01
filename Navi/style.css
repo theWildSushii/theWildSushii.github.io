@@ -69,23 +69,12 @@ div.settings > div.list{
   top: 0px;
   right: 0px;
   margin: 0px;
-  border-radius: 0px;
-  transition: width .25s linear 0s, background-color .25s linear 0s;
-  overflow: hidden;
   display: none;
-  background-color: rgba(0, 255, 255, 0);
-}
-
-div.settings:hover {
-  margin-right: 61.8%;
-}
-
-div.settings:hover > div.list {
-  width: 61.8%;
-  background-color: rgba(0, 255, 255, .64);
+  border-radius: 0px;
   overflow: scroll;
+  transition: width .16s linear 0s, background-color .216s linear 0s;
+  background-color: rgba(0, 255, 255, 0);
   box-shadow: 0px 0px 16px rgba(0, 255, 255, 0.64);
-  display: block;
 }
 
 div.list > ul {
@@ -112,6 +101,11 @@ div.list > ul > li > p {
 
 div.list > ul > li > .option {
   float: right;
+}
+
+#tts {
+  width: 24px;
+  height: 24px;
 }
 
 #loader {
