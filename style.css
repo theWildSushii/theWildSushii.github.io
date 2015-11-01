@@ -141,10 +141,8 @@ div.list > ul > li {
 }
 
 div.list > ul > li > a{
-  padding: 8px;
   margin: 0px;
-  width: 61.8%;
-  padding: 4px;
+  width: 100%;
 }
 
 div.list > ul > li:hover {
