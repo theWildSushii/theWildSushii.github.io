@@ -69,9 +69,8 @@ div.settings > div.list{
   top: 0px;
   right: 0px;
   margin: 0px;
-  display: none;
   border-radius: 0px;
-  overflow: scroll;
+  overflow: hidden;
   transition: width .16s linear 0s, background-color .216s linear 0s;
   background-color: rgba(0, 255, 255, 0);
   box-shadow: 0px 0px 16px rgba(0, 255, 255, 0.64);

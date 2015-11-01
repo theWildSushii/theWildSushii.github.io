@@ -10,12 +10,12 @@ window.onload = init;
 var isShowing = false;
 function showList(){
   if(isShowing){
-    e("list").style.display = "none";
+    e("list").style.overflow = "hidden";
     e("list").style.width = "0px";
     e("settings").style.marginRight = "8px";
     e("list").style.backgroundColor = "rgba(0, 255, 255, 0)"
   } else {
-    e("list").style.display = "block";
+    e("list").style.overflow = "scroll";
     e("list").style.width = "61.8%";
     e("settings").style.marginRight = "61.8%";
     e("list").style.backgroundColor = "rgba(0, 255, 255, .64)"
