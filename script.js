@@ -5,8 +5,6 @@ function getRandomText(){
     if (http.readyState == 4 && http.status == 200){
       phrases = http.responseText.split("\n");
       e("randText").innerHTML = phrases[randomInt(0, phrases.length)];
-    } else {
-      e("randText").innerHTML = "Something happened :("
     }
   }
   http.open("GET", "random.txt", true);
