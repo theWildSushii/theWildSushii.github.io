@@ -7,7 +7,7 @@ function getRandomText(){
       e("randText").innerHTML = phrases[randomInt(0, phrases.length)];
     }
   }
-  http.open("GET", "http://thewildsushii.github.io/random.txt", true);
+  http.open("GET", "https://rawgit.com/theWildSushii/theWildSushii.github.io/master/random.txt", true);
   http.send();
 }
 
@@ -27,7 +27,7 @@ function getSidebar() {
       e("slist").innerHTML = "<li><p>Could not get data. <a href=\"#\" onClick=\"getSidebar()\">Try again?</a></p></li>";
     }
   }
-  http.open("GET", "http://thewildsushii.github.io/sidebar.txt", true);
+  http.open("GET", "https://rawgit.com/theWildSushii/theWildSushii.github.io/master/sidebar.txt", true);
   http.send();
 }
 
