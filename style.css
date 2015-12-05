@@ -77,6 +77,19 @@ a:visited {
   padding: 8px;
 }
 
+#posts > a > div {
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 3.14159px;
+  background-color: #252525;
+  box-shadow: 0px 0px 3.14159px #00ffff;
+  transition: box-shadow 0.25s linear 0s;
+}
+
+#posts > a > div:hover {
+  box-shadow: 0px 0px 8px #00ffff;
+}
+
 #posts > div {
   padding: 8px;
   margin-bottom: 16px;

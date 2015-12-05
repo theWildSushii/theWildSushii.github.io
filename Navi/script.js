@@ -1,3 +1,7 @@
+function e(x){
+  return document.getElementById(x);
+}
+
 function init() {
   e("tts").checked = true;
   loaded(false);

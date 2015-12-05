@@ -2,3 +2,4 @@
 <a href="downloads.html"><div>Downloads</div></a>
 <a href="about.html"><div>About</div></a>
 <a href="Navi/"><div>Try Navi!</div></a>
+<a href="vneuralexamples.html"><div>VNeural Examples</div></a>

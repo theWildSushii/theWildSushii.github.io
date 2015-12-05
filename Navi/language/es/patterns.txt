@@ -1,2 +1,2 @@
 que [verb]
-que {es|son} [objeto]
+que {es,son [object]
