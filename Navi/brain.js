@@ -2,25 +2,18 @@ var tempMemory = ""; //This is the output
 var store = {}; //TODO Use it somewhere...
 
 //Language parts. An AJAX call fills these variables
-var verbs = ["correr", "brincar", "coger", "comer"];
-var adjetives = ["lindo", "feo", "grande", "puto", "gay"];
-var places = ["escuela", "casa", "hosptial", "casa de putas", "farmacia", "ruta"];
-var nouns = ["laptop", "ropa", "madre"];
-var subjects = ["Alan", "Sushii", "Dani", "Cynthia", "el weon", "la weona"];
+var verbs = [];
+var adjetives = [];
+var places = [];
+var nouns = [];
+var subjects = [];
 var connectors = [];
 var suffixes = [];
 var prefixes = [];
 var prepositions = [];
 
 //Chat parts
-var patterns = [
-  "eres un [adjetive]",
-  "[subject] es muy [adjetive]",
-  "[subject] es homofobico",
-  "[subject] se la pasa [verb] en la [place]",
-  "¡[verb]!",
-  "[adjetive] el que lo lea",
-  "¡[adjetive] [noun]!"];
+var patterns = [];
 var newPatterns = [];
 
 //Other helpers
