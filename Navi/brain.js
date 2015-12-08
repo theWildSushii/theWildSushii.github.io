@@ -1,5 +1,5 @@
 var tempMemory = ""; //This is the output
-var store = {}; //TODO Use it somewhere...
+var store = {}; //TODO Use it somewhere and somehow...
 
 //Language parts. An AJAX call fills these variables
 var verbs = [];
@@ -11,8 +11,6 @@ var connectors = [];
 var suffixes = [];
 var prefixes = [];
 var prepositions = [];
-
-//Chat parts
 var patterns = [];
 var newPatterns = [];
 
@@ -22,16 +20,16 @@ var lang = "en"; //Chat language
 var voice = "UK English Female"; //Text-to-Speech voice
 
 function brainInit(){
-  //getVerbs("https://thewildsushii.github.io/Navi/language/" + lang + "/verbs.txt");
-  //getAdjetives("https://thewildsushii.github.io/Navi/language/" + lang + "/adjetives.txt");
-  //getPlaces("https://thewildsushii.github.io/Navi/language/" + lang + "/places.txt");
-  //getNouns("https://thewildsushii.github.io/Navi/language/" + lang + "/nouns.txt");
-  //getSubjects("https://thewildsushii.github.io/Navi/language/" + lang + "/subjects.txt");
-  //getConnectors("https://thewildsushii.github.io/Navi/language/" + lang + "/connectors.txt");
-  //getSuffixes("https://thewildsushii.github.io/Navi/language/" + lang + "/suffixes.txt");
-  //getPreffixes("https://thewildsushii.github.io/Navi/language/" + lang + "/preffixes.txt");
-  //getPrepositions("https://thewildsushii.github.io/Navi/language/" + lang + "/prepositions.txt");
-  //getPatterns("https://thewildsushii.github.io/Navi/language/" + lang + "/patterns.txt");
+  getVerbs("https://thewildsushii.github.io/Navi/language/" + lang + "/verbs.txt");
+  getAdjetives("https://thewildsushii.github.io/Navi/language/" + lang + "/adjetives.txt");
+  getPlaces("https://thewildsushii.github.io/Navi/language/" + lang + "/places.txt");
+  getNouns("https://thewildsushii.github.io/Navi/language/" + lang + "/nouns.txt");
+  getSubjects("https://thewildsushii.github.io/Navi/language/" + lang + "/subjects.txt");
+  getConnectors("https://thewildsushii.github.io/Navi/language/" + lang + "/connectors.txt");
+  getSuffixes("https://thewildsushii.github.io/Navi/language/" + lang + "/suffixes.txt");
+  getPreffixes("https://thewildsushii.github.io/Navi/language/" + lang + "/preffixes.txt");
+  getPrepositions("https://thewildsushii.github.io/Navi/language/" + lang + "/prepositions.txt");
+  getPatterns("https://thewildsushii.github.io/Navi/language/" + lang + "/patterns.txt");
   loaded(true);
 }
 
