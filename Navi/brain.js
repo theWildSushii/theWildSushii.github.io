@@ -256,7 +256,7 @@ function signal(input){
     tempMemory = tempMemory.replace("  ", " ");
 
   }
-  }
+}
 
 function randInt(min, max) {
   var rand = Math.floor(Math.random() * max) + min;
