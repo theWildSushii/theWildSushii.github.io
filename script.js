@@ -59,7 +59,9 @@ function showList(){
   isShowing = !isShowing;
 }
 
-window.onload = function() {
+window.onload = tWSInit;
+
+function tWSInit(){
   getSize();
   getRandomText();
   getSidebar();
