@@ -26,7 +26,7 @@ window.onload = function(){
   net.train([0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0], [1], net.Int, 50); //Introvert training
   e("0").innerHTML = wordSet[0][0];
   e("1").innerHTML = wordSet[0][1];
-  loaded(true);
+  tWSInit();
 }
 
 var i = 1;
