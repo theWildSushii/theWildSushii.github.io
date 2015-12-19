@@ -22,7 +22,10 @@
         <div></div>
         <div></div>
         <div class="list" id="list" onclick="showList()">
-          <ul>
+          <ul id="sList">
+            <li>
+              <a href="https://thewildsushii.github.io/">Back to tWS Home</a>
+            </li>
             <li>
               <p>Language</p>
               <select id="lang" class="option" onchange="langChange()">
@@ -33,6 +36,9 @@
             <li onclick="flick('tts')">
               <p>Use Text-to-Speech?</p>
               <input type="checkbox" id="tts" onclick="flick('tts')" class="option">
+            </li>
+            <li>
+              <a href="javascript:window.location.reload(false)">Refresh</a>
             </li>
           </ul>
         </div>

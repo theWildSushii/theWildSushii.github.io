@@ -12,6 +12,11 @@ h1, h2, h3, p {
   font-family: Helvetica;
 }
 
+a {
+  text-decoration: none;
+  font-family: Helvetica;
+}
+
 div.header {
   position: fixed;
   left: 0px;
@@ -43,7 +48,7 @@ img.navi {
 }
 
 div.settings {
-  position: absolute;
+  position: fixed;
   width: 48px;
   height: 48px;
   top: 0px;
@@ -70,8 +75,9 @@ div.settings > div.list{
   right: 0px;
   margin: 0px;
   border-radius: 0px;
-  overflow: hidden;
-  transition: width .16s linear 0s, background-color .216s linear 0s;
+  transition: width .25s linear 0s, background-color .25s linear 0s;
+  display: none;
+  overflow: scroll;
   background-color: rgba(0, 255, 255, 0);
   box-shadow: 0px 0px 16px rgba(0, 255, 255, 0.64);
 }
@@ -89,11 +95,15 @@ div.list > ul > li {
   margin: 0px;
 }
 
+div.list > ul > li > a{
+  width: 100%;
+}
+
 div.list > ul > li:hover {
   background-color: #00ffff;
 }
 
-div.list > ul > li > p {
+div.list > ul > li > p, div.list > ul > li > a {
   color: #000000;
   float: left;
 }
@@ -111,11 +121,14 @@ div.list > ul > li > .option {
   position: fixed;
   top: 0px;
   left: 0px;
+  width: 64px;
+  height: 64px;
+  margin-left: calc(50% - 32px);
   margin-top: 64px;
-  width: 128px;
-  height: 128px;
-  border-radius: 90px;
+  border-radius: 32px;
   background: url(img/loader.png);
+  background-color: #252525;
+  box-shadow: 0px 0px 3.14159px #00ffff;
   transition: opacity 0.25s linear 0s;
   animation: loaderAni 1s steps(36) infinite;
   -webkit-animation: loaderAni .8s steps(36) infinite;
@@ -127,7 +140,7 @@ div.list > ul > li > .option {
     background-position: 0px;
   }
   to{
-    background-position: -4608px;
+    background-position: -2304px;
   }
 }
 @-webkit-keyframes loaderAni{
@@ -135,7 +148,7 @@ div.list > ul > li > .option {
     background-position: 0px;
   }
   to{
-    background-position: -4608px;
+    background-position: -2304px;
   }
 }
 
