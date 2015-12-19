@@ -1,9 +1,9 @@
-a bordo
+Ôªøa bordo
 acerca de
 arriba
 ausente
-a travÈs
-despuÈs
+a trav√©s
+despu√©s
 en contra
 a lo largo
 junto a
@@ -18,17 +18,17 @@ encima
 bar
 excepto
 antes de
-detr·s
+detr√°s
 abajo
 debajo
 junto a
-adem·s
+adem√°s
 Entre
-m·s all·
+m√°s all√°
 pero
 por
 hacia
-c·lculo
+c√°lculo
 sobre
 en vista de
 A pesar de
@@ -36,7 +36,7 @@ abajo
 durante
 excepto
 salvo
-a excepciÛn de
+a excepci√≥n de
 siguiendo
 para
 de
@@ -65,7 +65,7 @@ encima
 pasado
 pendiente
 por
-m·s
+m√°s
 Pro
 respecto a
 a pesar de
@@ -88,7 +88,7 @@ Hasta que
 arriba
 sobre
 versus
-vÌa
+v√≠a
 con
 dentro
 sin

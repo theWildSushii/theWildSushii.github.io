@@ -1,8 +1,8 @@
-yo
+﻿yo
 nosotros
 nosotras
 ustedes
-�l
+él
 ella
 eso
 ellos

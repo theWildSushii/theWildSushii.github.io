@@ -1,4 +1,4 @@
-detr·s
+Ôªødetr√°s
 a popa
 abandonado
 avergonzado
@@ -18,7 +18,7 @@ abrupto
 ausente
 absorbido
 absorbente
-abstraÌdo
+abstra√≠do
 absurdo
 abundante
 abusivo
@@ -26,15 +26,15 @@ aceptable
 accesible
 accidental
 preciso
-·cido
-·cido
-ac˙stico
+√°cido
+√°cido
+ac√∫stico
 acre
 actualmente
 ad hoc
 firme
 adaptable
-fan·tico
+fan√°tico
 adhesivo
 contiguo
 adorable
@@ -45,7 +45,7 @@ agonizante
 agradable
 adelante
 un frasco
-alcohÛlico
+alcoh√≥lico
 alerta
 un me gusta
 viva
@@ -64,9 +64,9 @@ animado
 irritado
 molesto
 ansioso
-ap·tico
-acu·tico
-arom·tico
+ap√°tico
+acu√°tico
+arom√°tico
 arrogante
 avergonzado
 ambicioso
@@ -74,17 +74,17 @@ clasificado
 asombroso
 atractivo
 propicio
-autom·tico
+autom√°tico
 disponible
 promedio
 despierto
 consciente
 impresionante
 horrible
-axiom·tico
+axiom√°tico
 malo
-b·rbaro
-tÌmido
+b√°rbaro
+t√≠mido
 obsceno
 hermosa
 propio
@@ -97,9 +97,9 @@ mejor
 desconcertado
 grande
 ondulante
-tamaÒo de un bocado
+tama√±o de un bocado
 amargo
-extraÒo
+extra√±o
 negro
 en blanco y negro
 sangriento
@@ -111,7 +111,7 @@ grosero
 aburrida
 aburrido
 muelle
-sin lÌmites
+sin l√≠mites
 inteligente
 temerario
 valiente
@@ -123,7 +123,7 @@ brillante
 brillante
 ancho
 roto
-marrÛn
+marr√≥n
 desigual
 fuerte
 bullicioso
@@ -144,10 +144,10 @@ cambiable
 encantador
 barato
 alegre
-quÌmico
+qu√≠mico
 jefe
 infantil
-frÌo
+fr√≠o
 caballerosidad
 regordete
 fornido
@@ -162,12 +162,12 @@ cerrado
 torpe
 desordenado
 coherente
-frÌo
+fr√≠o
 vistoso
 colosal
 combativo
-cÛmodo
-com˙n
+c√≥modo
+com√∫n
 completar
 complejo
 preocupado
@@ -189,7 +189,7 @@ lleno de gente
 cruel
 mimoso
 culto
-incÛmodo
+inc√≥modo
 curioso
 Rizado
 curvo
@@ -197,19 +197,19 @@ con curvas
 Corte
 linda
 linda
-cÌnico
+c√≠nico
 chiflado
 a diario
-daÒado
+da√±ado
 perjudicial
-h˙medo
+h√∫medo
 peligroso
 apuesto
 oscuro
 apuesto
 deslumbrante
 muerto
-rostro sin expresiÛn
+rostro sin expresi√≥n
 ensordecedor
 Estimado
 elegante
@@ -223,7 +223,7 @@ desafiante
 delicado
 delicioso
 encantador
-demonÌaco
+demon√≠aco
 delirante
 dependiente
 deprimido
@@ -232,10 +232,10 @@ descriptivo
 abandonado
 detallado
 determinado
-diabÛlico
-did·ctico
+diab√≥lico
+did√°ctico
 diferente
-difÌcil
+dif√≠cil
 diligente
 horrible
 sucio
@@ -252,52 +252,52 @@ divergente
 mareado
 dominador
 dudoso
-monÛtono
+mon√≥tono
 draconiano
-dram·tico
+dram√°tico
 triste
 bebido
 seco
 aburrido
 polvoriento
 polvoriento
-din·mica
+din√°mica
 disfuncional
 ansioso
 temprano
 ensordecedor
 terroso
-f·cil
+f√°cil
 comestible
-econÛmico
+econ√≥mico
 educado
 eficaz
 eficiente
 ocho
-el·stico
+el√°stico
 exaltado
 mayor
-elÈctrico
+el√©ctrico
 elegante
 duendecillo
-Èlite
+√©lite
 desconcertado
 eminente
-vacÌo
+vac√≠o
 encantado
 encantador
 alentador
 soportable
-energÈtico
+energ√©tico
 enorme
 entretenido
 entusiasta
 envidioso
-ecu·nime
+ecu√°nime
 igual
 erguido
-err·tico
-etÈreo
+err√°tico
+et√©reo
 evanescente
 evasivo
 incluso
@@ -305,24 +305,24 @@ excelente
 emocionada
 emocionante
 exclusivo
-exÛtico
+ex√≥tico
 caro
 extra grande
-extra PequeÒo
+extra Peque√±o
 exuberante
 jubiloso
 fabuloso
 descolorido
-dÈbil
+d√©bil
 justo
 fiel
-errÛneo
+err√≥neo
 falso
 familiar
 famoso
-fan·tico
+fan√°tico
 lujoso
-fant·stico
+fant√°stico
 lejos
 extenso
 fascinado
@@ -331,10 +331,10 @@ gordo
 defectuoso
 temeroso
 audaz
-dÈbil
+d√©bil
 fingido
 hembra
-fÈrtil
+f√©rtil
 festivo
 pocos
 feroz
@@ -360,11 +360,11 @@ precedente
 olvidadizo
 afortunado
 cuatro
-fr·gil
-fr·gil
-frenÈtico
+fr√°gil
+fr√°gil
+fren√©tico
 gratis
-congelaciÛn
+congelaci√≥n
 frecuente
 fresco
 displicente
@@ -384,7 +384,7 @@ hablador
 retribuido
 picante
 abierta
-g·rrulo
+g√°rrulo
 llamativo
 general
 amable
@@ -394,7 +394,7 @@ dotado
 gigantesco
 atractivo
 reluciente
-f·cil
+f√°cil
 brillante
 glorioso
 lustroso
@@ -418,10 +418,10 @@ grotesco
 malhumorado
 sucio
 horrible
-gruÒÛn
+gru√±√≥n
 guardado
 inocente
-crÈdulo
+cr√©dulo
 borrascoso
 gutural
 habitual
@@ -430,12 +430,12 @@ santificado
 vacilante
 hermoso
 generosamente
-pr·ctico
+pr√°ctico
 colgante
 desventurado
 feliz
-difÌcil
-difÌcil de encontrar
+dif√≠cil
+dif√≠cil de encontrar
 armonioso
 duro
 odioso
@@ -452,10 +452,10 @@ horrible
 alto
 highfalutin
 agudo
-divertidÌsimo
+divertid√≠simo
 silbido
-histÛrico
-holÌstico
+hist√≥rico
+hol√≠stico
 hueco
 sin hogar
 acogedor
@@ -465,15 +465,15 @@ hospitalario
 caliente
 enorme
 pesado
-monÛtono
-humorÌstico
+mon√≥tono
+humor√≠stico
 hambriento
 apresurado
-daÒo
+da√±o
 silencioso
 fornido
-hipnÛtico
-histÈrico
+hipn√≥tico
+hist√©rico
 
 repulsivo
 helado
@@ -489,7 +489,7 @@ inmenso
 inminente
 imparcial
 imperfecto
-descortÈs
+descort√©s
 importante
 importado
 imposible
@@ -497,7 +497,7 @@ incandescente
 incompetente
 poco concluyente
 industrioso
-increÌble
+incre√≠ble
 barato
 infame
 innato
@@ -528,22 +528,22 @@ juvenil
 kaput
 afilado
 amable
-de buen corazÛn
+de buen coraz√≥n
 amablemente
 nudoso
 conocimiento
 experto
 conocido
 trabajado
-l·nguido
+l√°nguido
 carente
 cojo
 lamentable
-l·nguido
+l√°nguido
 gran
-˙ltimo
+√∫ltimo
 tarde
-cÛmico
+c√≥mico
 prodigar
 perezoso
 apoyarse
@@ -555,10 +555,10 @@ nivel
 lascivo
 luz
 como
-simp·tico
+simp√°tico
 cojeando
 alfabetizado
-pequeÒa
+peque√±a
 animado
 animado
 vivo
@@ -575,25 +575,25 @@ amoroso
 bajo
 humilde
 afortunado
-ridÌculo
+rid√≠culo
 aterronado
 lozano
 exuberante
 acostado
-lÌrico
+l√≠rico
 macabro
 macho
 enloquecedor
 locamente
 magenta
-m·gico
-magnÌfico
+m√°gico
+magn√≠fico
 majestuoso
 improvisado
 masculino
 malicioso
 mamut
-manÌaco
+man√≠aco
 muchos
 marcado
 macizo
@@ -605,10 +605,10 @@ maduro
 media
 miserable
 carnoso
-mÈdico
+m√©dico
 manso
 meloso
-melÛdico
+mel√≥dico
 derretido
 misericordioso
 mero
@@ -616,18 +616,18 @@ desordenado
 poderoso
 militar
 lechoso
-imbÈcil
+imb√©cil
 miniatura
 menor
-sinverg¸enza
+sinverg√ºenza
 brumoso
 mezclado
 gimiendo
 moderno
 mohoso
 trascendental
-inmÛvil
-montaÒoso
+inm√≥vil
+monta√±oso
 confusa
 mundano
 turbio
@@ -635,7 +635,7 @@ pulposo
 mudo
 misterioso
 ingenuo
-paÒal
+pa√±al
 angostas
 asqueroso
 natural
@@ -652,17 +652,17 @@ nervioso
 nuevo
 el siguiente
 bonito
-h·bil
-·gil
+h√°bil
+√°gil
 nueve
-·gil
+√°gil
 silencioso
 ruidoso
 despreocupado
 mediocre
 sin parar
 normal
-nost·lgico
+nost√°lgico
 curioso
 nocivo
 nulo
@@ -680,9 +680,9 @@ servil
 observante
 obsoleto
 asequible
-oce·nico
+oce√°nico
 impar
-excÈntrico
+exc√©ntrico
 antiguo
 pasado de moda
 omnisciente
@@ -690,57 +690,57 @@ uno
 oneroso
 abierto
 opuesto
-Ûptima
+√≥ptima
 naranja
 ordinario
-org·nico
+org√°nico
 osificado
 extrovertida
 indignante
 excepcional
 oval
 demasiado seguro
-lleno de alegrÌa
+lleno de alegr√≠a
 sobrevalorado
 abierto
 sobreexcitado
 
 doloroso
 esmerado
-p·lido
+p√°lido
 miserable
-lleno de p·nico
-panor·mico
+lleno de p√°nico
+panor√°mico
 paralelo
 tostado
 parsimonioso
 pasado
 pastoral
-patÈtico
-pacÌfico
+pat√©tico
+pac√≠fico
 penitente
 Perfecto
-periÛdico
+peri√≥dico
 permisible
 perpetuo
 chiquita
 chiquita
-fÛbica
-fÌsico
-baladÌ
+f√≥bica
+f√≠sico
+balad√≠
 Rosa
 picante
-pl·cido
+pl√°cido
 llanura
 planta
 el plastico
 plausible
 agradable
 valeroso
-in˙til
+in√∫til
 listo
-CortÈs
-polÌtico
+Cort√©s
+pol√≠tico
 pobre
 posesivo
 posible
@@ -758,9 +758,9 @@ productivo
 profuso
 protector
 orgulloso
-psicodÈlico
-psicÛpata
-p˙blico
+psicod√©lico
+psic√≥pata
+p√∫blico
 hinchado
 bombeado
 escuchimizado
@@ -771,21 +771,21 @@ perplejo
 misterioso
 curandero
 pintoresco
-peleÛn
+pele√≥n
 cuestionable
-r·pido
-m·s r·pida
+r√°pido
+m√°s r√°pida
 tranquilo
 peculiar
 quijotesco
-burlÛn
+burl√≥n
 rabioso
 racial
 harapiento
 lluvioso
 bullicioso
 desenfrenado
-r·pido
+r√°pido
 raro
 rasposa
 andrajoso
@@ -793,7 +793,7 @@ listo
 real
 rebelde
 receptivo
-recÛndito
+rec√≥ndito
 rojo
 redundante
 reflexivo
@@ -805,26 +805,26 @@ repulsivo
 resuelto
 resonante
 responsable
-retÛrico
+ret√≥rico
 Rico
 correcto
 justo
-legÌtimo
-rÌgido
+leg√≠timo
+r√≠gido
 maduro
 lujoso
 asado
 robusto
-rom·ntico
+rom√°ntico
 espacioso
 podrido
-·spero
+√°spero
 ronda
 real
 rubicundo
 grosero
 rural
-r˙stico
+r√∫stico
 implacable
 sable
 triste
@@ -839,7 +839,7 @@ escaso
 asustado
 aterrador
 disperso
-cientÌfico
+cient√≠fico
 brillante
 flaco
 chillando
@@ -850,7 +850,7 @@ reservado
 sosegado
 decoroso
 selectivo
-egoÌsta
+ego√≠sta
 separar
 grave
 lanudo
@@ -858,12 +858,12 @@ tembloroso
 superficial
 agudo
 brillante
-escalofrÌos
+escalofr√≠os
 chocante
 corto
 estridente
 cerrar
-tÌmido
+t√≠mido
 enfermos
 silencio
 silencio
@@ -873,15 +873,15 @@ sencillo
 simplista
 sincero
 seis
-h·bil
+h√°bil
 flaco
-soÒoliento
+so√±oliento
 Delgado
 baboso
 resbaladizo
 poco riguroso
 lento
-pequeÒa
+peque√±a
 inteligente
 maloliente
 sonriente
@@ -892,10 +892,10 @@ snob
 mocoso
 suave
 empapado
-sÛlido
-sombrÌo
+s√≥lido
+sombr√≠o
 sofisticado
-sÛrdido
+s√≥rdido
 dolorido
 dolorido
 agrio
@@ -906,8 +906,8 @@ picante
 spiffy
 puntiagudo
 espiritual
-malÈvolo
-esplÈndido
+mal√©volo
+espl√©ndido
 escalofriante
 inmaculado
 detectado
@@ -926,16 +926,16 @@ estable
 escarpado
 esteriotipado
 pegajoso
-rÌgido
+r√≠gido
 estimulante
-tacaÒo
+taca√±o
 Tormentoso
 Derecho
-extraÒo
+extra√±o
 a rayas
 fuerte
 estupendo
-est˙pido
+est√∫pido
 robusto
 suave
 subsecuente
@@ -944,18 +944,18 @@ exitoso
 sucinto
 repentino
 malhumorado
-s˙per
-magnÌfico
+s√∫per
+magn√≠fico
 superficial
 supremo
 ostentoso
 dulce
 sofocante
-r·pido
-sintom·tico
-sinÛnimo
-tab˙
-t·cito
+r√°pido
+sintom√°tico
+sin√≥nimo
+tab√∫
+t√°cito
 pegajoso
 talentoso
 alto
@@ -965,14 +965,14 @@ tangible
 picante
 tarta
 de buen gusto
-insÌpido
+ins√≠pido
 sabroso
 cursi
 lloroso
 tedioso
-chiquitÌn
-pequeÒito
-narraciÛn
+chiquit√≠n
+peque√±ito
+narraci√≥n
 temporal
 diez
 oferta
@@ -984,7 +984,7 @@ estupendo
 probado
 irascible
 agradecido
-terapÈutico
+terap√©utico
 grueso
 delgada
 que puede pensar
@@ -998,27 +998,27 @@ Tres
 tremendo
 ordenado
 ajustado
-tacaÒo
-min˙sculo
+taca√±o
+min√∫sculo
 cansado
 cansado
 sabroso
 aletargado
-difÌcil
+dif√≠cil
 imponente
 tranquilo
 de pacotilla
 tremendo
-difÌcil
+dif√≠cil
 trillado
 preocupado
 agresivo
 cierto
 veraz
 dos
-tÌpico
+t√≠pico
 ubicuo
-m·s fea
+m√°s fea
 feo
 ultra
 incapaz
@@ -1035,8 +1035,8 @@ sin igual
 desigual
 insalubre
 desinteresado
-˙nico
-desaliÒado
+√∫nico
+desali√±ado
 desconocido
 antinatural
 revoltoso
@@ -1048,16 +1048,16 @@ inusual
 pesado
 no escrito
 optimista
-engreÌdo
+engre√≠do
 trastornado
 tenso
 utilizado
-˙til
-in˙til
-utÛpico
+√∫til
+in√∫til
+ut√≥pico
 pronunciar
-m·s lejano
-vacÌo
+m√°s lejano
+vac√≠o
 vagabundo
 vago
 valioso
@@ -1073,7 +1073,7 @@ violento
 violeta
 vivaz
 sin voz
-vol·til
+vol√°til
 voraz
 vulgar
 chiflado
@@ -1085,9 +1085,9 @@ falto
 belicoso
 calentar
 cauteloso
-antieconÛmico
+antiecon√≥mico
 acuoso
-dÈbiles
+d√©biles
 rico
 cansado
 acicalado
@@ -1118,11 +1118,11 @@ mareado y confuso
 factible
 preocupado
 sin valor
-colÈrico
+col√©rico
 miserable
 incorrecto
 torcido
-xenÛfobo
+xen√≥fobo
 amarillo
 flexible
 joven
@@ -1130,4 +1130,4 @@ juvenil
 sabroso
 loco
 celoso
-enÈrgico
+en√©rgico

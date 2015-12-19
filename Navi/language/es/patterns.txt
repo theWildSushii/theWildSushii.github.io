@@ -1,4 +1,4 @@
-[noun] [verb] [place]
+﻿[noun] [verb] [place]
 [noun] [verb] [place]
 [noun] [verb] [noun]
 [noun] [connector] [adjetive]

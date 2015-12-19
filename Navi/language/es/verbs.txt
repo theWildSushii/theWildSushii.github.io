@@ -1,4 +1,4 @@
-acatar
+ï»¿acatar
 acelerar
 aceptar
 lograr
@@ -7,8 +7,8 @@ adquirir
 actuado
 activar
 adaptar
-añadir
-dirección
+aÃ±adir
+direcciÃ³n
 administrar
 admirar
 admitir
@@ -38,7 +38,7 @@ arbitrar
 argumentar
 surgir
 organizar
-detención
+detenciÃ³n
 llegar
 comprobar
 pedir
@@ -55,14 +55,14 @@ atraer
 auditado
 evitar
 despierto
-atrás
+atrÃ¡s
 hornear
 equilibrar
-prohibición
-explosión
+prohibiciÃ³n
+explosiÃ³n
 desnudo
-murciélago
-bañarse
+murciÃ©lago
+baÃ±arse
 batalla
 ser
 haz
@@ -105,15 +105,15 @@ respirar
 raza
 breve
 traer
-emisión
-moretón
+emisiÃ³n
+moretÃ³n
 cepillo
 burbuja
 presupuesto
 construir
 bache
 Quemadura
-ráfaga
+rÃ¡faga
 enterrar
 busto
 comprar
@@ -131,16 +131,16 @@ porque
 reto
 cambiar
 cargar
-gráfico
-persecución
-engañar
+grÃ¡fico
+persecuciÃ³n
+engaÃ±ar
 comprobar
 animar
 masticar
 ahogo
 elegir
 picar
-Reclamación
+ReclamaciÃ³n
 aplaudir
 aclarar
 clasificar
@@ -168,7 +168,7 @@ calcular
 concebir
 concentrado
 conceptualizar
-preocupación
+preocupaciÃ³n
 concluir
 conducta
 confesar
@@ -189,7 +189,7 @@ convertir
 coordinar
 copia
 correcto
-correlación
+correlaciÃ³n
 costo
 tos
 consejo
@@ -200,7 +200,7 @@ choque
 gatear
 crear
 arrastrarse
-crítica
+crÃ­tica
 Cruz
 aplastar
 llorar
@@ -210,12 +210,12 @@ curva
 Corte
 ciclo
 presa
-dañar
+daÃ±ar
 baile
 atrevimiento
 acuerdo
 decaer
-engañar
+engaÃ±ar
 decidir
 decorar
 definir
@@ -228,7 +228,7 @@ depender
 describir
 Desierto
 merecer
-diseño
+diseÃ±o
 destruir
 detalle
 detectar
@@ -257,10 +257,10 @@ doble
 duda
 borrador
 arrastrar
-desagüe
+desagÃ¼e
 dramatizar
 dibujar
-sueña
+sueÃ±a
 vestido
 bebida
 goteo
@@ -278,7 +278,7 @@ educar
 eliminar
 avergonzar
 emplear
-vacío
+vacÃ­o
 promulgado
 alentar
 fin
@@ -301,7 +301,7 @@ excitar
 excusa
 ejecutar
 ejercicio
-exposición
+exposiciÃ³n
 existir
 expandir
 esperar
@@ -322,13 +322,13 @@ sujetar
 fax
 miedo
 alimentar
-sensación
+sensaciÃ³n
 cerca
 ir a buscar
 pelea
 archivo
 llenar
-película
+pelÃ­cula
 finalizar
 financiar
 encontrar
@@ -346,10 +346,10 @@ flor
 mosca
 doblez
 seguir
-engañar
+engaÃ±ar
 prohibir
 fuerza
-pronóstico
+pronÃ³stico
 adelantar
 prever
 predecir
@@ -361,7 +361,7 @@ abandonar
 cuadro
 congelar
 asustar
-freír
+freÃ­r
 reunir
 mirada
 generar
@@ -378,13 +378,13 @@ grasa
 saludar
 mueca
 moler
-apretón
+apretÃ³n
 gemido
 crecer
-garantía
+garantÃ­a
 guardia
 adivinar
-guía
+guÃ­a
 martillo
 mano
 encargarse de
@@ -392,12 +392,12 @@ escribir a mano
 colgar
 suceder
 acosar
-daño
+daÃ±o
 odio
 guarida
 cabeza
 sanar
-montón
+montÃ³n
 escuchar
 calor
 ayuda
@@ -412,7 +412,7 @@ abrazo
 tararear
 cazar
 prisa
-daño
+daÃ±o
 hipotetizar
 identificar
 ignorar
@@ -452,10 +452,10 @@ introducir
 inventar
 inventario
 investigar
-invitación
+invitaciÃ³n
 irritar
 picar
-cárcel
+cÃ¡rcel
 atasco
 sacudida
 unirse
@@ -476,7 +476,7 @@ nudo
 saber
 etiqueta
 tierra
-último
+Ãºltimo
 risa
 lanzamiento
 laico
@@ -503,7 +503,7 @@ vivir
 carga
 localizar
 bloquear
-Iniciar sesión
+Iniciar sesiÃ³n
 largo
 Mira
 perder
@@ -520,7 +520,7 @@ Marcos
 mercado
 casarse
 juego
-compañero
+compaÃ±ero
 materia
 media
 la medida
@@ -533,8 +533,8 @@ memorizar
 arreglar
 mentor
 leche
-mía
-engañar
+mÃ­a
+engaÃ±ar
 extranar
 escribir mal
 error
@@ -544,12 +544,12 @@ gemido
 modelo
 modificar
 monitor
-páramo
+pÃ¡ramo
 motivar
 llorar
 movimiento
 cortar
-confusión
+confusiÃ³n
 jarra
 multiplicar
 asesinato
@@ -582,7 +582,7 @@ superar
 exagerar
 girar en descubierto
 rebosar
-oír
+oÃ­r
 adelantar
 derrocamiento
 deber
@@ -607,13 +607,13 @@ Perfecto
 realizar
 permiso
 persuadir
-teléfono
-fotografía
+telÃ©fono
+fotografÃ­a
 recoger
 piloto
 pellizco
 pino
-determinar con precisión
+determinar con precisiÃ³n
 pionero
 lugar
 plan
@@ -629,7 +629,7 @@ popular
 poseer
 enviar
 verter
-práctica
+prÃ¡ctica
 alabado
 orar
 predicar
@@ -646,7 +646,7 @@ oprima
 fingir
 evitar
 pinchazo
-impresión
+impresiÃ³n
 proceso
 obtener
 Produce
@@ -664,8 +664,8 @@ proporcionar
 publicar
 Halar
 bomba
-puñetazo
-punción
+puÃ±etazo
+punciÃ³n
 castigar
 compra
 empujar
@@ -684,7 +684,7 @@ alcanzar
 leer
 reordenar
 darse cuenta de
-razón
+razÃ³n
 recibir
 reconocer
 recomendar
@@ -719,9 +719,9 @@ respuesta
 informe
 representar
 reproducir
-petición
+peticiÃ³n
 rescate
-investigación
+investigaciÃ³n
 resolver
 responder
 restaurada
@@ -729,7 +729,7 @@ reestructurar
 retirarse
 recuperar
 regreso
-revisión
+revisiÃ³n
 revisar
 rima
 eliminar
@@ -741,7 +741,7 @@ riesgo
 robar
 Roca
 rodar
-putrefacción
+putrefacciÃ³n
 frotar
 ruina
 regla
@@ -754,9 +754,9 @@ ahorrar
 Sierra
 decir
 susto
-dispersión
+dispersiÃ³n
 programar
-regaño
+regaÃ±o
 quemar
 raspar
 rasga
@@ -793,13 +793,13 @@ choque
 zapato
 disparar
 Tienda
-espectáculo
+espectÃ¡culo
 encogimiento
 encogimiento de hombros
 cerrar
 suspiro
-señal
-señal
+seÃ±al
+seÃ±al
 simplificar
 pecado
 canta
@@ -807,7 +807,7 @@ lavabo
 sorbo
 sentar
 bosquejo
-esquí
+esquÃ­
 omitir
 bofetada
 matar
@@ -815,7 +815,7 @@ dormir
 diapositiva
 honda
 escabullirse
-resbalón
+resbalÃ³n
 abertura
 lento
 aplastar
@@ -832,7 +832,7 @@ nieve
 empapar
 resolver
 calmar
-Adivinación
+AdivinaciÃ³n
 ordenar
 sonar
 sembrar
@@ -847,11 +847,11 @@ gastar
 derramar
 girar
 escupir
-división
+divisiÃ³n
 estropear
 lugar
-pulverización
-propagación
+pulverizaciÃ³n
+propagaciÃ³n
 primavera
 brotar
 squash
@@ -876,7 +876,7 @@ puntada
 deja de
 almacenar
 correa
-línea de corriente
+lÃ­nea de corriente
 fortalecer
 tramo
 paso
@@ -890,7 +890,7 @@ estudiar
 cosas
 subarrendar
 sustraer
-tener éxito
+tener Ã©xito
 chupar
 sufrir
 sugerir
@@ -909,7 +909,7 @@ sudor
 barrer
 hinchar
 nadar
-oscilación
+oscilaciÃ³n
 cambiar
 simbolizar
 sintetizar
@@ -921,10 +921,10 @@ domar
 grifo
 objetivo
 sabor
-enseñar
-lágrima
+enseÃ±ar
+lÃ¡grima
 molestar
-teléfono
+telÃ©fono
 decir
 tentar
 aterrorizar
@@ -940,9 +940,9 @@ cosquillas
 corbata
 hora
 Consejo
-neumático
+neumÃ¡tico
 toque
-excursión
+excursiÃ³n
 remolcar
 rastro
 comercio
@@ -964,8 +964,8 @@ problema
 solucionar problemas
 confianza
 probar
-tirón
-caída
+tirÃ³n
+caÃ­da
 vuelta
 tutor
 giro
@@ -1013,13 +1013,13 @@ bienvenida
 encaminarse a
 mojado
 gimoteo
-látigo
+lÃ¡tigo
 giro
 susurro
 silbar
 ganar
 viento
-guiño
+guiÃ±o
 limpiar
 deseo
 retirar
@@ -1028,14 +1028,14 @@ resistir a
 tambalearse
 preguntarse
 trabajo
-preocupación
+preocupaciÃ³n
 envolver
 ruina
 luchar
 meneo
 exprimir
 escribe
-radiografía
+radiografÃ­a
 bostezo
 grito
 cremallera
