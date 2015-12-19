@@ -16,10 +16,16 @@ var newPatterns = [];
 
 //Other helpers
 var result = ""; //Holder for AJAX results
-var lang = "en"; //Chat language
-var voice = "UK English Female"; //Text-to-Speech voice
+var lang; //Chat language
+var voice; //Text-to-Speech voice
 
 function brainInit(){
+  lang = e("lang").value;
+  if(lang == "en"){
+    voice = "UK English Female";
+  } else if(lang == "es"){
+    voice = "Spanish Female";
+  }
   getVerbs("https://thewildsushii.github.io/Navi/language/" + lang + "/verbs.txt");
   getAdjetives("https://thewildsushii.github.io/Navi/language/" + lang + "/adjetives.txt");
   getPlaces("https://thewildsushii.github.io/Navi/language/" + lang + "/places.txt");
