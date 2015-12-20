@@ -218,15 +218,29 @@ div#input {
   position: fixed;
   bottom: 0px;
   left: 0px;
-  width: calc(100% - 104px);
+  width: calc(100% - 82px);
   height: 48px;
   margin: 8px;
+  background-color: #252525;
+  border: none;
+  color: #00ffff;
+  resize: none;
   font-family: Helvetica;
-  border-radius: 32px;
   font-size: 16pt;
   box-shadow: 0px 0px 8px #000000;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 4px;
+}
+
+#message::-webkit-input-placeholder {
+   color: #00dada;
+}
+
+#message::-moz-placeholder {
+   color: #00dada;
+}
+
+#message:-ms-input-placeholder {  
+   color: #00dada;
 }
 
 #submit {
