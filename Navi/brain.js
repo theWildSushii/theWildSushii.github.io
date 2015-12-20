@@ -1,6 +1,6 @@
 var tempMemory = ""; //This is the output
 var store = {}; //TODO Use it somewhere and somehow...
-var chars = "qwertyuiopasdfghjklñzxcvbnm. ,(){}[]¡!¿?";
+var chars = "qwertyuiopasdfghjklñzxcvbnm.,(){}[]¡!¿?$%&#\"=/*-_1234567890";
 
 //Language parts. An AJAX call fills these variables
 var verbs = [];
@@ -63,6 +63,17 @@ function brainInit(){
   netPrepositions.init(chars.length, 1);
   netPatterns.init(chars.length, 1);
   netNewPatterns.init(chars.length, 1);
+  netVerbs.setDinamic(true);
+  netAdjetives.setDinamic(true);
+  netPlaces.setDinamic(true);
+  netNouns.setDinamic(true);
+  netSubjects.setDinamic(true);
+  netConnectors.setDinamic(true);
+  netSuffixes.setDinamic(true);
+  netPrefixes.setDinamic(true);
+  netPrepositions.setDinamic(true);
+  netPatterns.setDinamic(true);
+  netNewPatterns.setDinamic(true);
   loaded(true);
 }
 
@@ -261,19 +272,33 @@ function say(input){
 }
 
 function signal(input){
-  var inData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  var inChars = input.split("");
+  var inData = [];
+  for(var i = 0 ; i < chars.length; i++){
+    inData[i] = 0;
+  }
+  var inChars = input.toLowerCase().split("");
   for(var i = 0; i < inChars.length; i++){
     inData[chars.indexOf(inChars[i])] += 1;
   }
+  var selVerbs = netVerbs.fire(inData, 3)[0] * 3.14159;
+  var selAdjetives = netAdjetives.fire(inData, 3)[0] * 3.14159;
+  var selPlaces = netPlaces.fire(inData, 3)[0] * 3.14159;
+  var selNouns = netNouns.fire(inData, 3)[0] * 3.14159;
+  var selSubjects = netSubjects.fire(inData, 3)[0] * 3.14159;
+  var selConnectors = netConnectors.fire(inData, 3)[0] * 3.14159;
+  var selSuffixes = netSuffixes.fire(inData, 3)[0] * 3.14159;
+  var selPrefixes = netPrefixes.fire(inData, 3)[0] * 3.14159;
+  var selPrepositions = netPrepositions.fire(inData, 3)[0] * 3.14159;
+  var selPatterns = netPatterns.fire(inData, 3)[0] * 3.14159;
+  var selNewPatterns = netNewPatterns.fire(inData, 3)[0] * 3.14159;
   while(tempMemory == ""){
     var prob = randInt(0, 10);
     if(prob >= 5){
       for(var i = 0; i < randInt(1, prob); i++){
         if(randBool() && newPatterns.length > 0){
-          tempMemory += newPatterns[randInt(0, newPatterns.length - 1)] + " ";
+          tempMemory += newPatterns[Math.round(selNewPatterns * newPatterns.lenght)] + " ";
         } else {
-          tempMemory += patterns[randInt(0, patterns.length - 1)] + " ";
+          tempMemory += patterns[Math.round(selPatterns * patterns.length)] + " ";
         }
       }
     }
@@ -288,20 +313,20 @@ function signal(input){
     }
     if(token == "[oAdjetive]"){
       if(randBool()){
-        tempMemory = tempMemory.replace("[oAdjetive]", adjetives[netAdjetives.fire(inData, 2)*adjetives.length]);
+        tempMemory = tempMemory.replace("[oAdjetive]", adjetives[Math.round(selAdjetives*adjetives.length)]);
       } else {
         tempMemory = tempMemory.replace("[oAdjetive]", "");
       }
     }
-    tempMemory = tempMemory.replace("[adjetive]", adjetives[netAdjetives.fire(inData, 2)*adjetives.length]);
-    tempMemory = tempMemory.replace("[verb]", verbs[netVerbs.fire(inData, 2)*verbs.length]);
-    tempMemory = tempMemory.replace("[place]", places[netPlaces.fire(inData, 2)*places.length]);
-    tempMemory = tempMemory.replace("[noun]", nouns[netNouns.fire(inData, 2)*nouns.length]);
-    tempMemory = tempMemory.replace("[subject]", subjects[netSubjects.fire(inData, 2)*subjects.lenght]);
-    tempMemory = tempMemory.replace("[connector]", connectors[netConnectors.fire(inData, 2)*connectors.length]);
-    tempMemory = tempMemory.replace("[suffix]", suffixes[netSuffixes.fire(inData, 2)*suffixes.length]);
-    tempMemory = tempMemory.replace("[prefix]", prefixes[netPrefixes.fire(inData, 2)*prefixes.length]);
-    tempMemory = tempMemory.replace("[preposition]", prepositions[netPrepositions.fire(inData, 2)*prepositions.length]);
+    tempMemory = tempMemory.replace("[adjetive]", adjetives[Math.round(selAdjetives*adjetives.length)]);
+    tempMemory = tempMemory.replace("[verb]", verbs[Math.round(selVerbs*verbs.length)]);
+    tempMemory = tempMemory.replace("[place]", places[Math.round(selPlaces*places.length)]);
+    tempMemory = tempMemory.replace("[noun]", nouns[Math.round(selNouns*nouns.length)]);
+    tempMemory = tempMemory.replace("[subject]", subjects[Math.round(selSubjects*subjects.lenght)]);
+    tempMemory = tempMemory.replace("[connector]", connectors[Math.round(selConnectors*connectors.length)]);
+    tempMemory = tempMemory.replace("[suffix]", suffixes[Math.round(selSuffixes*suffixes.length)]);
+    tempMemory = tempMemory.replace("[prefix]", prefixes[Math.round(selPrefixes*prefixes.length)]);
+    tempMemory = tempMemory.replace("[preposition]", prepositions[Math.round(selPrepositions*prepositions.length)]);
     tempMemory = tempMemory.replace("  ", " ");
   }
 }

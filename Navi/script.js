@@ -42,6 +42,12 @@ function flick(target){
   e(target).checked = !e(target).checked;
 }
 
+function keyDetector(e){
+  if(e.keyCode === 13){
+    sendMessage();
+  }
+}
+
 function sendMessage() {
   var text = e("message").value;
   for(var i = 0; i < text.length; i++){

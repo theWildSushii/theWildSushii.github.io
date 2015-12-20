@@ -60,7 +60,7 @@
     </div>
 
     <div class="chat">
-      <textarea type="text" id="message" placeholder="Let's talk!"></textarea>
+      <input type="text" id="message" placeholder="Let's talk!" onkeypress="keyDetector(event)">
       <input onClick="sendMessage()" id="submit" type="submit" value="">
     </div>
 
