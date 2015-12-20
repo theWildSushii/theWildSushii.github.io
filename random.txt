@@ -1,10 +1,12 @@
 ﻿Hello there.
 Crazy, but lazy developer.
+Crazy, but lazy developAH.
 Get Rice.js at <a href="https://github.com/theWildSushii/Rice.js">GitHub</a>.
+Get VNeural.js at <a href="https://github.com/theWildSushii/VNeural.js">GitHub</a>.
 Yeah... Navi still on development...
-( ͡° ͜ʖ ͡°)
-I can't write a joke, but I can write an awesome but useless JavaScript
-The random text will be always here
+( ͡° ͜ʖ ͡° )
+I can't write a joke, but I can write an awesome but useless JavaScript.
+The random text will be always here.
 I like trains.
 Random text!! Woohoo!!
 Smile!!  You are so beautiful.
@@ -13,17 +15,20 @@ Don't touch my tacos.
 Say hi to your webcam... just kidding.
 Don't forget to be fabulous everyday!
 42
-Free hugs
+Free hugs.
 I'm still not knowing who let the dogs out :(
 Oh hi, I'm up here :D
 BEHOLD THE POWER OF MY CAPS LOCK!!
-Notice me senpai
-I'm already at college and I still can't spell unessarcaryccery
-From day to night I'll be watching you
-Hello, you look so beautiful today
+Notice me senpai.
+I'm already at college and I still can't spell unessarcaryccery.
+From day to night I'll be watching you.
+Hello, you look so beautiful today.
 I'm not sure how many problems do I have because Math is one of them.
 This website is completely public at <a href=\"https://github.com/theWildSushii/theWildSushii.github.io\">GitHub</a>.
 Do you use Vim? Get <a href="https://github.com/theWildSushii/SweetCandy.vim">this</a> colorscheme.
 This message won't appear on small screens :D
 [Insert random message here]
 <a href="#" onclick="alert('I told you to not click that...')">Don't click this...</a>
+<a href="#" onclick="alert('Why did you click it? :(')">Don't click this...</a>
+<a href="#" onclick="alert('D:')">Don't click this...</a>
+<a href="#" onclick="alert('You little rebel... I like you')">Don't click this...</a>
