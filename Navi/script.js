@@ -30,21 +30,16 @@ function showList(){
 function loaded(state){
   var loader = e("loader");
   if(state){
+    e("message").disabled = false;
     loader.style.opacity = "0";
   } else {
+    e("message").disabled = true;
     loader.style.opacity = "1";
   }
 }
 
 function flick(target){
   e(target).checked = !e(target).checked;
-}
-
-function textCheck(e){
-  var code = (e.keyCode ? e.keyCode : e.which);
-  if(code == 13){
-    sendMessage();
-  }
 }
 
 function sendMessage() {
@@ -80,6 +75,8 @@ function popUp(user, rawText) {
       for(var i = 0; i < text.split("").length; i++){
         text = text.replace("<", "&lt;");
         text = text.replace(">", "&gt;");
+        text = text.replace("\"", "&quot;");
+        text = text.replace("&", "&amp;");
       }
     }
     var id = "m" + messageCount;

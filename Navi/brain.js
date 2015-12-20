@@ -1,5 +1,6 @@
 var tempMemory = ""; //This is the output
 var store = {}; //TODO Use it somewhere and somehow...
+var chars = "qwertyuiopasdfghjklñzxcvbnm. ,(){}[]¡!¿?";
 
 //Language parts. An AJAX call fills these variables
 var verbs = [];
@@ -18,8 +19,23 @@ var newPatterns = [];
 var result = ""; //Holder for AJAX results
 var lang; //Chat language
 var voice; //Text-to-Speech voice
+var inputs = [];
+
+//Neural networks. By VNeural
+var netVerbs = new VNeural();
+var netAdjetives = new VNeural();
+var netPlaces = new VNeural();
+var netNouns = new VNeural();
+var netSubjects = new VNeural();
+var netConnectors = new VNeural();
+var netSuffixes = new VNeural();
+var netPrefixes = new VNeural();
+var netPrepositions = new VNeural();
+var netPatterns = new VNeural();
+var netNewPatterns = new VNeural();
 
 function brainInit(){
+  chars = chars.split("");
   lang = e("lang").value;
   if(lang == "en"){
     voice = "UK English Female";
@@ -33,9 +49,20 @@ function brainInit(){
   getSubjects("https://thewildsushii.github.io/Navi/language/" + lang + "/subjects.txt");
   getConnectors("https://thewildsushii.github.io/Navi/language/" + lang + "/connectors.txt");
   getSuffixes("https://thewildsushii.github.io/Navi/language/" + lang + "/suffixes.txt");
-  getPreffixes("https://thewildsushii.github.io/Navi/language/" + lang + "/preffixes.txt");
+  getPrefixes("https://thewildsushii.github.io/Navi/language/" + lang + "/prefixes.txt");
   getPrepositions("https://thewildsushii.github.io/Navi/language/" + lang + "/prepositions.txt");
   getPatterns("https://thewildsushii.github.io/Navi/language/" + lang + "/patterns.txt");
+  netVerbs.init(chars.length, 1);
+  netAdjetives.init(chars.length, 1);
+  netPlaces.init(chars.length, 1);
+  netNouns.init(chars.length, 1);
+  netSubjects.init(chars.length, 1);
+  netConnectors.init(chars.length, 1);
+  netSuffixes.init(chars.length, 1);
+  netPrefixes.init(chars.length, 1);
+  netPrepositions.init(chars.length, 1);
+  netPatterns.init(chars.length, 1);
+  netNewPatterns.init(chars.length, 1);
   loaded(true);
 }
 
@@ -55,9 +82,21 @@ function langChange(){
   getSubjects("https://thewildsushii.github.io/Navi/language/" + lang + "/subjects.txt");
   getConnectors("https://thewildsushii.github.io/Navi/language/" + lang + "/connectors.txt");
   getSuffixes("https://thewildsushii.github.io/Navi/language/" + lang + "/suffixes.txt");
-  getPreffixes("https://thewildsushii.github.io/Navi/language/" + lang + "/preffixes.txt");
+  getPrefixes("https://thewildsushii.github.io/Navi/language/" + lang + "/prefixes.txt");
   getPrepositions("https://thewildsushii.github.io/Navi/language/" + lang + "/prepositions.txt");
   getPatterns("https://thewildsushii.github.io/Navi/language/" + lang + "/patterns.txt");
+  newPatterns = [];
+  netVerbs.init(chars.length, 1);
+  netAdjetives.init(chars.length, 1);
+  netPlaces.init(chars.length, 1);
+  netNouns.init(chars.length, 1);
+  netSubjects.init(chars.length, 1);
+  netConnectors.init(chars.length, 1);
+  netSuffixes.init(chars.length, 1);
+  netPrefixes.init(chars.length, 1);
+  netPrepositions.init(chars.length, 1);
+  netPatterns.init(chars.length, 1);
+  netNewPatterns.init(chars.length, 1);
   loaded(true);
 }
 
@@ -153,7 +192,7 @@ function getSuffixes(dir){
   http.send();
 }
 
-function getPreffixes(dir){
+function getPrefixes(dir){
   var http = ajax();
   http.onreadystatechange = function(){
     if(http.readyState == 4 && http.status == 200){
@@ -222,6 +261,11 @@ function say(input){
 }
 
 function signal(input){
+  var inData = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  var inChars = input.split("");
+  for(var i = 0; i < inChars.length; i++){
+    inData[chars.indexOf(inChars[i])] += 1;
+  }
   while(tempMemory == ""){
     var prob = randInt(0, 10);
     if(prob >= 5){
@@ -242,25 +286,23 @@ function signal(input){
       var options = temp.split(",")
       tempMemory = tempMemory.replace(token, options[randInt(0, options.length - 1)]);
     }
-    if(token == "[adjetive]"){
+    if(token == "[oAdjetive]"){
       if(randBool()){
-        tempMemory = tempMemory.replace("[adjetive]", adjetives[randInt(0, adjetives.length - 1)]);
+        tempMemory = tempMemory.replace("[oAdjetive]", adjetives[netAdjetives.fire(inData, 2)*adjetives.length]);
       } else {
-        tempMemory = tempMemory.replace("[adjetive]", "");
+        tempMemory = tempMemory.replace("[oAdjetive]", "");
       }
     }
-    tempMemory = tempMemory.replace("[verb]", verbs[randInt(0, verbs.length - 1)]);
-    tempMemory = tempMemory.replace("[place]", places[randInt(0, places.length - 1)]);
-    tempMemory = tempMemory.replace("[noun]", nouns[randInt(0, nouns.length - 1)]);
-    tempMemory = tempMemory.replace("[subject]", subjects[randInt(0, subjects.length - 1)]);
-    tempMemory = tempMemory.replace("[connector]", connectors[randInt(0, connectors.length - 1)]);
-    tempMemory = tempMemory.replace("[suffix]", suffixes[randInt(0, suffixes.length - 1)]);
-    tempMemory = tempMemory.replace("[prefix]", prefixes[randInt(0, prefixes.length - 1)]);
-    tempMemory = tempMemory.replace("[preposition]", prepositions[randInt(0, prepositions.length - 1)]);
-    tempMemory = tempMemory.replace("[subject]", subjects[randInt(0, subjects.length - 1)]);
-    tempMemory = tempMemory.replace("[subject]", subjects[randInt(0, subjects.length - 1)]);
+    tempMemory = tempMemory.replace("[adjetive]", adjetives[netAdjetives.fire(inData, 2)*adjetives.length]);
+    tempMemory = tempMemory.replace("[verb]", verbs[netVerbs.fire(inData, 2)*verbs.length]);
+    tempMemory = tempMemory.replace("[place]", places[netPlaces.fire(inData, 2)*places.length]);
+    tempMemory = tempMemory.replace("[noun]", nouns[netNouns.fire(inData, 2)*nouns.length]);
+    tempMemory = tempMemory.replace("[subject]", subjects[netSubjects.fire(inData, 2)*subjects.lenght]);
+    tempMemory = tempMemory.replace("[connector]", connectors[netConnectors.fire(inData, 2)*connectors.length]);
+    tempMemory = tempMemory.replace("[suffix]", suffixes[netSuffixes.fire(inData, 2)*suffixes.length]);
+    tempMemory = tempMemory.replace("[prefix]", prefixes[netPrefixes.fire(inData, 2)*prefixes.length]);
+    tempMemory = tempMemory.replace("[preposition]", prepositions[netPrepositions.fire(inData, 2)*prepositions.length]);
     tempMemory = tempMemory.replace("  ", " ");
-
   }
 }
 
