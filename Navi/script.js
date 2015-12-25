@@ -9,6 +9,11 @@ function init() {
   e("message").focus();
 }
 
+function customTTS(){
+  say(e("customtts").value);
+  e("customtts").value = "";
+}
+
 window.onload = init;
 
 var isShowing = false;
@@ -42,9 +47,16 @@ function flick(target){
   e(target).checked = !e(target).checked;
 }
 
-function keyDetector(e){
+function keyDetector(e, action){
   if(e.keyCode === 13){
-    sendMessage();
+    switch(action){
+      case 0:
+        sendMessage();
+        break;
+      case 1:
+        customTTS();
+        break;
+    }
   }
 }
 
@@ -67,7 +79,7 @@ function sendMessage() {
 function randInt(min, max) {
   var rand = Math.floor(Math.random() * max) + min;
   while(rand > max){
-    rand = rand - 1;
+    rand--;
   }
   return rand;
 }
@@ -88,9 +100,7 @@ function popUp(user, rawText) {
     var id = "m" + messageCount;
     var input = e("input");
     input.insertAdjacentHTML('beforebegin', "<div id=\"" + id + "\" class=\"" + user + "\"><p>" + text + "</p></div>");
-    messageCount = messageCount + 1;
-    if(messageCount > 6){
-      window.scrollTo(0,document.body.scrollHeight);
-    }
+    messageCount++;
+    window.scrollTo(0,document.body.scrollHeight);
   }
 }

@@ -44,6 +44,11 @@
             <li>
               <a href="javascript:window.location.reload(false)">Refresh</a>
             </li>
+            <li>
+              <p>TTS</p>
+              <input id="customtts" placeholder="Have fun!" onkeypress="keyDetector(event, 1)" type="text">
+              <input value="Say!" onclick="customTTS()" type="button">
+            </li>
           </ul>
         </div>
       </div>
@@ -60,7 +65,7 @@
     </div>
 
     <div class="chat">
-      <input type="text" id="message" placeholder="Let's talk!" onkeypress="keyDetector(event)">
+      <input type="text" id="message" placeholder="Let's talk!" onkeypress="keyDetector(event, 0)">
       <input onClick="sendMessage()" id="submit" type="submit" value="">
     </div>
 

@@ -112,6 +112,11 @@ div.list > ul > li > .option {
   float: right;
 }
 
+#customtts {
+  width: 90%;
+  margin-left: 8px;
+}
+
 #tts {
   width: 24px;
   height: 24px;
@@ -214,32 +219,36 @@ div#input {
   height: 64px;
 }
 
-#message {
+#message{
   position: fixed;
   bottom: 0px;
   left: 0px;
   width: calc(100% - 82px);
   height: 48px;
   margin: 8px;
+  box-shadow: 0px 0px 8px #000000;
+  padding-left: 4px;
+  font-size: 16pt;
+}
+
+input[type=text] {
   background-color: #252525;
   border: none;
   color: #00ffff;
   resize: none;
   font-family: Helvetica;
-  font-size: 16pt;
-  box-shadow: 0px 0px 8px #000000;
-  padding-left: 4px;
+  font-size: 12pt;
 }
 
-#message::-webkit-input-placeholder {
+input[type=text]::-webkit-input-placeholder {
    color: #00dada;
 }
 
-#message::-moz-placeholder {
+:input[type=text]:-moz-placeholder {
    color: #00dada;
 }
 
-#message:-ms-input-placeholder {  
+:input[type=text]-ms-input-placeholder {  
    color: #00dada;
 }
 
