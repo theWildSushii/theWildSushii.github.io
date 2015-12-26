@@ -9,6 +9,35 @@ function init() {
   e("message").focus();
 }
 
+function ajax(){
+  if (window.XMLHttpRequest){
+    return new XMLHttpRequest();
+  } else {
+    return new ActiveXObject("Microsoft.XMLHttp");
+  }
+}
+
+function say(input){
+  responsiveVoice.speak(input, voice);
+}
+
+function refresh(){
+  e("mList").innerHTML = "<noscript><div class=\"navi\"><p>You need JavaScript enabled in order to chat with me.</p></div></noscript><div id=\"input\"></div>";
+  loaded(false);
+  netVerbs.clear();
+  netAdjetives.clear();
+  netPlaces.clear();
+  netNouns.clear();
+  netSubjects.clear();
+  netConnectors.clear();
+  netSuffixes.clear();
+  netPrefixes.clear();
+  netPrepositions.clear();
+  netPatterns.clear();
+  messageCount = 0;
+  brainInit();
+}
+
 function customTTS(){
   say(e("customtts").value);
   e("customtts").value = "";
@@ -98,8 +127,7 @@ function popUp(user, rawText) {
       }
     }
     var id = "m" + messageCount;
-    var input = e("input");
-    input.insertAdjacentHTML('beforebegin', "<div id=\"" + id + "\" class=\"" + user + "\"><p>" + text + "</p></div>");
+    e("input").insertAdjacentHTML('beforebegin', "<div id=\"" + id + "\" class=\"" + user + "\"><p>" + text + "</p></div>");
     messageCount++;
     window.scrollTo(0,document.body.scrollHeight);
   }

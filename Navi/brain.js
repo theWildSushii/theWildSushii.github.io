@@ -1,7 +1,7 @@
 var tempMemory = ""; //This is a partial output
 var memory = ""; //This is the output
 var store = {}; //TODO Use it somewhere and somehow...
-var chars = "qwertyuiopasdfghjklñzxcvbnm.,(){}[]¡!¿?$%&#\"=/*-_1234567890";
+var chars = "qwertyuiopasdfghjklñzxcvbnmáéíóú.,(){}[]¡!¿?$%&#\"=/*\\-_1234567890".split("");
 
 //Language parts. An AJAX call fills these variables
 var verbs = [];
@@ -34,7 +34,6 @@ var netPrepositions = new VNeural();
 var netPatterns = new VNeural();
 
 function brainInit(){
-  chars = chars.split("");
   lang = e("lang").value;
   if(lang == "en"){
     voice = "UK English Female";
@@ -124,14 +123,6 @@ function langChange(){
   netPrepositions.forcePositive();
   netPlaces.forcePositive();
   loaded(true);
-}
-
-function ajax(){
-  if (window.XMLHttpRequest){
-    return new XMLHttpRequest();
-  } else {
-    return new ActiveXObject("Microsoft.XMLHttp");
-  }
 }
 
 function getVerbs(dir){
@@ -282,10 +273,6 @@ function parse(data){
   return output.toLowerCase();
 }
 
-function say(input){
-  responsiveVoice.speak(input, voice);
-}
-
 function signal(input){
   var inData = [];
   for(var i = 0 ; i < chars.length; i++){
@@ -295,18 +282,14 @@ function signal(input){
   for(var i = 0; i < inChars.length; i++){
     inData[chars.indexOf(inChars[i])] += 1;
   }
-  console.log("Input data: " + inData);
   while(tempMemory == ""){
     var prob = randInt(0, 10);
     if(prob >= 5){
       for(var i = 0; i < randInt(1, prob); i++){
         var selVerbs = netVerbs.fire(inData, 3)[0];
-        console.log("Verb: " + selVerbs);
         var selAdjetives = netAdjetives.fire(inData, 3)[0];
         var selPlaces = netPlaces.fire(inData, 3)[0];
-        console.log("Place: " + selPlaces);
         var selNouns = netNouns.fire(inData, 3)[0];
-        console.log("Noun: " + selNouns);
         var selSubjects = netSubjects.fire(inData, 3)[0];
         var selConnectors = netConnectors.fire(inData, 3)[0];
         var selSuffixes = netSuffixes.fire(inData, 3)[0];
@@ -326,7 +309,6 @@ function signal(input){
           if(selPrepositions > 1){selPrepositions /= 10}
         }
         tempMemory += patterns[Math.round(selPatterns * patterns.length)] + " ";
-        console.log("Pattern",i,":", patterns[Math.round(selPatterns * patterns.length)]);
       }
     }
   }

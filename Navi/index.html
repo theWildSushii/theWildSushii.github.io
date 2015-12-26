@@ -39,10 +39,10 @@
             </li>
             <li onclick="flick('tts')">
               <p>Use Text-to-Speech?</p>
-              <input type="checkbox" id="tts" onclick="flick('tts')" class="option">
+              <input type="checkbox" id="tts" onclick="flick('tts')" class="option"><label></label>
             </li>
             <li>
-              <a href="javascript:window.location.reload(false)">Refresh</a>
+              <a href="javascript:void()" onclick="refresh()">Refresh</a>
             </li>
             <li>
               <p>TTS</p>
@@ -55,7 +55,7 @@
 
     </div>
 
-    <div class="chat-list">
+    <div id="mList" class="chat-list">
       <noscript>
         <div class="navi">
           <p>You need JavaScript enabled in order to chat with me.</p>
