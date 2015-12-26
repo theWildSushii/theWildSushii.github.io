@@ -126,9 +126,27 @@ select {
   padding: 2px;
 }
 
-#tts {
-  width: 24px;
-  height: 24px;
+input[type="checkbox"]{
+  display: none;
+}
+
+label:before {
+  content: "";
+  display: inline-block;
+  float: right;
+  width: 20px;
+  height: 20px;
+  right: 0px;
+  padding: 0px;
+  background-color: #252525;
+}
+
+input[type="checkbox"]:checked + label:before{
+  content: "\2713";
+  color: #00ffff;
+  padding: 0px;
+  text-align: center;
+  font-size: 10pt;
 }
 
 #loader {
