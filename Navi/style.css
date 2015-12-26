@@ -105,6 +105,7 @@ div.list > ul > li:hover {
 
 div.list > ul > li > p, div.list > ul > li > a {
   color: #000000;
+  text-shadow: 0px 0px 8px #00ffff;
   float: left;
 }
 
@@ -113,8 +114,16 @@ div.list > ul > li > .option {
 }
 
 #customtts {
-  width: 90%;
+  width: calc(100% - 80px);
   margin-left: 8px;
+}
+
+select {
+  background-color: #252525;
+  color: #00ffff;
+  font-family: Helvetica;
+  border: none;
+  padding: 2px;
 }
 
 #tts {
