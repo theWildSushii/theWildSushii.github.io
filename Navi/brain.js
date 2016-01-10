@@ -1,7 +1,7 @@
 var tempMemory = ""; //This is a partial output
 var memory = ""; //This is the output
 var store = {}; //TODO Use it somewhere and somehow...
-var chars = "qwertyuiopasdfghjklñzxcvbnmáéíóú.,(){}[]¡!¿?$%&#\"=/*\\-_1234567890".split("");
+var chars = "qwertyuiopasdfghjklñzxcvbnm abcdefghijklmnñopqrstuvxyz áéíóú ., () {} [] ¡! ¿? $%&#\"=/*\\-_ 1234567890".split("");
 
 //Language parts. An AJAX call fills these variables
 var verbs = [];
@@ -22,16 +22,11 @@ var voice; //Text-to-Speech voice
 var inputs = [];
 
 //Neural networks. By VNeural
-var netVerbs = new VNeural();
-var netAdjetives = new VNeural();
-var netPlaces = new VNeural();
-var netNouns = new VNeural();
-var netSubjects = new VNeural();
-var netConnectors = new VNeural();
-var netSuffixes = new VNeural();
-var netPrefixes = new VNeural();
-var netPrepositions = new VNeural();
-var netPatterns = new VNeural();
+var netInput = new VNeural();
+var netMiddle1 = new VNeural();
+var netMiddle2 = new VNeural();
+var netMiddle3 = new VNeural();
+var netOutput = new VNeural();
 
 function brainInit(){
   lang = e("lang").value;
@@ -50,36 +45,11 @@ function brainInit(){
   getPrefixes("https://thewildsushii.github.io/Navi/language/" + lang + "/prefixes.txt");
   getPrepositions("https://thewildsushii.github.io/Navi/language/" + lang + "/prepositions.txt");
   getPatterns("https://thewildsushii.github.io/Navi/language/" + lang + "/patterns.txt");
-  netVerbs.init(chars.length, 1);
-  netAdjetives.init(chars.length, 1);
-  netPlaces.init(chars.length, 1);
-  netNouns.init(chars.length, 1);
-  netSubjects.init(chars.length, 1);
-  netConnectors.init(chars.length, 1);
-  netSuffixes.init(chars.length, 1);
-  netPrefixes.init(chars.length, 1);
-  netPrepositions.init(chars.length, 1);
-  netPatterns.init(chars.length, 1);
-  netVerbs.setDinamic(true);
-  netAdjetives.setDinamic(true);
-  netPlaces.setDinamic(true);
-  netNouns.setDinamic(true);
-  netSubjects.setDinamic(true);
-  netConnectors.setDinamic(true);
-  netSuffixes.setDinamic(true);
-  netPrefixes.setDinamic(true);
-  netPrepositions.setDinamic(true);
-  netPatterns.setDinamic(true);
-  netVerbs.forcePositive();
-  netAdjetives.forcePositive();
-  netPlaces.forcePositive();
-  netNouns.forcePositive();
-  netSubjects.forcePositive();
-  netConnectors.forcePositive();
-  netSuffixes.forcePositive();
-  netPrefixes.forcePositive();
-  netPrepositions.forcePositive();
-  netPlaces.forcePositive();
+  netInput.init(8, 16);
+  netMiddle1.init(16, 32);
+  netMiddle2.init(32, 16);
+  netMiddle3.init(16, 8);
+  netOutput.init(8, 10);
   loaded(true);
 }
 
@@ -102,26 +72,11 @@ function langChange(){
   getPrefixes("https://thewildsushii.github.io/Navi/language/" + lang + "/prefixes.txt");
   getPrepositions("https://thewildsushii.github.io/Navi/language/" + lang + "/prepositions.txt");
   getPatterns("https://thewildsushii.github.io/Navi/language/" + lang + "/patterns.txt");
-  netVerbs.init(chars.length, 1);
-  netAdjetives.init(chars.length, 1);
-  netPlaces.init(chars.length, 1);
-  netNouns.init(chars.length, 1);
-  netSubjects.init(chars.length, 1);
-  netConnectors.init(chars.length, 1);
-  netSuffixes.init(chars.length, 1);
-  netPrefixes.init(chars.length, 1);
-  netPrepositions.init(chars.length, 1);
-  netPatterns.init(chars.length, 1);
-  netVerbs.forcePositive();
-  netAdjetives.forcePositive();
-  netPlaces.forcePositive();
-  netNouns.forcePositive();
-  netSubjects.forcePositive();
-  netConnectors.forcePositive();
-  netSuffixes.forcePositive();
-  netPrefixes.forcePositive();
-  netPrepositions.forcePositive();
-  netPlaces.forcePositive();
+  netInput.init(8, 16);
+  netMiddle1.init(16, 32);
+  netMiddle2.init(32, 16);
+  netMiddle3.init(16, 8);
+  netOutput.init(8, 10);
   loaded(true);
 }
 
@@ -256,10 +211,7 @@ function wordExists(word){
 }
 
 function parse(data){
-  var keys = data.toLowerCase().split(" ");
-  for(var i = 0; i < keys.length; i++){
-    signal(keys[i]);
-  }
+  signal(data.toLowerCase());
   var prePattern = [];
   //TODO better pattern thing
   prePattern = data;
@@ -270,90 +222,171 @@ function parse(data){
   if(e("tts").checked){
     say(output);
   }
+  loaded(true);
   return output.toLowerCase();
 }
 
+function splitBytes(byteArray){
+  var bitArray = [];
+  for(var i = 0; i < byteArray.length; i++){
+    bitArray.push((byteArray[i] >> 7) - ((byteArray[i] >> 8) << 1));
+    bitArray.push((byteArray[i] >> 6) - ((byteArray[i] >> 7) << 1));
+    bitArray.push((byteArray[i] >> 5) - ((byteArray[i] >> 6) << 1));
+    bitArray.push((byteArray[i] >> 4) - ((byteArray[i] >> 5) << 1));
+    bitArray.push((byteArray[i] >> 3) - ((byteArray[i] >> 4) << 1));
+    bitArray.push((byteArray[i] >> 2) - ((byteArray[i] >> 3) << 1));
+    bitArray.push((byteArray[i] >> 1) - ((byteArray[i] >> 2) << 1));
+    bitArray.push((byteArray[i]) - ((byteArray[i] >> 1) << 1));
+  }
+  return bitArray;
+}
+
+function joinBytes(bitArray){
+  var byteArray = [];
+  for(var i = 0; i < bitArray.length; i++){
+    var cbyte = bitArray[i] << 15;
+    cbyte += bitArray[++i] << 14;
+    cbyte += bitArray[++i] << 13;
+    cbyte += bitArray[++i] << 12;
+    cbyte += bitArray[++i] << 11;
+    cbyte += bitArray[++i] << 10;
+    cbyte += bitArray[++i] << 9;
+    cbyte += bitArray[++i] << 8;
+    cbyte += bitArray[++i] << 7;
+    cbyte += bitArray[++i] << 6;
+    cbyte += bitArray[++i] << 5;
+    cbyte += bitArray[++i] << 4;
+    cbyte += bitArray[++i] << 3;
+    cbyte += bitArray[++i] << 2;
+    cbyte += bitArray[++i] << 1;
+    cbyte += bitArray[++i];
+    byteArray.push(cbyte);
+  }
+  return byteArray;
+}
+
+function b2S(bytes){
+  return String.fromCharCode.apply(String, bytes);
+}
+
+function s2B(str){
+  var bytes = [];
+  for(var i = 0; i < str.length; i++){
+    bytes.push(str.charCodeAt(i));
+  }
+  return bytes;
+}
+
 function signal(input){
-  var inData = [];
-  for(var i = 0 ; i < chars.length; i++){
-    inData[i] = 0;
+  var keys = input.split(" ");
+  var wChars = [];
+  var preBytes = []
+  var bytes = [];
+  for(var i = 0; i < keys.length; i++){
+    wChars[i] = keys[i].split("");
+    preBytes[i] = [];
+    for(var j = 0; j < wChars[i].length; j++){
+      preBytes[i][j] = splitBytes(s2B(wChars[i][j]));
+    }
   }
-  var inChars = input.toLowerCase().split("");
-  for(var i = 0; i < inChars.length; i++){
-    inData[chars.indexOf(inChars[i])] += 1;
+  for(var i = 0; i < preBytes.length; i++){
+    bytes[i] = [0, 0, 0, 0, 0, 0, 0, 0];
+    for(var j = 0; j < preBytes[i].length; j++){
+      for(var z = 0; z < 8; z++){
+        bytes[i][z] += preBytes[i][j][z];
+      }
+    }
   }
+  var outputs = [];
   while(tempMemory == ""){
-    var prob = randInt(0, 10);
-    if(prob >= 5){
-      for(var i = 0; i < randInt(1, prob); i++){
-        var selVerbs = netVerbs.fire(inData, 3)[0];
-        var selAdjetives = netAdjetives.fire(inData, 3)[0];
-        var selPlaces = netPlaces.fire(inData, 3)[0];
-        var selNouns = netNouns.fire(inData, 3)[0];
-        var selSubjects = netSubjects.fire(inData, 3)[0];
-        var selConnectors = netConnectors.fire(inData, 3)[0];
-        var selSuffixes = netSuffixes.fire(inData, 3)[0];
-        var selPrefixes = netPrefixes.fire(inData, 3)[0];
-        var selPrepositions = netPrepositions.fire(inData, 3)[0];
-        var selPatterns = netPatterns.fire(inData, 3)[0];
-        for(var z = 0; z < 3; z++){
-          if(selVerbs > 1){selVerbs /= 10}
-          if(selAdjetives > 1){selAdjetives /= 10}
-          if(selPlaces > 1){selPlaces /= 10}
-          if(selNouns > 1){selNouns /= 10}
-          if(selSubjects > 1){selSubjects /= 10}
-          if(selConnectors > 1){selConnectors /= 10}
-          if(selSuffixes > 1){selSuffixes /= 10}
-          if(selPrefixes > 1){selPrefixes /= 10}
-          if(selPatterns > 1){selPatterns /= 10}
-          if(selPrepositions > 1){selPrepositions /= 10}
+    if(memory != "" || randBool()){
+      for(var i = 0; i < keys.length; i++){
+        if(randBool()){
+          outputs[i] = netOutput.fire(
+              netMiddle3.fire(
+                netMiddle2.fire(
+                  netMiddle1.fire(
+                    netInput.fire(
+                      bytes[i],
+                      2),
+                    2),
+                  2),
+                2),
+            3);
+          var selAdjetives = outputs[i][0];
+          var selVerbs = outputs[i][1];
+          var selPlaces = outputs[i][2];
+          var selNouns = outputs[i][3];
+          var selSubjects = outputs[i][4];
+          var selConnectors = outputs[i][5];
+          var selSuffixes = outputs[i][6];
+          var selPrefixes = outputs[i][7];
+          var selPrepositions = outputs[i][8];
+          var selPatterns = outputs[i][9];
+          for(var z = 0; z < 10; z++){
+            if(selAdjetives < 0.001){selAdjetives *= 10}
+            if(selVerbs < 0.001){selVerbs *= 10}
+            if(selPlaces < 0.001){selPlaces *= 10}
+            if(selNouns < 0.001){selNouns *= 10}
+            if(selSubjects < 0.001){selSubjects *= 10}
+            if(selConnectors < 0.001){selConnectors *= 10}
+            if(selSuffixes < 0.001){selSuffixes *= 10}
+            if(selPrefixes < 0.001){selPrefixes *= 10}
+            if(selPatterns < 0.001){selPatterns *= 10}
+
+            if(selAdjetives > 1){selAdjetives /= 10}
+            if(selVerbs > 1){selVerbs /= 10}
+            if(selPlaces > 1){selPlaces /= 10}
+            if(selNouns > 1){selNouns /= 10}
+            if(selSubjects > 1){selSubjects /= 10}
+            if(selConnectors > 1){selConnectors /= 10}
+            if(selSuffixes > 1){selSuffixes /= 10}
+            if(selPrefixes > 1){selPrefixes /= 10}
+            if(selPatterns > 1){selPatterns /= 10}
+          }
+          tempMemory = patterns[Math.round(selPatterns * (patterns.length - 1))];
+          var tokens = tempMemory.split(" ");
+          for(var i = 0; i < tokens.length; i++){
+            var token = tokens[i];
+            if(token.charAt(0) == "{"){
+              var temp = token.replace("{", "");
+              var options = temp.split(",");
+              tempMemory = tempMemory.replace(token, options[randInt(0, options.length - 1)]);
+            }
+            if(token == "[oAdjetive]"){
+              if(randBool()){
+                tempMemory = tempMemory.replace("[oAdjetive]", adjetives[Math.round(selAdjetives * (adjetives.length - 1))]);
+              } else {
+                tempMemory = tempMemory.replace("[oAdjetive]", "");
+              }
+            }
+            tempMemory = tempMemory.replace("[adjetive]", adjetives[Math.round(selAdjetives * (adjetives.length - 1))]);
+            tempMemory = tempMemory.replace("[verb]", verbs[Math.round(selVerbs * (verbs.length - 1))]);
+            tempMemory = tempMemory.replace("[place]", places[Math.round(selPlaces * (places.length - 1))]);
+            tempMemory = tempMemory.replace("[noun]", nouns[Math.round(selNouns * (nouns.length - 1))]);
+            tempMemory = tempMemory.replace("[subject]", subjects[Math.round(selSubjects * (subjects.length - 1))]);
+            tempMemory = tempMemory.replace("[connector]", connectors[Math.round(selConnectors * (connectors.length - 1))]);
+            tempMemory = tempMemory.replace("[suffix]", suffixes[Math.round(selSuffixes * (suffixes.length - 1))]);
+            tempMemory = tempMemory.replace("[prefix]", prefixes[Math.round(selPrefixes * (prefixes.length - 1))]);
+            tempMemory = tempMemory.replace("[preposition]", prepositions[Math.round(selPrepositions * (prepositions.length - 1))]);
+            tempMemory = tempMemory.replace("  ", " ");
+          }
         }
-        tempMemory += patterns[Math.round(selPatterns * patterns.length)] + " ";
       }
     }
   }
-  var tokens = tempMemory.split(" ");
-  for(var i = 0; i < tokens.length; i++){
-    var token = tokens[i];
-    if(token.charAt(0) == "{"){
-      var temp = token.replace("{", "");
-      var options = temp.split(",")
-      tempMemory = tempMemory.replace(token, options[randInt(0, options.length - 1)]);
-    }
-    if(token == "[oAdjetive]"){
-      if(randBool()){
-        tempMemory = tempMemory.replace("[oAdjetive]", adjetives[Math.round(selAdjetives*adjetives.length)]);
-      } else {
-        tempMemory = tempMemory.replace("[oAdjetive]", "");
-      }
-    }
-    tempMemory = tempMemory.replace("[adjetive]", adjetives[Math.round(selAdjetives*adjetives.length)]);
-    tempMemory = tempMemory.replace("[verb]", verbs[Math.round(selVerbs*verbs.length)]);
-    tempMemory = tempMemory.replace("[place]", places[Math.round(selPlaces*places.length)]);
-    tempMemory = tempMemory.replace("[noun]", nouns[Math.round(selNouns*nouns.length)]);
-    tempMemory = tempMemory.replace("[subject]", subjects[Math.round(selSubjects*subjects.lenght)]);
-    tempMemory = tempMemory.replace("[connector]", connectors[Math.round(selConnectors*connectors.length)]);
-    tempMemory = tempMemory.replace("[suffix]", suffixes[Math.round(selSuffixes*suffixes.length)]);
-    tempMemory = tempMemory.replace("[prefix]", prefixes[Math.round(selPrefixes*prefixes.length)]);
-    tempMemory = tempMemory.replace("[preposition]", prepositions[Math.round(selPrepositions*prepositions.length)]);
-    tempMemory = tempMemory.replace("  ", " ");
-  }
-  memory += tempMemory;
+  memory += tempMemory + " ";
   tempMemory = "";
 }
 
 function randInt(min, max) {
-  var rand = Math.floor(Math.random() * max) + min;
-  while(rand > max){
-    rand = rand - 1;
-  }
-  return rand;
+  return Math.floor(Math.random() * max + min) - min;
+}
+
+function randFloat(min, max){
+  return (Math.random() * max + min) - min;
 }
 
 function randBool(){
-  var out = false;
-  if(randInt(1, 10) > 5){
-    out = true;
-  }
-  return out;
+  return randInt(1, 10) > 5;
 }
