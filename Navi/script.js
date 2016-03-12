@@ -24,16 +24,6 @@ function say(input){
 function refresh(){
   e("mList").innerHTML = "<noscript><div class=\"navi\"><p>You need JavaScript enabled in order to chat with me.</p></div></noscript><div id=\"input\"></div>";
   loaded(false);
-  netVerbs.clear();
-  netAdjetives.clear();
-  netPlaces.clear();
-  netNouns.clear();
-  netSubjects.clear();
-  netConnectors.clear();
-  netSuffixes.clear();
-  netPrefixes.clear();
-  netPrepositions.clear();
-  netPatterns.clear();
   messageCount = 0;
   brainInit();
 }
@@ -95,7 +85,7 @@ function sendMessage() {
     text = text.replace("\n", " ");
   }
   e("message").value = "";
-  if(text != "" || text != " " || text != "  "){
+  if(text != "" && text != " " && text != "  "){
     e("message").focus();
     popUp("user", text);
     loaded(false);
@@ -114,6 +104,10 @@ function randInt(min, max) {
 
 var messageCount = 0;
 
+var myArray;
+var tId;
+var loopTimer;
+var done = true;
 function popUp(user, rawText) {
   var text = rawText;
   if(text != ""){
@@ -121,28 +115,36 @@ function popUp(user, rawText) {
       for(var i = 0; i < text.split("").length; i++){
         text = text.replace("<", "&lt;");
         text = text.replace(">", "&gt;");
-        text = text.replace("\"", "&quot;");
         text = text.replace("&", "&amp;");
       }
     }
     var id = "m" + messageCount;
-    e("input").insertAdjacentHTML('beforebegin', "<div id=\"" + id + "\" class=\"" + user + "\"><p>" + text + "</p></div>");
+    if(user != "navi"){
+      e("input").insertAdjacentHTML('beforebegin', "<div id=\"" + id + "\" class=\"" + user + "\"><p>" + text + "</p></div>");
+    } else {
+      done = false;
+      if(e("tts").checked){
+        say(text);
+      }
+      e("input").insertAdjacentHTML('beforebegin', "<div id=\"" + id + "\" class=\"" + user + "\"><p id=\"n" + id + "\"></p></div>");
+      loaded(true);
+      myArray = text.split("");
+      tId = "n" + id;
+      frameLooper();
+    }
     messageCount++;
-    window.scrollTo(0,document.body.scrollHeight);
-    var keyboardEvent = document.createEvent("KeyboardEvent");
-    var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
-    keyboardEvent[initMethod](
-      "keydown", // event type : keydown, keyup, keypress
-      true, // bubbles
-      true, // cancelable
-      window, // viewArg: should be window
-      false, // ctrlKeyArg
-      false, // altKeyArg
-      false, // shiftKeyArg
-      false, // metaKeyArg
-      35, // keyCodeArg : unsigned long the virtual key code, else 0
-      0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
-    );
-    document.dispatchEvent(keyboardEvent);
   }
+}
+function frameLooper() {
+  if(!done){
+    window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+  }
+  if(myArray.length > 0) {
+    var temp = myArray.shift();
+    e(tId).innerHTML += temp;
+  } else {
+    clearTimeout(loopTimer);
+    done = true;
+  }
+  loopTimer = setTimeout('frameLooper()',50);
 }

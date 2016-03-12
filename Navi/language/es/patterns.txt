@@ -1,10 +1,29 @@
-﻿[noun] [verb] [place]
-[noun] [verb] [place]
-[noun] [verb] [noun]
+﻿[noun] [connector] [verb] [place]
+[noun] [connector] [verb] [noun]
+[noun] [connector] [verb] [noun] [noun2]
 [noun] [connector] [adjetive]
-[noun] [connector] [noun]
-[subject] [verb] [place]
-[subject] [verb] [place]
-[subject] [verb] [noun]
+[noun] [connector] [oAdjetive] [noun]
+[subject] [connector] [verb] [place]
+[subject] [connector] [verb] [oAdjetive] [noun]
 [subject] [connector] [adjetive]
 [subject] [connector] [noun]
+[subject] [connector] [noun] [noun2]
+¿[subject] [verb] [subject2]?
+¿[subject] [verb] [noun]?
+¿[noun] [verb] [subject]?
+¿dónde [connector] [noun]?
+¿dónde [connector] [subject]?
+¿está [subject] [place]?
+¿es [subject] [adjetive]?
+¿es [noun] [adjetive]?
+sí
+no
+talvez
+claro
+interesante
+¿por qué?
+¿por qué no?
+[subject] [connector] [place]
+[subject] [connector] [place] con [subject2]
+[subject] [connector] [place] [verb] with [subject2]
+[noun] [connector] [place]

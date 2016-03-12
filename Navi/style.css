@@ -207,18 +207,16 @@ div.chat {
 
 div.navi {
   position: relative;
-  margin: 8px;
-  margin-right: 64px;
+  margin-left: 16px;
   border-radius: 35px;
-  padding: 16px;
+  padding: 4px;
 }
 
 div.user {
   position: relative;
-  margin: 8px;
-  margin-left: 64px;
+  margin-right: 16px;
   border-radius: 35px;
-  padding: 16px;
+  padding: 4px;
 }
 
 div.user > p {
