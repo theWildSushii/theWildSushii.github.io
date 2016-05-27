@@ -1,4 +1,4 @@
-[noun] [connector] [verb] [place]
+﻿[noun] [connector] [verb] [place]
 [noun] [connector] [verb] [noun]
 [noun] [connector] [verb] [noun] [noun2]
 [noun] [connector] [adjetive]
@@ -31,3 +31,9 @@ why not?
 [subject] [connector] [place] with [subject2]
 [subject] [connector] [place] [verb] with [subject2]
 [noun] [connector] [place]
+( ͡° ͜ʖ ͡° )
+[noun]
+[subject]
+[place]
+[verb]
+[adjective]

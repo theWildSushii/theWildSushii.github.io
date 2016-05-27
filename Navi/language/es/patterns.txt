@@ -1,11 +1,11 @@
 ﻿[noun] [connector] [verb] [place]
 [noun] [connector] [verb] [noun]
 [noun] [connector] [verb] [noun] [noun2]
-[noun] [connector] [adjetive]
-[noun] [connector] [oAdjetive] [noun]
+[noun] [connector] [adjective]
+[noun] [connector] [oAdjective] [noun]
 [subject] [connector] [verb] [place]
-[subject] [connector] [verb] [oAdjetive] [noun]
-[subject] [connector] [adjetive]
+[subject] [connector] [verb] [oAdjective] [noun]
+[subject] [connector] [adjective]
 [subject] [connector] [noun]
 [subject] [connector] [noun] [noun2]
 ¿[subject] [verb] [subject2]?
@@ -14,8 +14,8 @@
 ¿dónde [connector] [noun]?
 ¿dónde [connector] [subject]?
 ¿está [subject] [place]?
-¿es [subject] [adjetive]?
-¿es [noun] [adjetive]?
+¿es [subject] [adjective]?
+¿es [noun] [adjective]?
 sí
 no
 talvez
@@ -25,5 +25,11 @@ interesante
 ¿por qué no?
 [subject] [connector] [place]
 [subject] [connector] [place] con [subject2]
-[subject] [connector] [place] [verb] with [subject2]
+[subject] [connector] [place] [verb] con [subject2]
 [noun] [connector] [place]
+( ͡° ͜ʖ ͡° )
+[noun]
+[subject]
+[place]
+[verb]
+[adjective]

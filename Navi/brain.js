@@ -26,6 +26,13 @@ var layerSize = 179;
 var netInput = new VNeural(8, 180);
 var netMiddle = [];
 var netOutput = new VNeural(180, 14);
+netOutput.outFunction = function(x){
+  if(x >= 0){
+    return x;
+  } else {
+    return -x;
+  }
+}
 
 function brainInit(){
   lang = e("lang").value;
@@ -46,7 +53,8 @@ function brainInit(){
   getPatterns("language/" + lang + "/patterns.txt");
   for(var i = 0; i < layerSize; i++){
     netMiddle.push(new VNeural(180, 180));
-    netMiddle[i].setDinamic(true);
+    netMiddle[i].evolving = true;
+    netMiddle[i].evolutionRate /= 10;
   }
   loaded(true);
 }
@@ -73,9 +81,17 @@ function langChange(){
   netInput.init(8, 16);
   for(var i = 0; i < layerSize; i++){
     netMiddle.push(new VNeural(180, 180));
-    netMiddle[i].setDinamic(true);
+    netMiddle[i].evolving = true;
+    netMiddle[i].evolutionRate /= 10;
   }
   netOutput.init(8, 14);
+  netOutput.outFunction = function(x){
+    if(x >= 0){
+      return x;
+    } else {
+      return -x;
+    }
+  }
   loaded(true);
 }
 
@@ -285,13 +301,16 @@ function signal(input){
       bytes[z] += preBytes[i][z];
     }
   }
+  for(var i = 0; i < bytes.length; i++){
+    bytes[i] /= keys.length;
+  }
   var outputs;
   while(tempMemory == ""){
-    var temp = netInput.fire(bytes, 0);
+    var temp = netInput.fire(bytes);
     for(var j = 0; j < layerSize; j++){
-      temp = netMiddle[j].fire(temp, 0);
+      temp = netMiddle[j].fire(temp);
     }
-    outputs = netOutput.fire(temp, 3);
+    outputs = netOutput.fire(temp);
     var selAdjectives = outputs[0];
     var selVerbs = outputs[1];
     var selPlaces = outputs[2];
@@ -344,14 +363,14 @@ function signal(input){
         var options = temp.split(",");
         tempMemory = tempMemory.replace(token, options[randInt(0, options.length - 1)]);
       }
-      if(token == "[oAdjetive]"){
+      if(token == "[oAdjective]"){
         if(randBool()){
-          tempMemory = tempMemory.replace("[oAdjetive]", adjectives[Math.round(selAdjectives * (adjectives.length - 1))]);
+          tempMemory = tempMemory.replace("[oAdjective]", adjectives[Math.round(selAdjectives * (adjectives.length - 1))]);
         } else {
-          tempMemory = tempMemory.replace("[oAdjetive]", "");
+          tempMemory = tempMemory.replace("[oAdjective]", "");
         }
       }
-      tempMemory = tempMemory.replace("[adjetive]", adjectives[Math.round(selAdjectives * (adjectives.length - 1))]);
+      tempMemory = tempMemory.replace("[adjective]", adjectives[Math.round(selAdjectives * (adjectives.length - 1))]);
       tempMemory = tempMemory.replace("[verb]", verbs[Math.round(selVerbs * (verbs.length - 1))]);
       tempMemory = tempMemory.replace("[place]", places[Math.round(selPlaces * (places.length - 1))]);
       tempMemory = tempMemory.replace("[noun]", nouns[Math.round(selNouns * (nouns.length - 1))]);
