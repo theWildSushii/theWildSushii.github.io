@@ -99,8 +99,6 @@ a:visited {
 }
 
 #posts > div > img {
-  border-radius: 3.14159px;
-  box-shadow: 0px 0px 3.14159px #00ffff;
   margin: 3.14159px;
   max-width: calc(61.8vw - 32px);
 }

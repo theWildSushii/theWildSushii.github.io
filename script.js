@@ -7,7 +7,26 @@ function getRandomText(){
       e("randText").innerHTML = phrases[randomInt(0, phrases.length)];
     }
   }
-  http.open("GET", "https://rawgit.com/theWildSushii/theWildSushii.github.io/master/random.txt", true);
+  http.open("GET", "https://rawgit.com/theWildSushii/theWildSushii.github.io/master/random.txt", false);
+  http.send();
+}
+
+function getPosts(){
+  var http = ajax();
+  var posts;
+  http.onreadystatechange = function(){
+    if(http.readyState == 4 && http.status == 200){
+      posts = JSON.parse(http.responseText);
+      for(var i = 0; i < posts.length; i++){
+        if(posts[i].image != null){
+          e("posts").innerHTML += "<div><img src=\"" + posts[i].image + "\" tws-size=\"64x64\"><h2>" + posts[i].title + "</h2><p>" + posts[i].content + "</p></div>";
+        } else {
+          e("posts").innerHTML += "<div><h2>" + posts[i].title + "</h2><p>" + posts[i].content + "</p></div>";
+        }
+      }
+    }
+  }
+  http.open("GET", jsonPath, true);
   http.send();
 }
 
@@ -27,7 +46,7 @@ function getSidebar() {
       e("slist").innerHTML = "<li><p>Could not get data. <a href=\"#\" onClick=\"getSidebar()\">Try again?</a></p></li>";
     }
   }
-  http.open("GET", "https://rawgit.com/theWildSushii/theWildSushii.github.io/master/sidebar.txt", true);
+  http.open("GET", "https://rawgit.com/theWildSushii/theWildSushii.github.io/master/sidebar.txt", false);
   http.send();
 }
 
@@ -65,6 +84,7 @@ function tWSInit(){
   getSize();
   getRandomText();
   getSidebar();
+  getPosts();
   loaded(true);
 }
 

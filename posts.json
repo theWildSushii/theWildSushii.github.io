@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Welcome!",
+    "content": "Welcome to my homepage.<br>You can try Navi from the sidebar or download some stuff I've made :)"
+  },
+  {
+    "title": "Buttons! v1.5 is here!",
+    "content": "You can find it in the <a href=\"downloads.html\">downloads</a> section"
+  }
+]
