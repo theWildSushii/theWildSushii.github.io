@@ -1,10 +1,14 @@
 [
   {
     "title": "Welcome!",
-    "content": "Welcome to my homepage.<br>You can try Navi from the sidebar or download some stuff I've made :)"
+    "content": "Welcome to my homepage.<br>You can try Neutrino from the sidebar or download some stuff I've made."
   },
   {
-    "title": "Buttons! v1.5 is here!",
-    "content": "You can find it in the <a href=\"downloads.html\">downloads</a> section"
+    "title": "Goodbye, Navi",
+    "content": "The project is still going, but I'll start all over again under the name of Neutrino."
+  },
+  {
+    "title": "Tasky v1.0.0 is here!",
+    "content": "My first app ever published is here, you can find it in the downloads section or just click <a href=\"https://play.google.com/store/apps/details?id=tws.tasky\">here (Android)</a>."
   }
 ]
