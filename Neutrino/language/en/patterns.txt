@@ -1,0 +1,39 @@
+﻿[noun] [connector] [verb] [place]
+[noun] [connector] [verb] [noun]
+[noun] [connector] [verb] [noun] [noun2]
+[noun] [connector] [adjetive]
+[noun] [connector] [oAdjetive] [noun]
+[subject] [connector] [verb] [place]
+[subject] [connector] [verb] [oAdjetive] [noun]
+[subject] [connector] [adjetive]
+[subject] [connector] [noun]
+[subject] [connector] [noun] [noun2]
+do [subject] [verb] [subject2]?
+do [subject] [verb] [noun]?
+do [noun] [verb] [subject]?
+does [subject] [verb] [subject2]?
+does [subject] [verb] [noun]?
+does [noun] [verb] [subject]?
+where [connector] [noun]?
+where [connector] [subject]?
+is [subject] [place]?
+is [subject] [adjetive]?
+yes
+no
+maybe
+of course
+nope
+interesting
+[verb] [subject] with [noun]
+why?
+why not?
+[subject] [connector] [place]
+[subject] [connector] [place] with [subject2]
+[subject] [connector] [place] [verb] with [subject2]
+[noun] [connector] [place]
+( ͡° ͜ʖ ͡° )
+[noun]
+[subject]
+[place]
+[verb]
+[adjective]

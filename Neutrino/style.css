@@ -1,0 +1,289 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #000000;
+}
+
+h1, h2, h3, p {
+  color: #00ffff;
+  font-family: Helvetica;
+}
+
+a {
+  text-decoration: none;
+  font-family: Helvetica;
+}
+
+div.header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 64px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
+  background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
+  background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
+  background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
+  z-index: 3;
+}
+
+div.header > h2 {
+  text-align: center;
+  vertical-align: center;
+  margin-top: 10px;
+}
+
+img.navi {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin-left: 16px;
+  margin-top: 8px;
+  border-radius: 90px;
+  width: 48px;
+  height: 48px;
+}
+
+div.settings {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  top: 0px;
+  right: 0px;
+  margin: 8px;
+  border-radius: 8px;
+  padding: 4px;
+  transition: margin-right .16s linear 0s;
+}
+
+div.settings > div {
+  margin: 4px;
+  width: 64%;
+  height: 4px;
+  background-color: #00ffff;
+  border-radius: 35px;
+}
+
+div.settings > div.list{
+  position: fixed;
+  width: 0px;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  margin: 0px;
+  border-radius: 0px;
+  transition: width .25s linear 0s, background-color .25s linear 0s;
+  display: none;
+  overflow: scroll;
+  background-color: rgba(0, 255, 255, 0);
+  box-shadow: 0px 0px 16px rgba(0, 255, 255, 0.64);
+}
+
+div.list > ul {
+  padding: 0px;
+}
+
+div.list > ul > li {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #00ffff;
+  transition: background-color .25s linear 0s;
+  padding: 8px;
+  margin: 0px;
+}
+
+div.list > ul > li > a{
+  width: 100%;
+}
+
+div.list > ul > li:hover {
+  background-color: #00ffff;
+}
+
+div.list > ul > li > p, div.list > ul > li > a {
+  color: #000000;
+  text-shadow: 0px 0px 8px #00ffff;
+  float: left;
+}
+
+div.list > ul > li > .option {
+  float: right;
+}
+
+#customtts {
+  width: calc(100% - 80px);
+  margin-left: 8px;
+}
+
+select {
+  background-color: #252525;
+  color: #00ffff;
+  font-family: Helvetica;
+  border: none;
+  padding: 2px;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+label:before {
+  content: "";
+  display: inline-block;
+  float: right;
+  width: 20px;
+  height: 20px;
+  right: 0px;
+  padding: 0px;
+  background-color: #252525;
+}
+
+input[type="checkbox"]:checked + label:before{
+  content: "\2713";
+  color: #00ffff;
+  padding: 0px;
+  text-align: center;
+  font-size: 10pt;
+}
+
+#loader {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 64px;
+  height: 64px;
+  margin-left: calc(50% - 32px);
+  margin-top: 64px;
+  border-radius: 32px;
+  background: url(img/loader.png);
+  background-color: #252525;
+  box-shadow: 0px 0px 3.14159px #00ffff;
+  transition: opacity 0.25s linear 0s;
+  animation: loaderAni 1s steps(36) infinite;
+  -webkit-animation: loaderAni .8s steps(36) infinite;
+  z-index: 20;
+}
+
+@keyframes loaderAni{
+  from{
+    background-position: 0px;
+  }
+  to{
+    background-position: -2304px;
+  }
+}
+@-webkit-keyframes loaderAni{
+  from{
+    background-position: 0px;
+  }
+  to{
+    background-position: -2304px;
+  }
+}
+
+div.chat-list {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding-top: 64px;
+  background-color: #000000;
+}
+
+div.chat {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 64px;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0), #000000);
+  background: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0), #000000);
+  background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0), #000000);
+  background: -o-linear-gradient(270deg, rgba(0, 0, 0, 0), #000000);
+}
+
+div.navi {
+  position: relative;
+  margin-left: 16px;
+  border-radius: 35px;
+  padding: 4px;
+}
+
+div.user {
+  position: relative;
+  margin-right: 16px;
+  border-radius: 35px;
+  padding: 4px;
+}
+
+div.user > p {
+  color: #ffffff;
+  text-align: right;
+}
+
+div.navi > p {
+  color: #00ffff;
+  text-align: left;
+}
+
+div.separator {
+  margin-left: 19.1%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 61.8%;
+  height: 1px;
+  background-color: #dadada;
+  box-shadow: 0px 0px 8px #dadada;
+}
+
+div#input {
+  width: 1px;
+  height: 64px;
+}
+
+#message{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: calc(100% - 82px);
+  height: 48px;
+  margin: 8px;
+  box-shadow: 0px 0px 8px #000000;
+  padding-left: 4px;
+  font-size: 16pt;
+}
+
+input[type=text] {
+  background-color: #252525;
+  border: none;
+  color: #00ffff;
+  resize: none;
+  font-family: Helvetica;
+  font-size: 12pt;
+}
+
+input[type=text]::-webkit-input-placeholder {
+   color: #00dada;
+}
+
+:input[type=text]:-moz-placeholder {
+   color: #00dada;
+}
+
+:input[type=text]-ms-input-placeholder {  
+   color: #00dada;
+}
+
+#submit {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin: 8px;
+  width: 48px;
+  height: 48px;
+  background: url(img/send.png) no-repeat;
+  border: none;
+}
