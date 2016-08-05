@@ -1,74 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <meta property="og:image" content="preview.png"/>
-    <meta property="og:title" content="Navi" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:description" content="Hello, I'm Navi" />
-    <link href="style.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="scrollbar.css" type="text/css" rel="stylesheet" media="screen">
-    <link rel="shorcut icon" href="favicon.ico">
-    <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
-    <!-- <script src="https://rawgit.com/theWildSushii/VNeural.js/master/VNeural.js"></script> -->
-    <script src="VNeural.js"></script>
-    <script src="brain.js"></script>
-    <script src="script.js"></script>
-    <title>Navi</title>
+    <meta http-equiv="refresh" content="0; url=http://thewildsushii.github.io/Neutrino/" />
   </head>
   <body>
-    <div id="loader"></div>
-    <div class="header">
-      <img src="img/navi.png" class="navi">
-      <h2>Navi</h2>
-
-      <div class="settings" id="settings" onclick="showList()">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="list" id="list" onclick="showList()">
-          <ul id="sList">
-            <li>
-              <a href="https://thewildsushii.github.io/">Back to tWS Home</a>
-            </li>
-            <li>
-              <p>Language</p>
-              <select id="lang" class="option" onchange="langChange()">
-                <option value="en">English</option>
-                <option value="es">Español</option>
-              </select>
-            </li>
-            <li onclick="flick('tts')">
-              <p>Use Text-to-Speech?</p>
-              <input type="checkbox" id="tts" onclick="flick('tts')" class="option"><label></label>
-            </li>
-            <li>
-              <a href="javascript:void()" onclick="refresh()">Refresh</a>
-            </li>
-            <li>
-              <p>TTS</p>
-              <input id="customtts" placeholder="Have fun!" onkeypress="keyDetector(event, 1)" type="text">
-              <input value="Say!" onclick="customTTS()" type="button">
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
-    <div id="mList" class="chat-list">
-      <noscript>
-        <div class="navi">
-          <p>You need JavaScript enabled in order to chat with me.</p>
-        </div>
-      </noscript>
-      <div id="input"></div>
-    </div>
-
-    <div class="chat">
-      <input type="text" id="message" placeholder="Let's talk!" onkeypress="keyDetector(event, 0)">
-      <input onClick="sendMessage()" id="submit" type="submit" value="">
-    </div>
-
   </body>
 </html>

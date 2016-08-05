@@ -19,7 +19,7 @@ function getPosts(){
       posts = JSON.parse(http.responseText);
       for(var i = 0; i < posts.length; i++){
         if(posts[i].image != null){
-          e("posts").innerHTML += "<div><img src=\"" + posts[i].image + "\" tws-size=\"64x64\"><h2>" + posts[i].title + "</h2><p>" + posts[i].content + "</p></div>";
+          e("posts").innerHTML += "<div><img src=\"" + posts[i].image + "\"><h2>" + posts[i].title + "</h2><p>" + posts[i].content + "</p></div>";
         } else {
           e("posts").innerHTML += "<div><h2>" + posts[i].title + "</h2><p>" + posts[i].content + "</p></div>";
         }
