@@ -222,7 +222,7 @@ p.post_content {
     width: 80%;
   }
 
-  #random {
+  #random, #try_neutrino {
     display: none;
   }
 
