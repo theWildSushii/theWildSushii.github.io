@@ -1,205 +1,241 @@
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  background-color: rgba(0, 0, 0, 0);
-}
-::-webkit-scrollbar-thumb {
-  background-color: #00ffff;
+body {
+  background-color: #dadada;
+  padding: 0px;
+  margin: 0px;
+  font-family: Helvetica;
 }
 
-* {
-  padding: 0px;
+div{
   margin: 0px;
 }
 
-body {
-  background-color: #dadada;
-  font-family: "Haas Unica", Helvetica;
+h2, h3 {
   color: #00ffff;
-  text-shadow: 0px 0px 8px #252525;
 }
 
 a {
-  color: #00ffff;
-  text-decoration: none;
-  text-shadow: 0px 0px 8px #00ffff;
-  transition: text-shadow 0.314159s linear 0s;
-}
-
-a:hover{
-  text-shadow: 0px 0px 16px #00ffff;
-}
-
-a:visited {
-  color: #00ffff;
-  text-shadow: 0px 0px 8px #00ffff;
+  font-shadow: 0px 0px 4px #25da00;
 }
 
 #head {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 116px;
+  background-color: #252525;
+  box-shadow: 0px 0px 8px #252525;
+}
+
+#logoMain {
+  height: 64px;
+  float: left;
+}
+
+#random {
+  float: left;
+  margin-top: 20px;
+  color: #00ffff;
+}
+
+#random > a {
+  color: #00ffff;
+}
+
+#random > a:visited {
+  color: #00ffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+#try_neutrino {
+  float: right;
+  background-color: #000000;
+  border-radius: 3.14159px;
+  border-color: #00ffff;
+  border-style: solid;
+  border-width: 1px;
+  margin: 16px;
+  padding: 8px;
+}
+
+#try_neutrino > a {
+  color: #00ffff;
+  text-shadow: 0px 0px 8px #00ffff;
+}
+
+#mainMenu{
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  margin-top: 64px;
+}
+
+#mainMenu > a {
+  float: left;
+  width: calc(100% / 3);
+  height: 32px;
+}
+
+#mainMenu > a:hover {
+  color: #ff0000;
+}
+
+#mainMenu > a > div{
+  height: 32px;
+  padding-top: 20px;
+  color: #00ffff;
+  transition: background-color .25s linear 0s;
+}
+
+#mainMenu > a > div:hover{
+  background-color: #006464;
+}
+
+#indicator {
+  margin-top: 4px;
+  width: 100%;
+  height: 8px;
+  background-color: #00ffff;
+}
+
+#body{
+  margin-top: 124px;
+  width: 61.8%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.post{
+  box-shadow: 2px 2px 6px #252525;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  border-radius: 1.618px;
+}
+
+div.post_head {
+  background-color: #252525;
+  padding: 1px;
+}
+
+div.post_head > img.icon {
+  float: left;
+  margin: 8px;
+  width: 40px;
+}
+
+div.post_head > h3 {
+  color: #00ffff;
+  margin-left: 6px;
+}
+
+div.post > img{
+  display: block;
+  width: 61.8%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.post_tetraimg {
+  width: 61.8%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.tetra-tl{
+  position: relative;
+  width: 49%;
+  top: 0px;
+  left: 0px;
+}
+
+img.tetra-tr{
+  position: relative;
+  width: 49%;
+  top: 0px;
+  right: 0px;
+}
+
+img.tetra-bl{
+  position: relative;
+  width: 49%;
+  bottom: 0px;
+  left: 0px;
+}
+
+img.tetra-br{
+  position: relative;
+  width: 49%;
+  bottom: 0px;
+  right: 0px;
+}
+
+
+p.img_sub {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  color: #646464;
+  font-size: 10pt;
+}
+
+p.post_content {
+  margin: 16px;
+}
+
+.gp_button > img{
+  height: 64px;
+}
+
+#popup-img{
   position: fixed;
+  background-color: #000;
   left: 0px;
   top: 0px;
-  width: 100vw;
-  height: 48px;
-  background-color: #252525;
-  box-shadow: 0px 0px 3.14159px #252525;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
 }
 
-#head > * {
-  float: left;
-  margin: 4px;
-}
-
-#head > a > img {
-  height: 40px;
-}
-
-#head > h2 {
-  margin-top: 8px;
-}
-
-#head > p {
-  margin-top: 14px;
+#popup-img > img {
+  display: block;
+  width: 61.8%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 @media (max-width: 800px){
-  #head > p {
+
+  #body{
+    width: 80%;
+  }
+
+  #random {
     display: none;
   }
-}
 
-#body {
-  margin-top: 48px;
-}
-
-#posts {
-  margin: 8px;
-  padding: 8px;
-}
-
-#posts > a > div {
-  padding: 8px;
-  margin-bottom: 16px;
-  border-radius: 3.14159px;
-  background-color: #252525;
-  box-shadow: 0px 0px 3.14159px #00ffff;
-  transition: box-shadow 0.25s linear 0s;
-}
-
-#posts > a > div:hover {
-  box-shadow: 0px 0px 8px #00ffff;
-}
-
-#posts > div {
-  padding: 8px;
-  margin-bottom: 16px;
-  border-radius: 3.14159px;
-  background-color: #252525;
-  box-shadow: 0px 0px 3.14159px #252525;
-}
-
-img {
-  height: 64px;
-}
-
-div.settings {
-  position: fixed;
-  width: 48px;
-  height: 48px;
-  top: 0px;
-  right: 0px;
-  margin: 8px;
-  border-radius: 8px;
-  padding: 4px;
-  transition: margin-right .16s linear 0s;
-}
-
-div.settings > div {
-  margin: 4px;
-  width: 64%;
-  height: 4px;
-  background-color: #00ffff;
-  border-radius: 35px;
-}
-
-div.settings > div.list{
-  position: fixed;
-  width: 0px;
-  height: 100%;
-  top: 0px;
-  right: 0px;
-  margin: 0px;
-  border-radius: 0px;
-  transition: width .25s linear 0s, background-color .25s linear 0s;
-  display: none;
-  overflow: scroll;
-  background-color: rgba(0, 255, 255, 0);
-  box-shadow: 0px 0px 16px rgba(0, 255, 255, 0.64);
-}
-
-div.list > ul {
-  padding: 0px;
-}
-
-div.list > ul > li {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #00ffff;
-  transition: background-color .25s linear 0s;
-  padding: 8px;
-  margin: 0px;
-}
-
-div.list > ul > li > a{
-  width: 100%;
-}
-
-div.list > ul > li:hover {
-  background-color: #00ffff;
-}
-
-div.list > ul > li > p, div.list > ul > li > a {
-  color: #000000;
-  float: left;
-}
-
-div.list > ul > li > .option {
-  float: right;
-}
-
-#loader {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 64px;
-  height: 64px;
-  margin-left: calc(50% - 32px);
-  margin-top: 64px;
-  border-radius: 32px;
-  background: url(loader.png);
-  background-color: #252525;
-  box-shadow: 0px 0px 3.14159px #00ffff;
-  transition: opacity 0.25s linear 0s;
-  animation: loaderAni 1s steps(36) infinite;
-  -webkit-animation: loaderAni .8s steps(36) infinite;
-  z-index: 20;
-}
-
-@keyframes loaderAni{
-  from{
-    background-position: 0px;
+  div.post > img{
+    width: 80%;
   }
-  to{
-    background-position: -2304px;
-  }
-}
-@-webkit-keyframes loaderAni{
-  from{
-    background-position: 0px;
-  }
-  to{
-    background-position: -2304px;
-  }
-}
 
+  div.post_tetraimg{
+    width: 80%;
+  }
 
+  #popup-img > img{
+    width: 80%;
+  }
+
+}
