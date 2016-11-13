@@ -122,7 +122,7 @@ div.post_head {
   padding: 1px;
 }
 
-div.post_head > img.icon {
+img.icon {
   float: left;
   margin: 8px;
   width: 40px;
@@ -131,6 +131,7 @@ div.post_head > img.icon {
 div.post_head > h3 {
   color: #00ffff;
   margin-left: 6px;
+  margin-right: 6px;
 }
 
 div.post > img{
