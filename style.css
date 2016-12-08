@@ -112,7 +112,7 @@ a {
 div.post{
   box-shadow: 2px 2px 6px #252525;
   padding-bottom: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   background-color: #ffffff;
   border-radius: 1.618px;
 }
