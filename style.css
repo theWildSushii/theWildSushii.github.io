@@ -220,7 +220,7 @@ p.post_content {
 @media (max-width: 800px){
 
   #body{
-    width: 80%;
+   width: calc(100% - 32px);
   }
 
   #random, #try_neutrino {
@@ -228,15 +228,15 @@ p.post_content {
   }
 
   div.post > img{
-    width: 80%;
+    width: calc(100% - 32px);
   }
 
   div.post_tetraimg{
-    width: 80%;
+    width: calc(100% - 32px);
   }
 
   #popup-img > img{
-    width: 80%;
+    width: calc(100% - 32px);
   }
 
 }
