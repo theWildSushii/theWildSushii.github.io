@@ -115,6 +115,15 @@ div.post{
   margin-bottom: 12px;
   background-color: #ffffff;
   border-radius: 1.618px;
+  transition: box-shadow 0.1s linear 0s;
+}
+
+div.post:hover {
+  box-shadow: 5px 5px 8px #252525;
+}
+
+div.post:active{
+  box-shadow: 1px 1px 4px #252525;
 }
 
 div.post_head {
