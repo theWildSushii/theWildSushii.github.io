@@ -18,14 +18,11 @@ function ajax(){
 }
 
 function say(input){
-  responsiveVoice.speak(input, voice);
-}
-
-function refresh(){
-  e("mList").innerHTML = "<noscript><div class=\"navi\"><p>You need JavaScript enabled in order to chat with me.</p></div></noscript><div id=\"input\"></div>";
-  loaded(false);
-  messageCount = 0;
-  brainInit();
+  try{
+    responsiveVoice.speak(input, voice);
+  } catch(e){
+    console.log(e);
+  }
 }
 
 function customTTS(){
@@ -38,15 +35,15 @@ window.onload = init;
 var isShowing = false;
 function showList(){
   if(isShowing){
-    e("list").style.display = "none";
+    //e("list").style.display = "none";
     e("list").style.width = "0px";
-    e("settings").style.marginRight = "8px";
+    e("settings").style.marginLeft = "8px";
     e("list").style.backgroundColor = "rgba(0, 255, 255, 0)"
   } else {
-    e("list").style.display = "block";
+    //e("list").style.display = "block";
     e("list").style.width = "61.8%";
-    e("settings").style.marginRight = "61.8%";
-    e("list").style.backgroundColor = "rgba(0, 255, 255, .64)"
+    e("settings").style.marginLeft = "61.8%";
+    e("list").style.backgroundColor = "rgba(0, 255, 255, .75)"
   }
   isShowing = !isShowing;
 }
@@ -87,64 +84,37 @@ function sendMessage() {
   e("message").value = "";
   if(text != "" && text != " " && text != "  "){
     e("message").focus();
-    popUp("user", text);
     loaded(false);
     e("message").value = "";
-    popUp("navi", parse(text));
+    clear();
+    popUp(parse(text));
   }
+}
+
+function popUp(text) {
+  if(e("tts").checked){
+    say(text);
+  }
+  e("mList").innerHTML += "<div id=\"result\" class=\"card\"><p>" + text + "</p></div>";
+  loaded(true);
+}
+
+function clear(){
+  e("mList").innerHTML = "";
 }
 
 function randInt(min, max) {
-  var rand = Math.floor(Math.random() * max) + min;
-  while(rand > max){
-    rand--;
-  }
-  return rand;
+  return Math.round(Math.random() * max - min) + min;
 }
 
-var messageCount = 0;
-
-var myArray;
-var tId;
-var loopTimer;
-var done = true;
-function popUp(user, rawText) {
-  var text = rawText;
-  if(text != ""){
-    if(user == "user" || user == "navi"){
-      for(var i = 0; i < text.split("").length; i++){
-        text = text.replace("<", "&lt;");
-        text = text.replace(">", "&gt;");
-        text = text.replace("&", "&amp;");
-      }
-    }
-    var id = "m" + messageCount;
-    if(user != "navi"){
-      e("input").insertAdjacentHTML('beforebegin', "<div id=\"" + id + "\" class=\"" + user + "\"><p>" + text + "</p></div>");
-    } else {
-      done = false;
-      if(e("tts").checked){
-        say(text);
-      }
-      e("input").insertAdjacentHTML('beforebegin', "<div id=\"" + id + "\" class=\"" + user + "\"><p id=\"n" + id + "\"></p></div>");
-      loaded(true);
-      myArray = text.split("");
-      tId = "n" + id;
-      frameLooper();
-    }
-    messageCount++;
-  }
+function randFloat(min, max){
+  return (Math.random() * max - min) + min;
 }
-function frameLooper() {
-  if(!done){
-    window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
-  }
-  if(myArray.length > 0) {
-    var temp = myArray.shift();
-    e(tId).innerHTML += temp;
-  } else {
-    clearTimeout(loopTimer);
-    done = true;
-  }
-  loopTimer = setTimeout('frameLooper()',50);
+
+function randBool(prob){
+  return randFloat(0, 1) <= prob;
+}
+
+function randomFrom(array){
+  return array[randInt(0, array.length - 1)];
 }

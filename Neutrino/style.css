@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #dadada;
 }
 
 h1, h2, h3, p {
@@ -23,24 +23,18 @@ div.header {
   top: 0px;
   width: 100%;
   height: 64px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
-  background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
-  background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
-  background: -o-linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
+  background: #252525;
+  box-shadow: 0px 0px 6px #000;
   z-index: 3;
 }
 
 div.header > h2 {
   text-align: center;
   vertical-align: center;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
-img.navi {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  margin-left: 16px;
+img.neutrino {
   margin-top: 8px;
   border-radius: 90px;
   width: 48px;
@@ -49,20 +43,23 @@ img.navi {
 
 div.settings {
   position: fixed;
-  width: 48px;
+  width: 6px;
   height: 48px;
   top: 0px;
-  right: 0px;
+  left: 0px;
   margin: 8px;
   border-radius: 8px;
-  padding: 4px;
-  transition: margin-right .16s linear 0s;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 32px;
+  transition: margin-left 0.1s linear 0s;
 }
 
 div.settings > div {
-  margin: 4px;
-  width: 64%;
-  height: 4px;
+  margin: 6px;
+  height: 6px;
+  width: 6px;
   background-color: #00ffff;
   border-radius: 35px;
 }
@@ -72,14 +69,12 @@ div.settings > div.list{
   width: 0px;
   height: 100%;
   top: 0px;
-  right: 0px;
+  left: 0px;
   margin: 0px;
   border-radius: 0px;
-  transition: width .25s linear 0s, background-color .25s linear 0s;
-  display: none;
-  overflow: scroll;
+  transition: width .1s linear 0s, background-color .1s linear 0s;
+  overflow: hidden;
   background-color: rgba(0, 255, 255, 0);
-  box-shadow: 0px 0px 16px rgba(0, 255, 255, 0.64);
 }
 
 div.list > ul {
@@ -87,9 +82,6 @@ div.list > ul {
 }
 
 div.list > ul > li {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #00ffff;
   transition: background-color .25s linear 0s;
   padding: 8px;
   margin: 0px;
@@ -100,7 +92,7 @@ div.list > ul > li > a{
 }
 
 div.list > ul > li:hover {
-  background-color: #00ffff;
+  background-color: #64ffff;
 }
 
 div.list > ul > li > p, div.list > ul > li > a {
@@ -116,6 +108,7 @@ div.list > ul > li > .option {
 #customtts {
   width: calc(100% - 80px);
   margin-left: 8px;
+  padding-left 8px;
 }
 
 select {
@@ -156,26 +149,17 @@ input[type="checkbox"]:checked + label:before{
   width: 64px;
   height: 64px;
   margin-left: calc(50% - 32px);
-  margin-top: 64px;
+  margin-top: 72px;
   border-radius: 32px;
   background: url(img/loader.png);
   background-color: #252525;
-  box-shadow: 0px 0px 3.14159px #00ffff;
+  box-shadow: 0px 3px 3px #646464;
   transition: opacity 0.25s linear 0s;
   animation: loaderAni 1s steps(36) infinite;
-  -webkit-animation: loaderAni .8s steps(36) infinite;
   z-index: 20;
 }
 
 @keyframes loaderAni{
-  from{
-    background-position: 0px;
-  }
-  to{
-    background-position: -2304px;
-  }
-}
-@-webkit-keyframes loaderAni{
   from{
     background-position: 0px;
   }
@@ -190,7 +174,6 @@ div.chat-list {
   left: 0px;
   width: 100%;
   padding-top: 64px;
-  background-color: #000000;
 }
 
 div.chat {
@@ -199,44 +182,36 @@ div.chat {
   bottom: 0px;
   width: 100%;
   height: 64px;
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0), #000000);
-  background: -moz-linear-gradient(270deg, rgba(0, 0, 0, 0), #000000);
-  background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0), #000000);
-  background: -o-linear-gradient(270deg, rgba(0, 0, 0, 0), #000000);
 }
 
-div.navi {
+div.card {
   position: relative;
-  margin-left: 16px;
-  border-radius: 35px;
-  padding: 4px;
+  margin: 14px;
+  padding: 6px;
+  background: #fff;
+  box-shadow: 0px 0px 8px #646464;
+  animation-name: summon;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in;
+  overflow: hidden;
+  transition: box-shadow 0.1s linear 0s;
 }
 
-div.user {
-  position: relative;
-  margin-right: 16px;
-  border-radius: 35px;
-  padding: 4px;
+div.card:active {
+  box-shadow: 0px 0px 2px #252525;
 }
 
-div.user > p {
-  color: #ffffff;
-  text-align: right;
+@keyframes summon {
+  from{
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
 }
 
-div.navi > p {
-  color: #00ffff;
-  text-align: left;
-}
-
-div.separator {
-  margin-left: 19.1%;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  width: 61.8%;
-  height: 1px;
-  background-color: #dadada;
-  box-shadow: 0px 0px 8px #dadada;
+div.card > p {
+  color: #252525;
+  text-align: center;
 }
 
 div#input {
@@ -248,10 +223,11 @@ div#input {
   position: fixed;
   bottom: 0px;
   left: 0px;
-  width: calc(100% - 82px);
+  width: calc(100% - 68px);
   height: 48px;
-  margin: 8px;
-  box-shadow: 0px 0px 8px #000000;
+  margin-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   padding-left: 4px;
   font-size: 16pt;
 }
@@ -281,9 +257,12 @@ input[type=text]::-webkit-input-placeholder {
   position: fixed;
   bottom: 0px;
   right: 0px;
-  margin: 8px;
+  margin-right: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   width: 48px;
   height: 48px;
   background: url(img/send.png) no-repeat;
+  background-color: #252525;
   border: none;
 }
