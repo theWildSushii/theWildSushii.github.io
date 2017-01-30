@@ -5,6 +5,7 @@ var data = {};
 
 //Brain data
 var nInputs = []; //24
+var nMiddle = []; //24
 var nOutputs = []; //2
 
 //Other helpers
@@ -19,12 +20,18 @@ function brainInit(){
     nInputs[i].selfTrain = true;
     nInputs[i].evolvingRate *= 10;
   }
+  for(n in nInputs){
+    nMiddle.push(new Neuron());
+    nMiddle[nMiddle.length - 1].selfTrain = true;
+    nMiddle[nMiddle.length - 1].evolvingRate *= 10;
+    nMiddle[nMiddle.length - 1].connectTo(n);
+  }
   for(var i = 0; i < 2; i++){
     nOutputs.push(new Neuron());
     nOutputs[i].selfTrain = true;
     nOutputs[i].evolvingRate *= 10;
-    for(var j = 0; j < nInputs.length; j++){
-      nOutputs[i].connectTo(nInputs[j]);
+    for(var j = 0; j < nMiddle.length; j++){
+      nOutputs[i].connectTo(nMiddle[j]);
     }
   }
   lang = e("lang").value;
@@ -115,27 +122,47 @@ function signal(input){
         i--;
       }
     }
-    var input = wordToNInput(word);
-    for(var i = 0; i < nInputs.length; i++){
-      nInputs[i].value = input[i];
+    if(e("useBrain").checked){
+      var input = wordToNInput(word);
+      for(var i = 0; i < nInputs.length; i++){
+        nInputs[i].value = input[i];
+      }
     }
   }
-  var cWord = sigmoidToArrayElement(nOutputs[0].getOutput(), wordList);
+  var cWord = "";
+  if(e("useBrain").checked){
+    cWord = sigmoidToArrayElement(nOutputs[0].getOutput(), wordList);
+  } else {
+    cWord = randomFrom(wordList);
+  }
   tempMemory += cWord + " ";
   var wordLimit = 64;
-  while(nOutputs[1].getOutput() <= 0.75 && wordLimit-- > 1){
-    try{
-      var input2 = wordToNInput(cWord);
-      for(var i = 0; i < nInputs.length; i++){
-        nInputs[i].value = input2[i];
+  if(e("useBrain").checked){
+    while(nOutputs[1].getOutput() <= 0.75 && wordLimit-- > 1){
+      try{
+        var input2 = wordToNInput(cWord);
+        for(var i = 0; i < nInputs.length; i++){
+          nInputs[i].value = input2[i];
+        }
+        var wList = data[cWord];
+        cWord = sigmoidToArrayElement(nOutputs[0].getOutput(), wList);
+        if(cWord != null || cWord != undefined){
+          tempMemory += cWord + " ";
+        }
+      } catch(e){
+        console.exception(e.message);
       }
-      var wList = data[cWord];
-      cWord = sigmoidToArrayElement(nOutputs[0].getOutput(), wList);
-      if(cWord != null || cWord != undefined){
-        tempMemory += cWord + " ";
+    }
+  } else {
+    while(randBool(0.75)){
+      try{
+        cWord = randomFrom(data[cWord]);
+        if(cWord != null || cWord != undefined){
+          tempMemory += cWord + " ";
+        }
+      } catch(e){
+        console.exception(e.message);
       }
-    } catch(e){
-      console.exception(e.message);
     }
   }
   save();
