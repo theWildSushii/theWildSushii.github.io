@@ -5,7 +5,7 @@ var data = {};
 
 //Brain data
 var nInputs = []; //24
-var nMiddle = []; //24
+var nMiddle = []; //48
 var nOutputs = []; //2
 
 //Other helpers
@@ -20,11 +20,13 @@ function brainInit(){
     nInputs[i].selfTrain = true;
     nInputs[i].evolvingRate *= 10;
   }
-  for(n in nInputs){
+  for(var i = 0; i < 48; i++){
     nMiddle.push(new Neuron());
-    nMiddle[nMiddle.length - 1].selfTrain = true;
-    nMiddle[nMiddle.length - 1].evolvingRate *= 10;
-    nMiddle[nMiddle.length - 1].connectTo(n);
+    nMiddle[i].selfTrain = true;
+    nMiddle[i].evolvingRate *= 10;
+    for(n in nInputs){
+      nMiddle[i].connectTo(n);
+    }
   }
   for(var i = 0; i < 2; i++){
     nOutputs.push(new Neuron());
@@ -63,7 +65,7 @@ function wordExists(word){
 }
 
 function sigmoidToArrayElement(output, array){
-  return array[Math.round(output * (array.length - 1))];
+  return array[Math.round( (output * (array.length - 1) ) * randFloat(0.75, 1))];
 }
 
 function parse(data){
@@ -138,7 +140,7 @@ function signal(input){
   tempMemory += cWord + " ";
   var wordLimit = 64;
   if(e("useBrain").checked){
-    while(nOutputs[1].getOutput() <= 0.75 && wordLimit-- > 1){
+    while( nOutputs[1].getOutput() >= 0.5 && wordLimit-- > 1){
       try{
         var input2 = wordToNInput(cWord);
         for(var i = 0; i < nInputs.length; i++){
