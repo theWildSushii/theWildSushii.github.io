@@ -110,7 +110,7 @@ a {
 }
 
 div.post{
-  box-shadow: 2px 2px 6px #252525;
+  box-shadow: 0px 0px 8px #646464;
   padding-bottom: 8px;
   margin-bottom: 12px;
   background-color: #ffffff;
@@ -118,12 +118,8 @@ div.post{
   transition: box-shadow 0.1s linear 0s;
 }
 
-div.post:hover {
-  box-shadow: 5px 5px 8px #252525;
-}
-
 div.post:active{
-  box-shadow: 1px 1px 4px #252525;
+  box-shadow: 0px 0px 2px #252525;
 }
 
 div.post_head {

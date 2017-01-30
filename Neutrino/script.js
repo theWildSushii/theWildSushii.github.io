@@ -35,14 +35,14 @@ window.onload = init;
 var isShowing = false;
 function showList(){
   if(isShowing){
-    //e("list").style.display = "none";
+    e("shadow").style.display = "none";
     e("list").style.width = "0px";
     e("settings").style.marginLeft = "8px";
     e("list").style.backgroundColor = "rgba(0, 255, 255, 0)"
   } else {
-    //e("list").style.display = "block";
-    e("list").style.width = "61.8%";
-    e("settings").style.marginLeft = "61.8%";
+    e("shadow").style.display = "block";
+    e("list").style.width = "80%";
+    e("settings").style.marginLeft = "80%";
     e("list").style.backgroundColor = "rgba(0, 255, 255, .75)"
   }
   isShowing = !isShowing;
