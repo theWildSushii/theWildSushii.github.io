@@ -31,3 +31,13 @@ window.onload = function(){
   http.open("GET", "random.txt", true);
   http.send();
 }
+
+function randomSnackbar(){
+  var msg = [
+    "D:",
+    "Why..?",
+    "You little rebel, I like you :)",
+    "Why did you click it? :'("
+  ];
+  document.showSnackbar(msg[randomInt(0, msg.length - 1)]);
+}

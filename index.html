@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>Home | theWildSushii</title>
+    <script>
+      var colorPrimary = "#252525";
+      var colorAccent = "#00ffff";
+    </script>
+    <link href="https://thewildsushii.github.io/tWS-Material/twsmaterial.css" rel="stylesheet">
+    <script src="https://thewildsushii.github.io/tWS-Material/twsmaterial.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="theWildSushii" property="og:title">
@@ -20,57 +26,67 @@
     <obj type="cactus"></obj>
     <obj type="custom" src="http://thewildsushii.github.io/tWS.png"></obj>
     <!-- End of Project Network custom tags -->
+    <header>
+        <img src="tWS.png">
+        <h3 id="random"></h3>
+    </header>
 
-    <div id="head">
-      <div>
-        <img id="logoMain" src="tWS.png">
-        <p id="random"></p>
-      </div>
-
-      <div id="try_neutrino">
-        <a href="Neutrino/index.html">Try Neutrino!</a>
-      </div>
-
-      <div id="mainMenu">
-        <a href="index.html"><div><center>Home</center><div id="indicator"></div></div></a>
-        <a href="products.html"><div><center>Downloads</center></div></a>
-        <a href="about.html"><div><center>About</center></div></a>
+      <div id="mainMenu" class="navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
       </div>
     </div>
 
     <div id="body">
 
-      <div class="post">
-        <div class="post_head">
+      <div class="card">
+        <div class="card_head">
+          <h3>New product! tWS Material</h3>
+        </div>
+        <p>tWS Material is a JavaScript and CSS library based on Google's Material Design. Get it <a href="https://github.com/theWildSushii/tWS-Material">here</a>.</p>
+      </div>
+
+      <div class="card">
+        <div class="card_head">
+          <h3>Try Neutrino</h3>
+        </div>
+        <p>While Neutrino is being developed, you can try a small browser version <a href="Neutrino/">here</a>.</p>
+      </div>
+
+      <div class="card">
+        <div class="card_head">
           <h3>Panda Panda is here!</h3>
         </div>
-        <p class="post_content">You can download Panda Panda in <a href="https://play.google.com/store/apps/details?id=tws.projectpanda">this link(Android)</a> or in the downloads section.</p>
+        <p>You can download Panda Panda in <a href="https://play.google.com/store/apps/details?id=tws.projectpanda">this link(Android)</a> or in the downloads section.</p>
       </div>
 
-      <div class="post">
-        <div class="post_head">
+      <div class="card">
+        <div class="card_head">
           <h3>Contribute to Project Network :D</h3>
         </div>
-        <p class="post_content">The code of Project Network is <a href="https://github.com/DesertHareStudios/Project-Network">hosted at GitHub</a>, feel free to contribute and/or <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=U9T8XX5YUFAAJ">donate</a> to the project</p>
+        <p>The code of Project Network is <a href="https://github.com/DesertHareStudios/Project-Network">hosted at GitHub</a>, feel free to contribute.</p>
       </div>
  
-      <div class="post">
-        <div class="post_head">
+      <div class="card">
+        <div class="card_head">
           <h3>Goodbye, Navi</h3>
         </div>
-        <p class="post_content">The project is still going, but I'll start all over again under the name of Neutrino.</p>
+        <p>The project is still going, but I'll start all over again under the name of Neutrino.</p>
       </div>
 
-      <div class="post">
-        <div class="post_head">
+      <div class="card">
+        <div class="card_head">
           <h3>Tasky v1.0.0 is here!</h3>
         </div>
-        <p class="post_content">My first app ever published is here, you can find it in the downloads section or just click <a href="https://play.google.com/store/apps/details?id=tws.tasky">here (Android)</a>.</p>
+        <p>My first app ever published is here, you can find it in the downloads section or just click <a href="https://play.google.com/store/apps/details?id=tws.tasky">here (Android)</a>.</p>
       </div>
 
       <div id="popup-container"></div>
 
     </div>
+
+    <div id="snackbar"></div>
 
   </body>
 </html>

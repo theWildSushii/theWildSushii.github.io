@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>About | theWildSushii</title>
+    <script>
+      var colorPrimary = "#252525";
+      var colorAccent = "#00ffff";
+    </script>
+    <link href="https://thewildsushii.github.io/tWS-Material/twsmaterial.css" rel="stylesheet">
+    <script src="https://thewildsushii.github.io/tWS-Material/twsmaterial.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta content="theWildSushii" property="og:title">
@@ -13,52 +19,45 @@
   </head>
   <body>
 
-    <div id="head">
-      <div>
-        <img id="logoMain" src="tWS.png">
-        <p id="random"></p>
-      </div>
+    <header>
+        <img src="tWS.png">
+        <h3 id="random"></h3>
+    </header>
 
-      <div id="try_neutrino">
-        <a href="Neutrino/index.html">Try Neutrino!</a>
-      </div>
-
-      <div id="mainMenu">
-        <a href="index.html"><div><center>Home</center></div></a>
-        <a href="products.html"><div><center>Downloads</center></div></a>
-        <a href="about.html"><div><center>About</center><div id="indicator"></div></div></a>
+      <div id="mainMenu" class="navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
       </div>
     </div>
 
     <div id="body">
 
-      <div class="post">
-        <div class="post_head">
-          <img class="icon" src="downloads/info.png">
+      <div class="card">
+        <div class="card_head">
+          <img src="downloads/info.png">
           <h3>About</h3>
         </div>
-        <p class="post_content">Just a weird developer with a <i>slight</i> obsession with AI</p>
+        <p>Just a weird developer with a <i>slight</i> obsession with AI</p>
       </div>
 
-      <div class="post">
-        <div class="post_head">
-          <img class="icon" src="downloads/mail.png">
+      <div class="card">
+        <div class="card_head">
+          <img src="downloads/mail.png">
           <h3>Contact</h3>
         </div>
         <a href="https://www.facebook.com/The-Wild-Sushii-1609320552625532/"><img class="icon" src="https://en.facebookbrand.com/wp-content/uploads/2016/05/FB-fLogo-Blue-broadcast-2.png"></a>
         <a href="https://github.com/theWildSushii/"><img class="icon" src="downloads/Octocat.png"></a>
         <a href="mailto:sushiiito123@gmail.com"><img class="icon" src="https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico"></a>
         <a href="https://twitter.com/theWildSushii/"><img class="icon" src="downloads/twitter.png"></a>
-        <p class="post_content"><br></p>
       </div>
 
-      <div class="post">
-        <div class="post_head">
-          <img class="icon" src="downloads/handshake.png">
+      <div class="card">
+        <div class="card_head">
+          <img src="downloads/handshake.png">
           <h3>Partners<h3>
         </div>
         <a href="https://desertharestudios.github.io"><img class="icon" src="https://desertharestudios.github.io/logo.png"</a>
-        <p class="post_content"><br></p>
       </div>
 
     </div>

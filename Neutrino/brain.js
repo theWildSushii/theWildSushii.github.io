@@ -126,8 +126,8 @@ function signal(input){
     }
     if(e("useBrain").checked){
       var input = wordToNInput(word);
-      for(var i = 0; i < nInputs.length; i++){
-        nInputs[i].value = input[i];
+      for(var j = 0; j < nInputs.length; j++){
+        nInputs[j].value = input[j];
       }
     }
   }

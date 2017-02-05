@@ -25,6 +25,4 @@ I'm not sure how many problems do I have because Math is one of them.
 This website is completely public at <a href=\"https://github.com/theWildSushii/theWildSushii.github.io\">GitHub</a>.
 This message won't appear on small screens :D
 [Insert random message here]
-<a href="#" onclick="alert('Why did you click it? :(')">Don't click this...</a>
-<a href="#" onclick="alert('D:')">Don't click this...</a>
-<a href="#" onclick="alert('You little rebel... I like you')">Don't click this...</a>
+<a href="#" onclick="randomSnackbar()">Don't click this...</a>
