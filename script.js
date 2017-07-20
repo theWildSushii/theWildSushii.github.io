@@ -1,7 +1,3 @@
-function e(x){
-  return document.getElementById(x);
-}
-
 function popUpImg(img){
   e("popup-container").innerHTML = "<div id=\"popup-img\" onclick=\"closepopup()\"><img src=\"" + img.src + "\"></div>";
 }
@@ -22,7 +18,7 @@ function randomInt(min, max){
   return Math.round( (Math.random() * ( max - min ) ) + min );
 }
 
-window.onload = function(){
+window.addEventListener("load", function() {
   var http = ajax();
   http.onreadystatechange = function(){
     var results = http.responseText.split("\n");
@@ -30,7 +26,7 @@ window.onload = function(){
   }
   http.open("GET", "random.txt", true);
   http.send();
-}
+});
 
 function randomSnackbar(){
   var msg = [
@@ -40,4 +36,21 @@ function randomSnackbar(){
     "Why did you click it? :'("
   ];
   document.showSnackbar(msg[randomInt(0, msg.length - 1)]);
+}
+
+function expand(divName, trigger){
+  var isShown = false;
+  try {
+    isShown = e(divName).isShown;
+  } catch(ex) {
+    e(divName).isShown = isShown;
+  }
+  if(isShown) {
+    e(divName).style.height = "0px";
+    trigger.innerHTML = "SHOW MORE"
+  } else {
+    e(divName).style.height = "auto";
+    trigger.innerHTML = "SHOW LESS";
+  }
+  e(divName).isShown = !e(divName).isShown;
 }
