@@ -144,5 +144,9 @@ a {
         grid-template-columns: [start] 1fr [end];
         grid-template-rows: [start] 1fr [end];
     }
+
+    #random {
+        display: none;
+    }
     
 }
