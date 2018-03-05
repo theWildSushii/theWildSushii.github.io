@@ -1,185 +1,148 @@
-div{
-  margin: 0px;
+* {
+    margin: 0px;
+    padding: 0px;
+    transition: all 0.2s ease-in-out 0s;
 }
 
-#random {
-  margin-left: 8px;
+body {
+    background-color: #f0f0f0;
+    font-family: Roboto, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: [start] 1fr [end];
+    grid-template-rows: [header] 56px [content] 1fr [end];
 }
 
-#random > a {
-  color: #00ffff;
+header {
+    background-color: #252525;
+    grid-column-start: start;
+    grid-column-end: end;
+    grid-row-start: header;
+    grid-row-end: content;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.26);
 }
 
-#random > a:visited {
-  color: #00ffff;
+header > * {
+    float: left;
+    height: 40px;
+    margin: 8px;
+    color: #00ffff;
 }
 
-#title {
-  margin-left: 8px;
-  margin-right: 8px;
-  color: #00ffff;
+header > h3 {
+    margin: 16px;
+    height: 24px;
 }
 
-#title_eyes {
-  text-shadow: 0px 0px 4px #00ffff;
+#content {
+    grid-column-start: start;
+    grid-column-end: end;
+    grid-row-start: content;
+    grid-row-end: end;
+    display: grid;
+    grid-template-columns: [blog] 1fr [products] 1fr [about] 1fr [end];
+    grid-template-rows: [start] 1fr [end];
 }
 
-a {
-  text-decoration: none;
+.card {
+    background-color: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .26), 0px 0px 1px rgba(0, 0, 0, 0.26);
+    margin: 8px;
+    padding-bottom: 1px;
 }
 
-#body {
-  width: 61.8%;
-  margin-left: auto;
-  margin-right: auto;
+.content > .blog {
+    grid-row-start: start;
+    grid-row-end: end;
+    grid-column-start: blog;
 }
 
-div.post_tetraimg {
-  width: 61.8%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.content > .products {
+    grid-row-start: start;
+    grid-row-end: end;
+    grid-column-start: products;
 }
 
-img.tetra-tl{
-  position: relative;
-  width: 49%;
-  top: 0px;
-  left: 0px;
+.content > .about {
+    grid-row-start: start;
+    grid-row-end: end;
+    grid-column-start: about;
 }
 
-img.tetra-tr{
-  position: relative;
-  width: 49%;
-  top: 0px;
-  right: 0px;
+.card img, .card a img {
+    height: 64px;
 }
 
-img.tetra-bl{
-  position: relative;
-  width: 49%;
-  bottom: 0px;
-  left: 0px;
+.card p {
+    margin: 8px;
 }
 
-img.tetra-br{
-  position: relative;
-  width: 49%;
-  bottom: 0px;
-  right: 0px;
+.card_head {
+    background-color: #252525;
+    height: 56px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;;
 }
 
-
-p.img_sub {
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  color: #646464;
-  font-size: 10pt;
+.card_head > * {
+    float: left;
+    color: #00ffff;
+    height: 40px;
+    margin: 8px:
 }
 
-.gp_button > img{
-  height: 64px;
+.card_head > h3 {
+    margin: 16px;
+    height: 24px;
 }
 
-#popup-img{
-  position: fixed;
-  background-color: rgba(0, 0, 0, .61);
-  left: 0px;
-  top: 0px;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-}
-
-#popup-img > img {
-  display: block;
-  width: 61.8%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-top: auto;
-}
-
-div.card > p{
-  margin-left: 8px;
-}
-
-img.icon {
-  display: inline-block;
-  margin: 8px;
-  width: 40px;
-}
-
-button {
-  min-width: 88px;
-  height: 32px;
-  margin: 8px;
-  border: none;
-  background-color: #00ffff;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-radius: 2px;
-}
-
-button:hover {
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, .26), 0px 0px 1px rgba(0, 0, 0, 0.26);
-}
-
-button:active {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, .26), 0px 0px 4px rgba(0, 0, 0, 0.26);
+.card_head > img {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
 }
 
 .expandable {
-  background-color: rgba(128, 128, 128, 0.26);
-  left: 0px;
-  right: 0px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: 0px;
-  margin-right: 0px;
-  height: 0px;
-  overflow: hidden;
-  padding-left: 8px;
-  padding-right: 8px;
+    background-color: rgba(128, 128, 128, 0.26);
+    left: 0px;
+    right: 0px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 0px;
+    overflow: hidden;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
-@media (max-width: 800px){
-
-  #body{
-    width: calc(100% - 12px);
-  }
-
-  #random, #try_neutrino {
-    display: none;
-  }
-
-  div.card > img{
-    width: calc(100% - 32px);
-  }
-
-  div.post_tetraimg{
-    width: calc(100% - 32px);
-  }
-
-  #popup-img > img{
-    width: calc(100% - 32px);
-  }
-
-  button {
+button {
     min-width: 88px;
-    height: 36px;
+    height: 32px;
     margin: 8px;
     border: none;
     background-color: #00ffff;
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 2px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, .26), 0px 0px 1px rgba(0, 0, 0, 0.26);
-  }
+}
 
+a {
+    color: #ff00a6;
+    text-decoration: none;
+}
+
+.card .icon {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+}
+
+@media(max-width: 800px) {
+    
+    #content {
+        grid-template-columns: [start] 1fr [end];
+        grid-template-rows: [start] 1fr [end];
+    }
+    
 }
