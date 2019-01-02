@@ -1,177 +1,201 @@
+.social {
+    font-family: "SocialIcons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;
+}
+
 * {
-    margin: 0px;
     padding: 0px;
-    transition: all 0.2s ease-in-out 0s;
+    margin: 0px;
+    transition: all 0.382s ease-in-out 0s;
 }
 
 body {
-    background-color: #f0f0f0;
-    font-family: Roboto, Helvetica, sans-serif;
+    background-color: #cedae6;
+    padding-top: 64px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    font-family: Roboto, sans-serif;
 }
 
 header {
     position: fixed;
-    width: 100%;
     height: 56px;
+    width: 100%;
     top: 0px;
     left: 0px;
-    background-color: #252525;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, .26), 0px 0px 3px rgba(0, 0, 0, 0.26);
-    z-index: 2;
+    background-color: #18A4A4;
+    box-shadow: 0px 2px 4px rgba(0, 19, 38, 0.24), 0px 0px 2px rgba(0, 19, 38, 0.24);
 }
 
-a {
-    color: #ff00a6;
-    text-decoration: none;
-}
-
-header > a {
+header > * {
     display: inline-block;
-    float: right;
-    margin-top: 18.5px;
-    margin-bottom: 18.5px;
-    margin-right: 16px;
-    color: #00ffff;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, .26), 0px 0px 1px rgba(0, 0, 0, 0.26);
-
+    color: #f0f0f0;
+    height: 48px;
+    line-height: 48px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    vertical-align: middle;
 }
 
-#wrapper {
-    margin-top: 56px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 0px;
-    padding-right: 0px;
-    min-height: 100vh,
-}
-
-#wrapper > h1, #wrapper > h2, #wrapper > h3 {
-    text-align: center;
-    padding: 8px;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, .26), 0px 0px 1px rgba(0, 0, 0, 0.26);
-}
-
-#logo {
-    position: fixed;
-    left: 64px;
-    top: 0px;
-    padding: 8px;
-    width: 64px;
-    height: 64px;
-    background-color: #252525;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, .26), 0px 0px 3px rgba(0, 0, 0, 0.26);
-    z-index: 2;
-}
-
-.gameHeader {
-    position: relative;
-    width: 1024px;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    background-size: 100%;
-}
-
-.gameHeader > a > img {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    height: 80px;
-}
-
-#harerush {
-    background-image: url("media/harerushheader.png");
-}
-
-#pandapanda {
-    background-image: url("media/pandapandaheader.png")
-}
-
-#tasky {
-    background-image: url("media/taskyheader.png");
-}
-
-.card {
-    background-color: #ffffff;
-    border-radius: 2px;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, .26), 0px 0px 1px rgba(0, 0, 0, 0.26);
-    margin: 8px;
-    padding: 8px;
-}
-
-.card p {
-    margin: 8px;
+p {
     text-align: justify;
 }
 
-footer {
-    background-color: #252525;
-    padding: 8px;
-    min-height: 56px;
-    overflow: auto;
-    white-space: nowrap;
+a {
+    text-decoration: none;
+    color: #CB1E8F;
 }
 
-footer > a > img {
-    display: inline-block;
-    float: left;
-    height: 40px;
+a:hover {
+    text-decoration: underline;
+    color: #E06AB7;
+}
+
+a.social:hover {
+    text-decoration: none;
+}
+
+#about, #references {
     margin: 8px;
+    width: calc(100% - 16px);
+    padding: 2px;
+    background-color: #f0f0f0;
+    border-radius: 2px;
+    box-shadow: 0px 0.5px 1px rgba(0, 19, 38, 0.24), 0px 0px 0.5px rgba(0, 19, 38, 0.24);
 }
 
-@media(max-width: 1056px) {
-    .gameHeader {
-        width: 800px;
-        height: 390.625px;
-    }
+#about {
+    display: grid;
+    grid-template-columns: [left]1fr [about]1fr 1fr[end];
+    grid-template-rows: [top]56px [about]256px [work]56px [semiend] auto;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
 }
 
-@media(max-width: 832px) {
-    .gameHeader {
-        width: 500px;
-        height: 244.140625px;
-    }
+#avatar {
+    grid-column: left / span 1;
+    grid-row: top / work;
+}
 
-    .gameHeader > a > img {
-        height: 56px;
-    }
+#avatar img {
+    height: 258px;
+    width: auto;
+    border-radius: 2px;
+    box-shadow: 0px 0.5px 1px rgba(0, 19, 38, 0.24), 0px 0px 0.5px rgba(0, 19, 38, 0.24);
+}
+
+#aboutme {
+    grid-column: about / end;
+    grid-row: top / span 1;
+}
+
+#aboutcontent {
+    grid-column: about / end;
+    grid-row: about / span 1;
+    padding: 16px;
+}
+
+#mywork {
+    grid-column: left / end;
+    grid-row: work / span 1;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: left / end;
+    grid-row: semiend / span 1;
+}
+
+#gallery img {
+    width: 96px;
+    background-color: rgba(0, 0, 0, 0.24);
+    margin: 8px;
+    border-radius: 2px;
+    box-shadow: 0px 0.5px 1px rgba(0, 19, 38, 0.24), 0px 0px 0.5px rgba(0, 19, 38, 0.24);
+}
+
+#gallery img:hover {
+    box-shadow: 0px 3px 6px rgba(0, 19, 38, 0.24), 0px 0px 3px rgba(0, 19, 38, 0.24);
+}
+
+#references {
+    display: grid;
+    grid-template-columns: [left] 1fr [end];
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: start;
+    justify-content: center;
+}
+
+#references h1, #references h2 {
+    text-align: center;
+}
+
+#references img {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 90%;
+}
+
+#references p {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.links {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.links * {
+    display: inline-block;
+    margin-left: 12px;
+    margin-right: 0px;
+    text-align: middle;
+}
+
+.links p {
+    margin-left: 4px;
 }
 
 @media(max-width: 800px) {
+    #about, #gallery, #references {
+        display: block;
+    }
 
-    #gameList {
-        height: 256px;
+    #gallery, #avatar {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: calc(100% - 12px);
+    }
+
+    #avatar img, #gallery img {
         width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4px;
+        margin-bottom: 6px;
     }
-
-    .gameHeader {
-        display: inline-block;
-        margin: 16px;
-        width: 224px;
-        height: 224px;
+    
+    #about h1, #references h1 {
+        text-align: center;
     }
-
-    .gameHeader > a > img {
-        height: 56px;
-        right: 4px;
-        bottom: 4px;
-    }
-
-    #pandapanda {
-        background-image: url("media/pandapandaicon.png");
-    }
-
-    #harerush {
-        background-image: url("media/harerushicon.png");
-    }
-
-    #tasky {
-        background-image: url("media/taskyicon.png");
-    }
-
 }
