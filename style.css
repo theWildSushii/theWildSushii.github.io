@@ -10,8 +10,12 @@ body {
     margin-right: 0px;
     margin-bottom: 0px;
     margin-top: 56px;
-    padding: 16px;
+    padding: 0px;
     min-height: 100%;
+}
+
+section {
+    padding: 16px;
 }
 
 header {
@@ -106,6 +110,10 @@ h3 {
     flex-wrap: wrap;
 }
 
+#contact .horizontal-flex {
+    justify-content: center;
+}
+
 .horizontal-flex>* {
     width: 85%;
     max-width: 288px;
@@ -114,32 +122,15 @@ h3 {
 
 #contact>.horizontal-flex>a {
     display: block;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
     text-align: center;
-    font-size: 48px;
+    font-size: 32px;
     text-decoration: none;
     color: #CAE9E9;
     transition: all 0.15s ease-in-out 0s;
-    border-radius: 2px;
-    background-color: #0A757A;
-}
-
-.socicon-facebook {
-    background-color: #3e5b98!important;
-}
-
-.socicon-instagram {
-    background-color: #e31c8c!important;
-}
-
-.socicon-twitter {
-    background-color: #4da7de!important;
-}
-
-.socicon-youtube {
-    background-color: #e02a20!important;
+    border-radius: 100%;
 }
 
 #contact>.horizontal-flex>a:hover {
@@ -149,9 +140,9 @@ h3 {
 footer {
     margin-top: 16px;
     width: 100%;
-    height: 192px;
     background-color: #0A757A;
-    padding-top: 28.8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 footer img {
