@@ -1,1 +1,3 @@
-# theWildSushii.github.io
+# theWildSushii's Portfolio
+
+View website [here](http://thewildsushii.github.io/).
