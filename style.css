@@ -96,9 +96,9 @@ header p {
     max-width: 256px;
 }
 
-.max256 {
-    flex-basis: 256px;
-    max-width: 256px;
+.max288 {
+    flex-basis: 288px;
+    max-width: 288px;
 }
 
 
