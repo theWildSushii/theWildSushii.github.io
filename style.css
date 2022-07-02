@@ -29,7 +29,7 @@ body {
 a {
     text-decoration: none;
     color: #f2ed41;
-    transition: color 0.15s ease-in-out 0s;
+    transition: color 0.0833s ease-in-out 0s;
 }
 
 a:hover {
@@ -41,7 +41,7 @@ header {
     top: 0px;
     left: 0px;
     width: calc(100% - 32px);
-    height: calc(100vh - 64px);
+    min-height: calc(100vh - 64px);
     background-color: #2b2d2d;
     padding-top: 56px;
     padding-bottom: 8px;
@@ -78,10 +78,14 @@ header p {
 .columns {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    
 }
-.columns > * {
+
+.columns>* {
     flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
 }
 
 .horizontalwrap {
@@ -90,7 +94,7 @@ header p {
     justify-content: space-evenly;
 }
 
-.horizontalwrap > * {
+.horizontalwrap>* {
     flex-grow: 1;
     flex-basis: 256px;
     max-width: 256px;
@@ -108,13 +112,15 @@ header p {
     margin: 8px;
 }
 
-.card > img {
+.card>img {
     width: 100%;
     height: auto;
     border-radius: 2px;
 }
 
-.card > h1, .card > h2, .card > p{
+.card>h1,
+.card>h2,
+.card>p {
     text-align: center;
 }
 
@@ -122,7 +128,7 @@ footer {
     margin: 0px;
     min-height: 112px;
     padding-top: 8px;
-    background-color: #000000;
+    background-color: #14001a;
 }
 
 footer h1 {
@@ -143,8 +149,30 @@ footer h1 {
     width: 32px;
     height: 32px;
     filter: invert(1);
+    transition: all 0.0833s ease-in-out 0s;
+}
+
+.links img:hover {
+    filter: invert(0.618);
 }
 
 @media only screen and (max-width: 800px) {
 
+    .horizontalwrap {
+        display: block;
+    }
+    
+    .horizontalwrap>* {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 256px;
+    }
+
+    .max288 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
 }
