@@ -20,7 +20,7 @@ header {
     padding: 16px;
 }
 
-header > * {
+header>* {
     text-align: center;
     margin: 8px;
 }
@@ -128,8 +128,8 @@ main>a>div>* {
 
 article {
     margin: 0px;
-    padding: 16px 0px;
-    width: 100vw;
+    padding: 16px 16px;
+    width: calc(100vw - 32px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,8 +138,77 @@ article {
     gap: 0px;
 }
 
-article > * {
+article>* {
+    width: calc(100% - 32px);
+}
+
+article > h2 {
+    margin-top: 64px;
+}
+
+article > h3 {
+    margin-top: 32px;
+}
+
+.header-image {
+    display: block;
+    margin: 16px auto;
     width: 100%;
+    height: auto;
+}
+
+.swatch > * {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.swatch>div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.swatch>div:first-child>div:first-child {
+    aspect-ratio: 1;
+    height: 100%;
+    flex-basis: 128px;
+    border-radius: 38.2%;
+}
+
+.swatch>div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.swatch>div:nth-child(2)>div {
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    gap: 8px;
+    margin: 16px;
+    width: 100%;
+}
+
+.gallery > img {
+    height: 512px;
 }
 
 footer {
@@ -179,7 +248,7 @@ footer {
         padding: 16px 0px;
         background-color: var(--surface-dim-transparent);
         opacity: 0;
-    
+
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
