@@ -61,6 +61,10 @@ nav svg:hover {
 }
 
 main {
+    padding: 0px 16px;
+}
+
+.showcase {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -70,7 +74,8 @@ main {
     padding: 32px 0px;
 }
 
-main>a {
+.showcase>* {
+    display: block;
     width: 85vw;
     border-radius: 8px;
     overflow: hidden;
@@ -78,7 +83,6 @@ main>a {
     background-position: top;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-color: var(--surface-container);
     text-decoration: none;
     padding-left: 0px;
     padding-right: 0px;
@@ -86,7 +90,15 @@ main>a {
     padding-bottom: 0px;
 }
 
-main>a>div {
+.showcase>a{
+    background-color: var(--surface-container);
+}
+
+.showcase>div{
+    background-color: var(--surface-container-high);
+}
+
+.showcase>*>div {
     width: 100%;
     height: calc(100% - 32px);
     margin: 0px;
@@ -101,13 +113,20 @@ main>a>div {
     flex-wrap: nowrap;
 }
 
-main>a>div>* {
+.showcase>*>div>* {
     margin: 0px 16px;
     color: var(--on-surface);
 }
 
+.showcase>*>div img {
+    display: block;
+    margin: 0px auto;
+    width: 85%;
+    height: auto;
+}
+
 .warning-text {
-    color: var(--warning);
+    color: var(--warning)!important;
 }
 
 #return {
@@ -219,7 +238,7 @@ footer {
 @media only screen and (min-width: 1024px) {
 
 
-    main {
+    .showcase {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -228,7 +247,7 @@ footer {
         padding: 32px 0px;
     }
 
-    main>a {
+    .showcase>* {
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 0px;
@@ -241,7 +260,7 @@ footer {
         background-repeat: no-repeat;
     }
 
-    main>a>div {
+    .showcase>*>div {
         width: 100%;
         height: calc(100% - 32px);
         margin: 0px;
@@ -258,7 +277,7 @@ footer {
         flex-wrap: nowrap;
     }
 
-    main>a:hover>div {
+    .showcase>*:hover>div {
         opacity: 1;
     }
 
