@@ -1,37 +1,42 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <meta name="keywords" content="programming, coding, shaders, 3d, game design, ui design, ux design">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | theWildSushii</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#7242ff">
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#7141ff">
+    <meta name="msapplication-config" content="browserconfig.xml" />
     <meta name="msapplication-TileColor" content="#191700">
-    <meta name="theme-color" content="#7242ff">
+    <meta name="theme-color" content="#7141ff">
 
-    <meta property="og:title" content="Portfolio | theWildSushii">
-    <meta property="og:site_name" content="Portfolio | theWildSushii">
-    <meta property="og:url" content="http://thewildsushii.github.io" />
-    <meta property="og:description" content="Programmer, 3D artist and game developer">
+    <meta property="og:title" content="theWildSushii">
+    <meta property="og:site_name" content="theWildSushii">
+    <meta property="og:url" content="http://thewildsushii.github.io">
+    <meta property="og:description" content="theWildSushii's Portfolio">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="http://thewildsushii.github.io/thumb.png">
+    <meta property="og:image" content="http://thewildsushii.github.io/assets/logo.png">
+
+    <title>theWildSushii</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel='stylesheet'
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <link href="colors.css" rel="stylesheet">
-    <link href="theme.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/roles.css">
+    <link rel="stylesheet" href="css/style.css">
 
+    <script src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -121,149 +126,273 @@
     </svg>
 
     <header>
-        <img src="media/logo.png">
-        <h1>Sushii Gamillo | <span>theWildSushii</span></h1>
-        <p>Programmer, 3D artist and game developer</p>
-        <p>Email: <a href="mailto:iamtwsushii@gmail.com" target="_blank">iamtwsushii@gmail.com</a></p>
+        <a href="#" title="theWildSushii">theWildSushii</a>
+        <nav>
+            <a href="#about" title="About">
+                <span class="material-symbols-rounded" translate="no">person</span>
+                <p>About</p>
+            </a>
+            <a href="#skills" title="Skills">
+                <span class="material-symbols-rounded" translate="no">description</span>
+                <p>Skills</p>
+            </a>
+            <a href="#projects" title="Projects">
+                <span class="material-symbols-rounded" translate="no">gallery_thumbnail</span>
+                <p>Projects</p>
+            </a>
+            <a href="#contact" title="Contact">
+                <span class="material-symbols-rounded" translate="no">chat</span>
+                <p>Contact</p>
+            </a>
+        </nav>
+        <span id="daynight-button" class="material-symbols-rounded" translate="no"
+            onclick="toggleDaynight()">dark_mode</span>
     </header>
 
-    <nav>
-        <a href="https://github.com/theWildSushii" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#github"></use>
-            </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/thewildsushii/" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#linkedin"></use>
-            </svg>
-        </a>
-        <a href="https://discordapp.com/users/385289200540450816/" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#discord"></use>
-            </svg>
-        </a>
-        <a href="https://www.tiktok.com/@thewildsushii" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#tiktok"></use>
-            </svg>
-        </a>
-        <a href="https://www.instagram.com/thewildsushii/" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#instagram"></use>
-            </svg>
-        </a>
-        <a href="https://x.com/theWildSushii" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#x"></use>
-            </svg>
-        </a>
-        <a href="https://www.youtube.com/channel/UC1lEywnv2CSJMMpSYuuUahQ" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#youtube"></use>
-            </svg>
-        </a>
-        <a href="https://www.artstation.com/thewildsushii" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#artstation"></use>
-            </svg>
-        </a>
-        <a href="https://www.behance.net/theWildSushii" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#behance"></use>
-            </svg>
-        </a>
-        <a href="https://www.pixiv.net/en/users/94791307" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <use xlink:href="#pixiv"></use>
-            </svg>
-        </a>
-    </nav>
-
     <main>
-        <h2>Design Documents</h2>
-        <section class="showcase">
-            <a href="tiao-tiaos-hike" style="background-image: url('tiao-tiaos-hike/tiaotiaoshike.png')">
-                <div>
-                    <p><b>Tiào Tiào's Hike</b></p>
-                    <p>Mobile game</p>
-                    <p>I did: Programming, Game Design, 3D Art, UI/UX Design, Audio</p>
+        <section id="home">
+            <div>
+                <img src="assets/logo.svg" title="theWildSushii's logo">
+                <div class="links">
+                    <a href="https://github.com/theWildSushii" target="_blank" title="GitHub">
+                        <svg viewBox="0 0 24 24">
+                            <use xlink:href="#github"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/thewildsushii/" target="_blank" title="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/theWildSushii" target="_blank">
+                        <svg viewBox="0 0 24 24">
+                            <use xlink:href="#x"></use>
+                        </svg>
+                    </a>
                 </div>
-            </a>
-            <a href="trochilidiva" style="background-image: url('trochilidiva/trochilidiva.png')">
-                <div>
-                    <p><b>Trochilidiva</b></p>
-                    <p>VTuber</p>
-                    <p>I did: 3D Model, Brand Design</p>
-                </div>
-            </a>
-            <a href="water-ring-toss" style="background-image: url('water-ring-toss/waterringtoss.png')">
-                <div>
-                    <p><b>Water Ring Toss</b></p>
-                    <p>Mobile game</p>
-                    <p>I did: Programming, Game Design, UI/UX Design, Audio</p>
-                </div>
-            </a>
-            <a href="red-barrel-inc" style="background-image: url('red-barrel-inc/Red Barrel Inc_Logo.png')">
-                <div>
-                    <p><b>Red Barrel Inc.</b></p>
-                    <p>Concept Art</p>
-                    <p>I did: Brand Design</p>
-                </div>
-            </a>
-            <a href="hare-rush" style="background-image: url('hare-rush/harerush.png')">
-                <div>
-                    <p><b>Hare Rush</b></p>
-                    <p>Mobile game</p>
-                    <p>I did: Programming, Game Design, UI/UX Design, Audio</p>
-                    <p class="warning-text">Currently working on a full rework</p>
-                </div>
-            </a>
+            </div>
+            <div>
+                <h1>Hello there, I am Sushii Gamillo</h1>
+                <h3>3D/shader artist and game/frontend developer.</h3>
+                <p>Passionate developer specialized in game development, shaders, optimization and a huge color nerd.
+                </p>
+                <a href="#contact" class="button" title="Contact Me">
+                    <span class="material-symbols-rounded" translate="no">chat</span>
+                    Contact Me
+                </a>
+            </div>
         </section>
-        <h2>Apps</h2>
-        <section class="showcase">
-            <a href="https://thewildsushii.github.io/Koilors/" style="background-image: url('koilors/koilors.png')" target="_blank">
+        <section id="about">
+            <h2 class="center">About Me</h2>
+            <p>A frontend and game developer with a passion for creating optimized and accessible user experiences. With
+                a solid foundation on HTML, CSS, JavaScript and C#.</p>
+            <p>I specialize in creating optimized websites and video games with a solid foundation that allows
+                developers and artists to easily expand and add content.</p>
+            <p>Also a huge color nerd, I have researched a lot of concepts about color theory, color perception,
+                harmonies and more. With a solid understanding about Oklab and many other color spaces.</p>
+            <div class="columns">
                 <div>
-                    <p><b>Koilors</b></p>
-                    <p>Color palette generator</p>
-                    <p class="warning-text">Still a work in progress!</p>
+                    <h3 class="center">06+</h3>
+                    <p class="sub center">Years of experience</p>
                 </div>
-            </a>
-            <div style="background-image: url('tiao-tiaos-hike/tiaotiaoshike.png')">
                 <div>
-                    <p><b>Tiào Tiào's Hike</b></p>
+                    <h3 class="center">10+</h3>
+                    <p class="sub center">Completed projects</p>
+                </div>
+                <div>
+                    <h3 class="center">04+</h3>
+                    <p class="sub center">Companies worked</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2 class="center">Skills</h2>
+            <ul class="chips">
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Blender</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>MagicaVoxel</li>
+                <li>Android Studio</li>
+            </ul>
+            <h2 class="center">Qualification</h2>
+            <div class="columns">
+                <label class="tab">
+                    <span class="material-symbols-rounded" translate="no">school</span>Education
+                    <input id="education-tab" type="radio" name="qualification" checked>
+                </label>
+                <label class="tab">
+                    <span class="material-symbols-rounded" translate="no">work</span>Work
+                    <input id="work-tab" type="radio" name="qualification">
+                </label>
+            </div>
+            <ul id="education-list">
+                <li>
+                    <h3>Computer Science Engineering</h3>
+                    <p>Instituto Tecnológico de Ciudad Juárez</p>
+                    <p class="sub"><span class="material-symbols-rounded" translate="no">calendar_month</span>2015</p>
+                </li>
+                <li>
+                    <h3>Digital Design</h3>
+                    <p>Universidad Autónoma de Ciudad Juárez</p>
+                    <p class="sub"><span class="material-symbols-rounded" translate="no">calendar_month</span>2019</p>
+                </li>
+            </ul>
+            <ul id="work-list">
+                <li>
+                    <h3>Junior Engineer</h3>
+                    <p>Vani Café de Europa</p>
+                    <p class="sub"><span class="material-symbols-rounded" translate="no">calendar_month</span>2017</p>
+                </li>
+                <li>
+                    <h3>Graphic Designer</h3>
+                    <p>Vani Café de Europa</p>
+                    <p class="sub"><span class="material-symbols-rounded" translate="no">calendar_month</span>2018</p>
+                </li>
+                <li>
+                    <h3>Unity Developer</h3>
+                    <p>Desert Hare Studios</p>
+                    <p class="sub"><span class="material-symbols-rounded" translate="no">calendar_month</span>2018-2022
+                    </p>
+                </li>
+                <li>
+                    <h3>Unity Developer</h3>
+                    <p>Freelance</p>
+                    <p class="sub"><span class="material-symbols-rounded" translate="no">calendar_month</span>2019-2024
+                    </p>
+                </li>
+                <li>
+                    <h3>Frontend & Backend Developer</h3>
+                    <p>Seguros Juárez</p>
+                    <p class="sub"><span class="material-symbols-rounded" translate="no">calendar_month</span>2023</p>
+                </li>
+                <li>
+                    <h3>Frontend Developer</h3>
+                    <p>Alternativa Gráfica</p>
+                    <p class="sub"><span class="material-symbols-rounded" translate="no">calendar_month</span>2022-2023
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2 class="center">Projects</h2>
+            <p class="center sub">Some of my work</p>
+            <div class="project">
+                <div>
+                    <img src="http://thewildsushii.github.io/Koilors/assets/thumbnail.png" title="Koilors banner">
+                </div>
+                <div>
+                    <h3>Koilors</h3>
+                    <p>Perceptually uniform color scheme designer.</p>
+                    <p>Generate beautiful color palettes by picking just one color.</p>
+                    <a class="button" href="https://thewildsushii.github.io/Koilors/" target="_blank">Open Web App</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <img src="media/tiaotiaoshike-banner.png" title="Tiào Tiào's Hike banner">
+                </div>
+                <div>
+                    <h3>Tiào Tiào's Hike</h3>
+                    <p>Casual android game.</p>
                     <a href='https://play.google.com/store/apps/details?id=tws.projectpanda' target="_blank">
-                        <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
+                        <img class="googleplaybanner" alt='Get it on Google Play'
+                            src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
                     </a>
                 </div>
             </div>
-            <div style="background-image: url('water-ring-toss/waterringtoss.png')">
+            <div class="project">
                 <div>
-                    <p><b>Water Ring Toss</b></p>
-                    <p>Mobile game</p>
+                    <img src="media/waterringtoss-banner.png" title="Water Ring Toss banner">
+                </div>
+                <div>
+                    <h3>Water Ring Toss</h3>
+                    <p>Hyper casual android game.</p>
+                    <p>An experiment on graphics and physics simulations on mobile.</p>
                     <a href='https://play.google.com/store/apps/details?id=dhs.waterring' target="_blank">
-                        <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
+                        <img class="googleplaybanner" alt='Get it on Google Play'
+                            src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' />
                     </a>
-                </div>
-            </div>
-            <div style="background-image: url('hare-rush/harerush.png')">
-                <div>
-                    <p><b>Hare Rush</b></p>
-                    <p>Mobile game</p>
-                    <a href='https://play.google.com/store/apps/details?id=dhs.harerush' target="_blank">
-                        <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-                    </a>
-                    <p class="warning-text">Currently working on a full rework</p>
-                </div>
-            </div>
-            <div style="background-image: url('teachar/teachar.png')">
-                <div>
-                    <p><b>TeachAR</b></p>
-                    <p>AR app</p>
-                    <p class="warning-text">Still in development.</p>
                 </div>
             </div>
         </section>
+        <section id="contact">
+            <h2 class="center">Contact me</h2>
+            <p class="center sub">Get in touch</p>
+            <div class="list">
+                <a href="mailto:iamtwsushii@gmail.com" class="largelink" target="_blank" title="Email">
+                    <span class="material-symbols-rounded" translate="no">mail</span>
+                    <div>
+                        <h3>Email</h3>
+                        <p>iamtwsushii@gmail.com</p>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/thewildsushii/" class="largelink" target="_blank" title="LinkedIn">
+                    <svg viewBox="0 0 24 24">
+                        <use xlink:href="#linkedin"></use>
+                    </svg>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <p>@thewildsushii</p>
+                    </div>
+                </a>
+                <a href="https://github.com/theWildSushii" class="largelink" target="_blank" title="GitHub">
+                    <svg viewBox="0 0 24 24">
+                        <use xlink:href="#github"></use>
+                    </svg>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p>@theWildSushii</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <footer>
+            <a href="https://discordapp.com/users/385289200540450816/" target="_blank" title="Discord">
+                <svg viewBox="0 0 24 24">
+                    <use xlink:href="#discord"></use>
+                </svg>
+            </a>
+            <a href="https://www.tiktok.com/@thewildsushii" target="_blank" title="TikTok">
+                <svg viewBox="0 0 24 24">
+                    <use xlink:href="#tiktok"></use>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/thewildsushii/" target="_blank" title="Instagram">
+                <svg viewBox="0 0 24 24">
+                    <use xlink:href="#instagram"></use>
+                </svg>
+            </a>
+            <a href="https://x.com/theWildSushii" target="_blank">
+                <svg viewBox="0 0 24 24">
+                    <use xlink:href="#x"></use>
+                </svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UC1lEywnv2CSJMMpSYuuUahQ" target="_blank" title="YouTube">
+                <svg viewBox="0 0 24 24">
+                    <use xlink:href="#youtube"></use>
+                </svg>
+            </a>
+            <a href="https://www.artstation.com/thewildsushii" target="_blank" title="ArtStation">
+                <svg viewBox="0 0 24 24">
+                    <use xlink:href="#artstation"></use>
+                </svg>
+            </a>
+            <a href="https://www.behance.net/theWildSushii" target="_blank" title="Behance">
+                <svg viewBox="0 0 24 24">
+                    <use xlink:href="#behance"></use>
+                </svg>
+            </a>
+            <a href="https://www.pixiv.net/en/users/94791307" target="_blank" title="Pixiv">
+                <svg viewBox="0 0 24 24">
+                    <use xlink:href="#pixiv"></use>
+                </svg>
+            </a>
+        </footer>
     </main>
 
 </body>

@@ -1,0 +1,468 @@
+* {
+    min-width: 0px;
+    border-color: var(--outline);
+    transition: all 0.1309s ease;
+}
+
+.material-symbols-rounded {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+h1,
+h2,
+h3 {
+    text-wrap: balance;
+}
+
+h3 {
+    color: var(--on-surface-variant);
+}
+
+p {
+    text-wrap: pretty;
+}
+
+.center {
+    text-align: center;
+}
+
+p.sub {
+    margin: 4px;
+    font-size: 10pt;
+    vertical-align: middle;
+}
+
+p.sub .material-symbols-rounded {
+    margin: 0px 2px;
+    font-size: 10pt;
+    font-variation-settings: 'opsz' 20;
+}
+
+body {
+    background-color: var(--surface-container);
+    color: var(--on-surface);
+    margin: 0px 0px 72px 0px;
+    font-family: "Lexend", sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    bottom: unset;
+    height: 64px;
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--surface-container);
+}
+
+header a {
+    text-decoration: none;
+    color: var(--on-surface);
+}
+
+header a:hover,
+header a:active {
+    color: var(--accent);
+}
+
+header>nav {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 12px 4px 16px 4px;
+    background-color: var(--surface-container);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 24px;
+    align-content: stretch;
+    align-items: stretch;
+    font-size: 10pt;
+}
+
+header .material-symbols-rounded:hover,
+header .material-symbols-rounded:active {
+    color: var(--accent);
+    font-variation-settings: 'FILL' 1;
+}
+
+header>nav>div {
+    position: unset;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+header>nav>a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+header>nav>a p {
+    margin: 0px;
+}
+
+main {
+    background-color: var(--surface);
+}
+
+section {
+    padding: 60px 16px 0px 16px;
+    max-width: 768px;
+}
+
+#home img {
+    display: block;
+    margin: 0px auto;
+    width: 128px;
+}
+
+.links {
+    padding: 24px 8px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.links * {
+    width: 24px;
+    padding: 4px;
+    fill: var(--on-surface);
+}
+
+.links *:hover *,
+.links *:active * {
+    fill: var(--accent);
+}
+
+a.button {
+    width: 144px;
+    margin: 8px auto;
+    background-color: var(--accent);
+    color: var(--on-accent);
+    padding: 8px 24px;
+    border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 8px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+a.button:has(span) {
+    padding: 8px 24px 8px 16px;
+}
+
+a.button:hover,
+a.button:active {
+    background-color: var(--on-accent);
+    color: var(--accent);
+}
+
+a.button:hover *,
+a.button:active * {
+    font-variation-settings: 'FILL' 1;
+}
+
+div.columns {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+div.columns>* {
+    flex-basis: 0px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+ul.chips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    gap: 16px;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul.chips li {
+    list-style-type: none;
+    background-color: var(--surface-container-low);
+    padding: 8px 16px;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+label.tab input {
+    display: none;
+}
+
+label.tab {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--surface-container-low);
+    color: var(--on-surface);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+label.tab:has(input:checked) {
+    background-color: var(--accent);
+    color: var(--on-accent);
+}
+
+label.tab:has(input:checked) .material-symbols-rounded {
+    font-variation-settings: 'FILL' 1;
+}
+
+div.columns:has(#education-tab:checked)~#education-list {
+    display: default;
+}
+
+div.columns:has(#education-tab:not(:checked))~#education-list {
+    display: none;
+}
+
+div.columns:has(#work-tab:checked)~#work-list {
+    display: default;
+}
+
+div.columns:has(#work-tab:not(:checked))~#work-list {
+    display: none;
+}
+
+ul:not(.chips) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px;
+    gap: 16px;
+}
+
+ul:not(.chips) li {
+    flex-basis: 320px;
+    flex-shrink: 1;
+}
+
+ul li p,
+ul li h3 {
+    font-size: 0.9em;
+    margin: 4px;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 16px;
+    padding: 8px;
+    gap: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 16px;
+}
+
+.project>div {
+    flex-basis: 320px;
+    flex-grow: 1;
+}
+
+.project h3 {
+    margin: 8px auto;
+}
+
+.project>div>img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+.project .googleplaybanner {
+    display: block;
+    margin: 0px auto;
+    width: 61.8%;
+}
+
+div.list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+a.largelink {
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--on-surface-variant);
+}
+
+a.largelink * {
+    fill: var(--on-surface-variant);
+}
+
+a.largelink svg {
+    width: 24px;
+}
+
+a.largelink:hover,
+a.largelink:active {
+    color: var(--accent);
+}
+
+a.largelink:hover *,
+a.largelink:active * {
+    fill: var(--accent);
+}
+
+a.largelink div {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+a.largelink div * {
+    margin: 0px;
+    color: var(--on-surface-variant);
+}
+
+footer {
+    padding: 56px 32px;
+    background-color: var(--surface-container-lowest);
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+footer * {
+    width: 20px;
+    padding: 2px;
+    fill: var(--on-surface);
+}
+
+footer *:hover *,
+footer *:active * {
+    fill: var(--accent);
+}
+
+@media only screen and (min-width: 768px) {
+
+    body {
+        margin: 0px 0px 0px 0px;
+    }
+
+    header>nav {
+        position: unset;
+        bottom: unset;
+        left: unset;
+        right: unset;
+        height: unset;
+        background-color: unset;
+        justify-content: flex-end;
+    }
+
+    header>nav .material-symbols-rounded {
+        display: none;
+    }
+
+    #home {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    #home img {
+        width: 256px;
+    }
+
+    #home>* {
+        flex-basis: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    section {
+        margin: 0px auto;
+    }
+
+    div.list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        gap: 8px;
+        padding: 8px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    div.columns {
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.columns>* {
+        flex-basis: 336px;
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+}

@@ -1,0 +1,94 @@
+:root {
+    accent-color: var(--accent);
+}
+
+:root, :root.dark {
+    --accent: var(--A80);
+    --on-accent: var(--A20);
+    --accent-container: var(--A30);
+    --on-accent-container: var(--A90);
+    
+    --inverse-accent: var(--A20);
+    --inverse-on-accent: var(--A80);
+    --inverse-accent-container: var(--A70);
+    --inverse-on-accent-container: var(--A10);
+
+    --surface-dim: var(--P6);
+    --surface: var(--P6);
+    --surface-bright: var(--P24);
+    --surface-container-lowest: var(--P4);
+    --surface-container-low: var(--P10);
+    --surface-container: var(--P12);
+    --surface-container-high: var(--P17);
+    --surface-container-highest: var(--P22);
+    --on-surface: var(--P90);
+    --on-surface-variant: var(--P80);
+    --outline: var(--P60);
+    --outline-variant: var(--P30);
+
+    --inverse-surface-dim: var(--P94);
+    --inverse-surface: var(--P94);
+    --inverse-on-surface: var(--P10);
+
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+
+    :root {
+        --accent: var(--A40);
+        --on-accent: var(--A100);
+        --accent-container: var(--A90);
+        --on-accent-container: var(--A10);
+    
+        --inverse-accent: var(--A60);
+        --inverse-on-accent: var(--A0);
+        --inverse-accent-container: var(--A10);
+        --inverse-on-accent-container: var(--A90);
+    
+        --surface-dim: var(--P87);
+        --surface: var(--P98);
+        --surface-bright: var(--P98);
+        --surface-container-lowest: var(--P100);
+        --surface-container-low: var(--P96);
+        --surface-container: var(--P94);
+        --surface-container-high: var(--P92);
+        --surface-container-highest: var(--P90);
+        --on-surface: var(--P10);
+        --on-surface-variant: var(--P30);
+        --outline: var(--P50);
+        --outline-variant: var(--P80);
+
+        --inverse-surface-dim: var(--P13);
+        --inverse-surface: var(--P2);
+        --inverse-on-surface: var(--P90);
+        
+        color-scheme: light;
+    }
+}
+
+:root.light {
+    --accent: var(--A40);
+    --on-accent: var(--A100);
+    --accent-container: var(--A90);
+    --on-accent-container: var(--A10);
+
+    --surface-dim: var(--P87);
+    --surface: var(--P98);
+    --surface-bright: var(--P98);
+    --surface-container-lowest: var(--P100);
+    --surface-container-low: var(--P96);
+    --surface-container: var(--P94);
+    --surface-container-high: var(--P92);
+    --surface-container-highest: var(--P90);
+    --on-surface: var(--P10);
+    --on-surface-variant: var(--P30);
+    --outline: var(--P50);
+    --outline-variant: var(--P80);
+
+    --inverse-surface-dim: var(--P13);
+    --inverse-surface: var(--P2);
+    --inverse-on-surface: var(--P90);
+    
+    color-scheme: light;
+}
