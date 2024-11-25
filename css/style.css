@@ -1,7 +1,7 @@
 * {
     min-width: 0px;
     border-color: var(--outline);
-    transition: all 0.1309s ease;
+    transition: all 83ms ease-in-out;
 }
 
 .material-symbols-rounded {
